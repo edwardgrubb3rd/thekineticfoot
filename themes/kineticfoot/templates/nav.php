@@ -18,4 +18,7 @@
 		<div class="nav-list bar2"></div>
 		<div class="nav-list bar3"></div>
 	</div>
+	<div class="navbar-contact">
+		<a href="tel:7202954864" class="navbar-link">720.295.4864</a>
+	</div>
 </div>
