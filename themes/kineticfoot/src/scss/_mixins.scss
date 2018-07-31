@@ -1,0 +1,5 @@
+@mixin mediaQuery ($minOrMax, $val) {
+  @media only screen and (#{$minOrMax}-width: $val) {
+      @content;
+  }
+}
