@@ -7,6 +7,14 @@ body, html {
 	padding: 0;
 }
 
+body {
+	max-width: $lgDesktop;
+
+	@include mediaQuery(min, $lgDesktop) {
+		margin: 0 auto;
+	}
+}
+
 main {
 	display: block;
 }
