@@ -1,8 +1,42 @@
 // Typography
 // import google font files, replace as needed
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:700|Source+Sans+Pro:400,600,700');
-$font-primary: 'Roboto', sans-serif;
+$primary-font: 'Montserrat', sans-serif;
+$line-height-base: 1rem;
 
-body {
-	font-family: $font-primary;
+// Font Sizing
+$font-size-base: 1rem !default;
+$font-size-lg: ($font-size-base * 1.25) !default;
+$font-size-sm: ($font-size-base * 0.875) !default;
+
+*, html {
+  font-family: $primary-font;
+}
+
+// SIZING
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: inherit;
+    font-size: $font-size-base * (6 - $i);
+    font-weight: 400;
+    line-height: $line-height-base * (6 - $i);
+  }
+}
+
+p {
+  font-family: inherit;
+  font-size: $font-size-base;
+  line-height: 1.25;
+}
+
+a {
+  font-family: inherit;
+  font-size: $font-size-base;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+li {
+  font-family: inherit;
+  line-height: 1.2;
 }

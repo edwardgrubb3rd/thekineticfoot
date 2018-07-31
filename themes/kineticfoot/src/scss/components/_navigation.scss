@@ -1,0 +1,92 @@
+
+.navbar {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  max-width: $lgDesktop;
+  padding: 0 40px;
+  position: relative;
+
+  @include mediaQuery(min, $lgDesktop) {
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  .navbar-link {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 450px;
+  width: 100%;
+
+  @include mediaQuery(max, $tablet) {
+    display: none;
+  }
+}
+
+.navbar-menu.active {
+  display: flex;
+}
+
+.navbar-menu.mobile {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 250px;
+
+  .navbar-item {
+    padding: 5px 0;
+  }
+}
+
+.navbar-link {
+  color: $white;
+
+  &:hover {
+    color: $light-gray;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  width: 35px;
+
+  @include mediaQuery(max, $tablet) {
+    display: flex;
+  }
+}
+
+.nav-list {
+  background-color: $white;
+  border-radius: 5px;
+	height: 3px;
+	margin: 3px 0;
+	transition: 0.8s;
+  width: 35px;
+}
+
+.change {
+  .bar1 {
+  	transform: rotate(-405deg) translate(-10px, 3px);
+  }
+  .bar2 {
+  	opacity: 0;
+  }
+  .bar3 {
+  	transform: rotate(405deg) translate(-10px, -4px);
+  }
+}

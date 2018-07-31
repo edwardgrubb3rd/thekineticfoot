@@ -1,17 +1,17 @@
-<?php get_template_part( 'templates/header' );
+<?php
 
-if ( function_exists( 'FLO_get_flexible_content_layouts' ) ) :
-	FLO_get_flexible_content_layouts( 'pre_content' );
-endif;
+ get_template_part( 'templates/header' );
 
 ?>
 
-<main role="document">
-	<?php get_template_part( 'templates/loop' ); ?>
-</main>
+<body>
 
-<?php if ( function_exists( 'FLO_get_flexible_content_layouts' ) ) :
-	FLO_get_flexible_content_layouts( 'post_content' );
-endif;
+  <div class="hero">
+    hero here
+  </div>
 
-get_template_part( 'templates/footer' );
+</body>
+
+<?php
+
+ get_template_part( 'templates/footer' );
