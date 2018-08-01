@@ -20,6 +20,8 @@
   text-transform: uppercase;
 
   &:hover {
+    background-color: $fontColor;
+    color: $backgroundColor;
     cursor: pointer;
   }
 
