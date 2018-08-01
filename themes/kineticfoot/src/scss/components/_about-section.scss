@@ -13,14 +13,25 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
+
+  @include mediaQuery(max, $tablet) {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .about-item {
   align-items: center;
   display: flex;
+  flex: 0 0 30%;
   flex-direction: column;
-  max-width: 30%;
   padding: 20px;
+  width: 30%;
+
+  @include mediaQuery(max, $tablet) {
+    flex: 0 0 80%;
+    width: 80%;
+  }
 }
 
 .about-item-img {
