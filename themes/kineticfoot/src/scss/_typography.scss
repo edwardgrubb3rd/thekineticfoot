@@ -19,8 +19,18 @@ $font-size-sm: ($font-size-base * 0.875) !default;
     font-family: inherit;
     font-size: $font-size-base * (6 - $i);
     font-weight: 400;
-    line-height: $line-height-base * (6 - $i);
+    line-height: (($font-size-base * (6 - $i)) + .1rem);
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 p {
@@ -39,4 +49,11 @@ a {
 li {
   font-family: inherit;
   line-height: 1.2;
+}
+
+// Class Specific
+.title {
+  font-size: 3rem;
+  line-height: 3.1rem;
+  text-transform: uppercase;
 }

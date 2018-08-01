@@ -1,0 +1,5 @@
+
+.cta-button {
+  @include button($off-white, null, $dark-gray);
+  width: 50%;
+}

@@ -1,0 +1,32 @@
+
+.hero {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 780px;
+  justify-content: center;
+}
+
+.hero-content {
+  align-items: center;
+  background-color: rgba(89, 121, 142, 0.84);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+  width: 45%;
+
+  .title {
+    color: $off-white;
+  }
+
+  .subtitle {
+    color: $off-white;
+    display: block;
+    margin: 10px 0 15px;
+    width: 85%;
+  }
+}

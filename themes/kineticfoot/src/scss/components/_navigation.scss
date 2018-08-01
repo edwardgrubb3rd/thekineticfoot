@@ -1,7 +1,18 @@
 
 .navbar {
+  background-color: rgba(0, 0, 0, 0.85);
+  max-width: $lgDesktop;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  @include mediaQuery(max, $mobile) {
+    padding: 0 20px;
+  }
+}
+
+.navbar-wrapper {
   align-items: center;
-  background-color: $black;
   display: flex;
   height: 50px;
   justify-content: space-between;
@@ -29,6 +40,7 @@
 
 .navbar-menu.active {
   display: flex;
+  width: 55%;
 }
 
 .navbar-menu.mobile {
@@ -76,7 +88,7 @@
 
 .change {
   .bar1 {
-  	transform: rotate(-405deg) translate(-10px, 3px);
+  	transform: rotate(-405deg) translate(-9px, 3px);
   }
   .bar2 {
   	opacity: 0;
@@ -92,4 +104,8 @@
   padding: 15px 10px;
   position: absolute;
   top: 50px;
+
+  @include mediaQuery(max, $mobile) {
+    left: 0;
+  }
 }

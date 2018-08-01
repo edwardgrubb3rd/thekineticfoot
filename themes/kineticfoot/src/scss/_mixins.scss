@@ -3,3 +3,33 @@
       @content;
   }
 }
+
+@mixin button($backgroundColor, $borderColor, $fontColor) {
+  background-color: $backgroundColor;
+  @if $borderColor {
+    border: 2px solid $borderColor;
+  }
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  font-weight: 600;
+  height: 50px;
+  justify-content: center;
+  max-width: 372px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include mediaQuery(max, $mobile) {
+    width: 335px;
+  }
+
+  @include mediaQuery(max, 320px) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 270px;
+  }
+}
