@@ -56,6 +56,12 @@ button {
   line-height: 1.1;
 }
 
+button {
+  font-family: inherit;
+  font-size: $font-size-base;
+  line-height: 1.1;
+}
+
 li {
   font-family: inherit;
   line-height: 1.2;
