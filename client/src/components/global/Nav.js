@@ -35,7 +35,7 @@ class Nav extends Component {
       			{
               this.state.links.map(({title, link}) => (
                 <div className="navbar-item" key={title}>
-                  <Link to={link} >{title}</Link>
+                  <Link to={link} className="navbar-link">{title}</Link>
           			</div>
               ))
             }
