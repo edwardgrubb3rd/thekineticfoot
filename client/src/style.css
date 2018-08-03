@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700|Source+Sans+Pro:400,600,700");
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0; }
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 18px; } }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 20px; } }
+
+body {
+  margin: 0;
+  max-width: 1440px;
+  padding: 0; }
+  @media only screen and (min-width: 1440px) {
+    body {
+      margin: 0 auto; } }
+
+main {
+  display: block; }
+
+.section {
+  padding: 25px 0;
+  width: 100%; }
+
+*, html {
+  font-family: "Montserrat", sans-serif; }
+
+h1 {
+  font-family: inherit;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 5.1rem; }
+
+h2 {
+  font-family: inherit;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 4.1rem; }
+
+h3 {
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.1rem; }
+
+h4 {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.1rem; }
+
+h5 {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.1rem; }
+
+h6 {
+  font-family: inherit;
+  font-size: 0rem;
+  font-weight: 400;
+  line-height: 0.1rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; }
+
+p {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.25; }
+
+a {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.1;
+  text-decoration: none; }
+  @media only screen and (max-width: 900px) {
+    a {
+      font-size: 0.8rem; } }
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.1; }
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.1; }
+
+li {
+  font-family: inherit;
+  line-height: 1.2; }
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.1rem;
+  text-transform: uppercase; }
+
+/*** Import partials from the modules folder ***/
+.about {
+  background-color: #000;
+  text-align: center; }
+  .about .title {
+    color: #59798E; }
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px; }
+  @media only screen and (max-width: 900px) {
+    .about-grid {
+      align-items: center;
+      flex-direction: column; } }
+
+.about-item {
+  align-items: center;
+  display: flex;
+  flex: 0 0 30%;
+  flex-direction: column;
+  padding: 20px;
+  width: 30%; }
+  @media only screen and (max-width: 900px) {
+    .about-item {
+      flex: 0 0 80%;
+      width: 80%; } }
+
+.about-item-img {
+  border-radius: 50%;
+  width: 75%; }
+
+.about-item-subtitle {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 10px 0; }
+
+.about-item-desc {
+  color: #FFFFFF;
+  width: 90%; }
+
+.cta-button {
+  background-color: #FFFFFF;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  font-weight: 600;
+  height: 50px;
+  justify-content: center;
+  max-width: 372px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 50%; }
+  .cta-button:hover {
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    cursor: pointer; }
+  @media only screen and (max-width: 600px) {
+    .cta-button {
+      width: 100%; } }
+  @media only screen and (max-width: 320px) {
+    .cta-button {
+      margin-left: 0;
+      margin-right: 0;
+      width: 270px; } }
+
+.btn-primary {
+  background-color: #59798E;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  font-weight: 600;
+  height: 50px;
+  justify-content: center;
+  max-width: 372px;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .btn-primary:hover {
+    background-color: #FFFFFF;
+    color: #59798E;
+    cursor: pointer; }
+  @media only screen and (max-width: 600px) {
+    .btn-primary {
+      width: 100%; } }
+  @media only screen and (max-width: 320px) {
+    .btn-primary {
+      margin-left: 0;
+      margin-right: 0;
+      width: 270px; } }
+
+.hero {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 780px;
+  justify-content: center; }
+
+.hero-content {
+  align-items: center;
+  background-color: rgba(89, 121, 142, 0.84);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+  width: 45%; }
+  @media only screen and (max-width: 900px) {
+    .hero-content {
+      padding: 20px;
+      width: 60%; } }
+  @media only screen and (max-width: 600px) {
+    .hero-content {
+      padding: 15px;
+      width: 85%; } }
+  .hero-content .title {
+    color: #FDFFFC; }
+  .hero-content .subtitle {
+    color: #FDFFFC;
+    display: block;
+    margin: 10px 0 15px;
+    width: 85%; }
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.85);
+  max-width: 1440px;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.navbar-wrapper {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: relative; }
+  @media only screen and (max-width: 600px) {
+    .navbar-wrapper {
+      padding: 0 20px; } }
+
+.logo .navbar-link {
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 450px;
+  width: 100%; }
+  @media only screen and (max-width: 900px) {
+    .navbar-menu {
+      display: none; } }
+
+.navbar-menu.active {
+  display: flex;
+  width: 55%; }
+
+.navbar-menu.mobile {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 250px; }
+  .navbar-menu.mobile .navbar-item {
+    padding: 5px 0; }
+
+.navbar-link {
+  color: #FFFFFF; }
+  .navbar-link:hover {
+    color: #D4DBE3; }
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  width: 35px; }
+  @media only screen and (max-width: 900px) {
+    .mobile-menu {
+      display: flex; } }
+
+.nav-list {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  height: 3px;
+  margin: 3px 0;
+  transition: 0.8s;
+  width: 35px; }
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 3px); }
+
+.change .bar2 {
+  opacity: 0; }
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-10px, -4px); }
+
+.navbar-contact {
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 40px;
+  padding: 15px 10px;
+  position: absolute;
+  top: 50px; }
+  @media only screen and (max-width: 600px) {
+    .navbar-contact {
+      left: 0; } }
