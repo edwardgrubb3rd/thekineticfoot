@@ -3,3 +3,7 @@
   @include button($white, null, $dark-gray);
   width: 50%;
 }
+
+.btn-primary {
+  @include button($persian-green, null, $white);
+}

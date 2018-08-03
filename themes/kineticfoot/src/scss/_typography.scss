@@ -44,6 +44,16 @@ a {
   font-size: $font-size-base;
   line-height: 1.1;
   text-decoration: none;
+
+  @include mediaQuery(max, $tablet) {
+    font-size: ($font-size-base * .8);
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: $font-size-base;
+  line-height: 1.1;
 }
 
 li {
@@ -54,6 +64,7 @@ li {
 // Class Specific
 .title {
   font-size: 3rem;
+  font-weight: 600;
   line-height: 3.1rem;
   text-transform: uppercase;
 }

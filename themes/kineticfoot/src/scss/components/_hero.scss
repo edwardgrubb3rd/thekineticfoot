@@ -19,6 +19,16 @@
   text-align: center;
   width: 45%;
 
+  @include mediaQuery(max, $tablet) {
+    padding: 20px;
+    width: 60%;
+  }
+
+  @include mediaQuery(max, $mobile) {
+    padding: 15px;
+    width: 85%;
+  }
+
   .title {
     color: $off-white;
   }
