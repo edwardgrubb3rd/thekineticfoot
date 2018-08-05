@@ -4,6 +4,7 @@ import { DataConsumer } from '../context/DataContext';
 // Components
 import Hero from '../components/global/Hero';
 import About from '../components/home/About';
+import Contact from '../components/home/Contact';
 
 export default class Home extends Component {
   render() {
@@ -33,6 +34,7 @@ export default class Home extends Component {
               button={about_button_text}
               link={about_button_link}
                />
+            <Contact />
           </Fragment>
         )}
       </DataConsumer>

@@ -210,6 +210,9 @@ li {
       margin-right: 0;
       width: 270px; } }
 
+.contact .title {
+  color: #59798E; }
+
 .hero {
   align-items: center;
   background-position: center;
@@ -243,6 +246,27 @@ li {
     display: block;
     margin: 10px 0 15px;
     width: 85%; }
+
+.footer {
+  background-color: #59798E;
+  color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px; }
+
+.footer-section {
+  flex: 0 0 50%;
+  width: 50%; }
+  @media only screen and (max-width: 600px) {
+    .footer-section {
+      flex: 0 0 100%;
+      width: 100%; } }
+  .footer-section .title {
+    font-size: 1.5rem; }
+
+.copyright {
+  display: block;
+  font-size: .8rem; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.85);

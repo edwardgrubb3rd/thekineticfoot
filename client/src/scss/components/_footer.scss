@@ -1,0 +1,27 @@
+
+.footer {
+  background-color: $persian-green;
+  color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+.footer-section {
+  flex: 0 0 50%;
+  width: 50%;
+
+  @include mediaQuery(max, $mobile) {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem; 
+  }
+}
+
+.copyright {
+  display: block;
+  font-size: .8rem;
+}

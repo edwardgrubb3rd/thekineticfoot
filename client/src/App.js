@@ -8,6 +8,7 @@ import Home from './pages/Home';
 
 // Components
 import Nav from './components/global/Nav';
+import Footer from './components/global/Footer';
 
 export default class App extends Component {
   render() {
@@ -21,7 +22,9 @@ export default class App extends Component {
           </DataConsumer>
           <Switch>
             <Route exact path="/" component={Home}/>
+            <Route exact path="*" component={Home} />
           </Switch>
+          <Footer />
         </Fragment>
       </BrowserRouter>
     );
