@@ -157,6 +157,7 @@ li {
   background-color: #FFFFFF;
   align-items: center;
   border-radius: 4px;
+  color: #1C1C1C;
   display: flex;
   font-weight: 600;
   height: 50px;
@@ -182,6 +183,7 @@ li {
   background-color: #59798E;
   align-items: center;
   border-radius: 4px;
+  color: #FFFFFF;
   display: flex;
   font-weight: 600;
   height: 50px;

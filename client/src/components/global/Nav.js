@@ -29,7 +29,7 @@ class Nav extends Component {
       <div className="navbar">
       	<div className="navbar-wrapper">
       		<div className="logo">
-      			<a href="/" className="navbar-link">Kinetic Foot & Ankle</a>
+            <Link to='/' className="navbar-link">Kinetic Foot & Ankle</Link>
       		</div>
       		<div className={this.state.class}>
       			{

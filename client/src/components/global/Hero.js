@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Hero = (props) => (
   <div className="hero" style={{backgroundImage: `url(${props.img})`}}>
@@ -8,10 +10,15 @@ const Hero = (props) => (
       <span className="subtitle">
         {props.content}
       </span>
-      <a href={props.link} className="cta-button" target="_blank">{props.button}</a>
+      {
+        props.link ?
+        <Link to={props.link} className="cta-button" target="_blank">{props.button}</Link>
+        :
+        null
+      }
     </div>
 
   </div>
 );
 
-export default Hero;
+export default withRouter(Hero);
