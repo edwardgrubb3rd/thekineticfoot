@@ -11,7 +11,8 @@ export const DataContext = React.createContext({
   about_sections: [],
   about_button_text: '',
   about_button_link: '',
-  links: []
+  links: [],
+  contact_number: ''
 });
 
 // This is the consumer of the values (state)
@@ -45,9 +46,10 @@ export class DataProvider extends Component {
         });
       });
     axios.get('/wp-json/acf/v3/pages/40')
-      .then(({data: {acf: {links}}}) => {
+      .then(({data: {acf: {links, contact_number}}}) => {
         this.setState({
-          links
+          links,
+          contact_number
         })
       })
   }

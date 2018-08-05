@@ -15,8 +15,8 @@ export default class App extends Component {
       <BrowserRouter>
         <Fragment>
           <DataConsumer>
-            {({data: {links}}) => (
-              <Nav links={links} />
+            {({data: {links, contact_number}}) => (
+              <Nav links={links} contact={contact_number} />
             )}
           </DataConsumer>
           <Switch>

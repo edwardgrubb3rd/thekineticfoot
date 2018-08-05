@@ -7,7 +7,21 @@ class Nav extends Component {
     super(props);
 
     this.state = {
-      class: 'navbar-menu'
+      class: 'navbar-menu',
+      contactLink: ''
+    }
+  }
+
+  convertNumber() {
+    if(this.props.contact) {
+      if(this.props.contact.includes('.')) {
+        let contactLink = this.props.contact.split('.').join('');
+        return contactLink;
+      }
+      if(this.props.contact.includes('-')) {
+        let contactLink = this.props.contact.split('-').join('');
+        return contactLink;
+      }
     }
   }
 
@@ -51,7 +65,7 @@ class Nav extends Component {
       			<div className="nav-list bar3"></div>
       		</div>
       		<div className="navbar-contact">
-      			<a href="tel:7202954864" className="navbar-link">720.295.4864</a>
+      			<a href={`tel:${this.convertNumber()}`} className="navbar-link">{this.props.contact}</a>
       		</div>
       	</div>
       </div>
