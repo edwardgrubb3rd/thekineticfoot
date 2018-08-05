@@ -20,7 +20,21 @@ class Nav extends Component {
           title: "Advanced Therapies",
           link: "/therapies"
         }
-      ]
+      ],
+      class: 'navbar-menu'
+    }
+  }
+
+  handleClick = () => {
+    if(this.state.class === 'navbar-menu') {
+      this.setState({
+        class: 'navbar-menu active'
+      });
+    }
+    if(this.state.class === 'navbar-menu active') {
+      this.setState({
+        class: 'navbar-menu'
+      });
     }
   }
 
@@ -31,7 +45,7 @@ class Nav extends Component {
       		<div className="logo">
       			<a href="/" className="navbar-link">Kinetic Foot & Ankle</a>
       		</div>
-      		<div className="navbar-menu">
+      		<div className={this.state.class}>
       			{
               this.state.links.map(({title, link}) => (
                 <div className="navbar-item" key={title}>
@@ -40,7 +54,7 @@ class Nav extends Component {
               ))
             }
       		</div>
-      		<div className="mobile-menu">
+      		<div className="mobile-menu" onClick={this.handleClick}>
       			<div className="nav-list bar1"></div>
       			<div className="nav-list bar2"></div>
       			<div className="nav-list bar3"></div>

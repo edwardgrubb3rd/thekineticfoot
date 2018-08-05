@@ -19,3 +19,27 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#wp stuff
+.env
+.DS_Store
+.zip
+.rar
+~
+.lock
+.swp
+.out
+.idea
+.sass-cache
+*.log
+node_modules
+build
+public
+tmp
+temp
+cache
+robots.txt
+uploads/*
+!uploads/index.php
+simple-backup
+upgrade
