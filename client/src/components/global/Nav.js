@@ -43,7 +43,12 @@ class Nav extends Component {
       <div className="navbar">
       	<div className="navbar-wrapper">
       		<div className="logo">
-            <Link to='/' className="navbar-link">Kinetic Foot & Ankle</Link>
+            {
+              this.props.logo ?
+              <Link to='/' className="navbar-link"><img src={this.props.logo} alt="the kinetic foot and ankle clinic logo"/></Link>
+              :
+              <Link to='/' className="navbar-link">Kinetic Foot & Ankle</Link>
+            }
       		</div>
       		<div className={this.state.class}>
       			{
