@@ -10,7 +10,8 @@ export const DataContext = React.createContext({
   about_title: '',
   about_sections: [],
   about_button_text: '',
-  about_button_link: ''
+  about_button_link: '',
+  links: []
 });
 
 // This is the consumer of the values (state)
@@ -37,13 +38,18 @@ export class DataProvider extends Component {
           button_text: hero.button_text,
           button_link: hero.button_link,
           background_image: hero.background_image,
-          about_title: about_title,
-          about_sections: about_sections,
-          about_button_text: about_button_text,
-          about_button_link: about_button_link
+          about_title,
+          about_sections,
+          about_button_text,
+          about_button_link
         });
       });
-    console.log(this.state);
+    axios.get('/wp-json/acf/v3/pages/40')
+      .then(({data: {acf: {links}}}) => {
+        this.setState({
+          links
+        })
+      })
   }
 
   render() {

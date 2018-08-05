@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { DataConsumer } from './context/DataContext';
 // Router
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -13,7 +14,11 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Fragment>
-          <Nav />
+          <DataConsumer>
+            {({data: {links}}) => (
+              <Nav links={links} />
+            )}
+          </DataConsumer>
           <Switch>
             <Route exact path="/" component={Home}/>
           </Switch>

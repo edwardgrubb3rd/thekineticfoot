@@ -7,20 +7,6 @@ class Nav extends Component {
     super(props);
 
     this.state = {
-      links: [
-        {
-          title: "Our Team",
-          link: "/team"
-        },
-        {
-          title: "Our Office",
-          link: "/office"
-        },
-        {
-          title: "Advanced Therapies",
-          link: "/therapies"
-        }
-      ],
       class: 'navbar-menu'
     }
   }
@@ -47,11 +33,16 @@ class Nav extends Component {
       		</div>
       		<div className={this.state.class}>
       			{
-              this.state.links.map(({title, link}) => (
-                <div className="navbar-item" key={title}>
-                  <Link to={link} className="navbar-link">{title}</Link>
-          			</div>
-              ))
+              this.props.links ?
+              (
+                this.props.links.map(({title, link}) => (
+                  <div className="navbar-item" key={title}>
+                    <Link to={link} className="navbar-link">{title}</Link>
+            			</div>
+                ))
+              )
+              :
+              null
             }
       		</div>
       		<div className="mobile-menu" onClick={this.handleClick}>

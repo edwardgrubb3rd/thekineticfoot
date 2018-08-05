@@ -61,6 +61,7 @@
 
 .navbar-link {
   color: $white;
+  text-transform: capitalize;
 
   &:hover {
     color: $light-gray;

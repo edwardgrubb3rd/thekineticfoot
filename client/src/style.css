@@ -285,7 +285,8 @@ li {
     padding: 5px 0; }
 
 .navbar-link {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  text-transform: capitalize; }
   .navbar-link:hover {
     color: #D4DBE3; }
 
