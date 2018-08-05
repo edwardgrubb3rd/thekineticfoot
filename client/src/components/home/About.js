@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const About = (props) => (
   <div className="about section">
@@ -10,7 +12,7 @@ const About = (props) => (
         (
           props.sections.map(({image, title, description}) => (
             <div className="about-item" key={title}>
-              <img className="about-item-img" src={image} alt="" />
+              <img className="about-item-img" src={image} alt="kinetic foot ankle team about us" />
               <span className="about-item-subtitle">{title}</span>
               <p className="about-item-desc">{description}</p>
             </div>
@@ -20,7 +22,15 @@ const About = (props) => (
         null
       }
     </div>
+
+    {
+      props.link ?
+      <Link to={props.link} className="btn-primary">{props.button}</Link>
+      :
+      null
+    }
+
   </div>
 )
 
-export default About;
+export default withRouter(About);

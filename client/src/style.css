@@ -112,10 +112,16 @@ li {
 
 /*** Import partials from the modules folder ***/
 .about {
+  align-items: center;
   background-color: #000;
+  display: flex;
+  flex-direction: column;
   text-align: center; }
   .about .title {
     color: #59798E; }
+  .about .btn-primary {
+    margin-top: 20px;
+    width: 50%; }
 
 .about-grid {
   display: flex;
