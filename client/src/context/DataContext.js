@@ -53,7 +53,16 @@ export class DataProvider extends Component {
           contact_number,
           logo
         });
-      })
+      });
+      axios.get('/wp-json/acf/v3/pages/50')
+        .then(({data: {acf: {social_media, contact_info, hours_of_operation, emergency_contact}}}) => {
+          this.setState({
+            social_media,
+            contact_info,
+            hours_of_operation,
+            emergency_contact
+          });
+        });
   }
 
   render() {

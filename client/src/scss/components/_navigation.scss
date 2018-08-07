@@ -60,11 +60,11 @@
 }
 
 .navbar-link {
-  color: $white;
+  color: $light-blue;
   text-transform: capitalize;
 
   &:hover {
-    color: $light-gray;
+    color: lighten($light-blue, 10);
   }
 }
 

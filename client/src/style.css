@@ -77,11 +77,13 @@ p {
   margin: 0; }
 
 p {
+  color: #1C1C1C;
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.25; }
 
 a {
+  color: #9FC3DA;
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.1;
@@ -113,12 +115,12 @@ li {
 /*** Import partials from the modules folder ***/
 .about {
   align-items: center;
-  background-color: #000;
+  background-color: #9FC3DA;
   display: flex;
   flex-direction: column;
   text-align: center; }
   .about .title {
-    color: #59798E; }
+    color: #233541; }
   .about .btn-primary {
     margin-top: 20px;
     width: 50%; }
@@ -150,13 +152,13 @@ li {
   width: 75%; }
 
 .about-item-subtitle {
-  color: #FFFFFF;
+  color: #1C1C1C;
   font-size: 1.5rem;
   text-transform: capitalize;
   margin: 10px 0; }
 
 .about-item-desc {
-  color: #FFFFFF;
+  color: #1C1C1C;
   width: 90%; }
 
 .cta-button {
@@ -173,6 +175,7 @@ li {
   text-transform: uppercase;
   width: 50%; }
   .cta-button:hover {
+    border: 1px solid #FFFFFF;
     background-color: #1C1C1C;
     color: #FFFFFF;
     cursor: pointer; }
@@ -186,10 +189,10 @@ li {
       width: 270px; } }
 
 .btn-primary {
-  background-color: #59798E;
+  background-color: #233541;
   align-items: center;
   border-radius: 4px;
-  color: #FFFFFF;
+  color: #D4DBE3;
   display: flex;
   font-weight: 600;
   height: 50px;
@@ -198,8 +201,9 @@ li {
   text-decoration: none;
   text-transform: uppercase; }
   .btn-primary:hover {
-    background-color: #FFFFFF;
-    color: #59798E;
+    border: 1px solid #233541;
+    background-color: #D4DBE3;
+    color: #233541;
     cursor: pointer; }
   @media only screen and (max-width: 600px) {
     .btn-primary {
@@ -248,8 +252,8 @@ li {
     width: 85%; }
 
 .footer {
-  background-color: #59798E;
-  color: #FFFFFF;
+  background-color: #233541;
+  color: #9FC3DA;
   display: flex;
   flex-wrap: wrap;
   padding: 25px; }
@@ -264,12 +268,32 @@ li {
   .footer-section .title {
     font-size: 1.5rem; }
 
+.right {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end; }
+
 .copyright {
   display: block;
   font-size: .8rem; }
 
 .social-contact {
-  display: flex; }
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; }
+
+.social-icon {
+  height: 40px;
+  width: 40px; }
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  text-align: right; }
+
+.city-state {
+  display: flex;
+  justify-content: flex-end; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.85);
@@ -320,10 +344,10 @@ li {
     padding: 5px 0; }
 
 .navbar-link {
-  color: #FFFFFF;
+  color: #9FC3DA;
   text-transform: capitalize; }
   .navbar-link:hover {
-    color: #D4DBE3; }
+    color: #c4dae8; }
 
 .mobile-menu {
   display: none;

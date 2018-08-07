@@ -1,13 +1,13 @@
 
 .about {
   align-items: center;
-  background-color: $black;
+  background-color: $light-blue;
   display: flex;
   flex-direction: column;
   text-align: center;
 
   .title {
-    color: $persian-green;
+    color: $elephant;
   }
 
   .btn-primary {
@@ -48,13 +48,13 @@
 }
 
 .about-item-subtitle {
-  color: $white;
+  color: $dark-gray;
   font-size: 1.5rem;
   text-transform: capitalize;
   margin: 10px 0;
 }
 
 .about-item-desc {
-  color: $white;
+  color: $dark-gray;
   width: 90%;
 }

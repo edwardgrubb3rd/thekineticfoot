@@ -1,7 +1,7 @@
 
 .footer {
-  background-color: $persian-green;
-  color: $white;
+  background-color: $elephant;
+  color: $light-blue;
   display: flex;
   flex-wrap: wrap;
   padding: 25px;
@@ -21,6 +21,12 @@
   }
 }
 
+.right {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .copyright {
   display: block;
   font-size: .8rem;
@@ -28,4 +34,22 @@
 
 .social-contact {
   display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.social-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.city-state {
+  display: flex;
+  justify-content: flex-end;
 }

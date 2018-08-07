@@ -14,18 +14,33 @@ export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Fragment>
-          <DataConsumer>
-            {({data: {links, contact_number, logo}}) => (
-              <Nav links={links} contact={contact_number} logo={logo} />
-            )}
-          </DataConsumer>
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="*" component={Home} />
-          </Switch>
-          <Footer />
-        </Fragment>
+        <DataConsumer>
+          {({data: {
+            links,
+            contact_number,
+            logo,
+            social_media,
+            contact_info,
+            hours_of_operation,
+            emergency_contact
+          }}) => (
+            <Fragment>
+              <Nav
+                links={links}
+                contact={contact_number}
+                logo={logo} />
+              <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="*" component={Home} />
+              </Switch>
+              <Footer
+                social_media={social_media}
+                contact_info={contact_info}
+                hours_of_operation={hours_of_operation}
+                emergency_contact={emergency_contact} />
+            </Fragment>
+          )}
+        </DataConsumer>
       </BrowserRouter>
     );
   }

@@ -34,12 +34,14 @@ p {
 }
 
 p {
+  color: $dark-gray;
   font-family: inherit;
   font-size: $font-size-base;
   line-height: 1.25;
 }
 
 a {
+  color: $light-blue;
   font-family: inherit;
   font-size: $font-size-base;
   line-height: 1.1;
