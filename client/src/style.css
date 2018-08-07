@@ -357,6 +357,10 @@ li {
   font-size: 1.5rem;
   margin-bottom: 5px; }
 
+.map {
+  height: 450px;
+  width: 450px; }
+
 .hero {
   align-items: center;
   background-position: center;

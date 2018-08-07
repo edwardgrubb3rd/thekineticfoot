@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Map from '../global/Map';
+
 export default class Contact extends Component {
   constructor(props) {
     super(props);
@@ -27,9 +29,7 @@ export default class Contact extends Component {
             :
             null
           }
-          <div className="map">
-            google map
-          </div>
+          <Map />
         </div>
       </div>
     )
