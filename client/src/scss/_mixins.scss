@@ -24,9 +24,6 @@
     @if $borderColor {
       border-color: $backgroundColor;
     }
-    @else {
-      border: 1px solid $backgroundColor;
-    }
     background-color: $fontColor;
     color: $backgroundColor;
     cursor: pointer;

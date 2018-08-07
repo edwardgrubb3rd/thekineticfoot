@@ -24,6 +24,7 @@
 .right {
   align-items: flex-end;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
 }
 
@@ -35,7 +36,7 @@
 .social-contact {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .social-icon {
@@ -46,10 +47,8 @@
 .footer-contact {
   display: flex;
   flex-direction: column;
-  text-align: right;
 }
 
 .city-state {
   display: flex;
-  justify-content: flex-end;
 }

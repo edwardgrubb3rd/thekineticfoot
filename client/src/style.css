@@ -175,7 +175,6 @@ li {
   text-transform: uppercase;
   width: 50%; }
   .cta-button:hover {
-    border: 1px solid #FFFFFF;
     background-color: #1C1C1C;
     color: #FFFFFF;
     cursor: pointer; }
@@ -189,10 +188,10 @@ li {
       width: 270px; } }
 
 .btn-primary {
-  background-color: #233541;
+  background-color: #59798E;
   align-items: center;
   border-radius: 4px;
-  color: #D4DBE3;
+  color: #233541;
   display: flex;
   font-weight: 600;
   height: 50px;
@@ -201,9 +200,8 @@ li {
   text-decoration: none;
   text-transform: uppercase; }
   .btn-primary:hover {
-    border: 1px solid #233541;
-    background-color: #D4DBE3;
-    color: #233541;
+    background-color: #233541;
+    color: #59798E;
     cursor: pointer; }
   @media only screen and (max-width: 600px) {
     .btn-primary {
@@ -271,6 +269,7 @@ li {
 .right {
   align-items: flex-end;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end; }
 
 .copyright {
@@ -280,7 +279,7 @@ li {
 .social-contact {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px; }
+  margin-bottom: 10px; }
 
 .social-icon {
   height: 40px;
@@ -288,12 +287,10 @@ li {
 
 .footer-contact {
   display: flex;
-  flex-direction: column;
-  text-align: right; }
+  flex-direction: column; }
 
 .city-state {
-  display: flex;
-  justify-content: flex-end; }
+  display: flex; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.85);

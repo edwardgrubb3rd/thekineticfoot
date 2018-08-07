@@ -5,5 +5,5 @@
 }
 
 .btn-primary {
-  @include button($elephant, null, $light-gray);
+  @include button($persian-green, null, $elephant);
 }
