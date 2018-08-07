@@ -20,6 +20,16 @@ $font-size-sm: ($font-size-base * 0.875) !default;
     font-size: $font-size-base * (6 - $i);
     font-weight: 400;
     line-height: (($font-size-base * (6 - $i)) + .1rem);
+
+    @include mediaQuery(max, $tablet) {
+      font-size: $font-size-sm * (6 - $i);
+      line-height: (($font-size-sm * (6 - $i)) + .1rem);
+    }
+
+    @include mediaQuery(max, $mobile) {
+      font-size: $font-size-base * (6 - $i);
+      line-height: (($font-size-base * (6 - $i)) + .1rem);
+    }
   }
 }
 
@@ -75,4 +85,14 @@ li {
   font-weight: 600;
   line-height: 3.1rem;
   text-transform: uppercase;
+
+  @include mediaQuery(max, $tablet) {
+    font-size: 2rem;
+    line-height: 2.1rem;
+  }
+
+  @include mediaQuery(max, $mobile) {
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+  }
 }

@@ -4,12 +4,16 @@
   color: $light-blue;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 25px;
+
+  @include mediaQuery(max, $mobile) {
+    flex-direction: column;
+    padding: 15px;
+  }
 }
 
 .footer-section {
-  flex: 0 0 50%;
-  width: 50%;
 
   @include mediaQuery(max, $mobile) {
     flex: 0 0 100%;
@@ -17,15 +21,42 @@
   }
 
   .title {
+    display: block;
     font-size: 1.5rem;
+    line-height: 1.55rem;
+
+    @include mediaQuery(max, $tablet) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.left {
+  flex: 0 0 65%;
+  width: 65%;
+
+  @include mediaQuery(max, $tablet) {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    width: 100%;
   }
 }
 
 .right {
   align-items: flex-end;
   display: flex;
+  flex: 0 0 30%;
   flex-direction: column;
   justify-content: flex-end;
+  width: 30%;
+
+  @include mediaQuery(max, $tablet) {
+    align-items: flex-start;
+    flex: 0 0 100%;
+    margin-top: 5px;
+    width: 100%;
+  }
 }
 
 .copyright {

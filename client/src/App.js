@@ -9,6 +9,7 @@ import Home from './pages/Home';
 // Components
 import Nav from './components/global/Nav';
 import Footer from './components/global/Footer';
+import Spinner from './components/global/Spinner';
 
 export default class App extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class App extends Component {
       <BrowserRouter>
         <DataConsumer>
           {({data: {
+            loading,
             links,
             contact_number,
             logo,
@@ -24,6 +26,9 @@ export default class App extends Component {
             hours_of_operation,
             emergency_contact
           }}) => (
+            loading ?
+            <Spinner />
+            :
             <Fragment>
               <Nav
                 links={links}

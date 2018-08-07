@@ -56,36 +56,84 @@ h1 {
   font-size: 5rem;
   font-weight: 400;
   line-height: 5.1rem; }
+  @media only screen and (max-width: 900px) {
+    h1 {
+      font-size: 4.375rem;
+      line-height: 4.475rem; } }
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 5rem;
+      line-height: 5.1rem; } }
 
 h2 {
   font-family: inherit;
   font-size: 4rem;
   font-weight: 400;
   line-height: 4.1rem; }
+  @media only screen and (max-width: 900px) {
+    h2 {
+      font-size: 3.5rem;
+      line-height: 3.6rem; } }
+  @media only screen and (max-width: 600px) {
+    h2 {
+      font-size: 4rem;
+      line-height: 4.1rem; } }
 
 h3 {
   font-family: inherit;
   font-size: 3rem;
   font-weight: 400;
   line-height: 3.1rem; }
+  @media only screen and (max-width: 900px) {
+    h3 {
+      font-size: 2.625rem;
+      line-height: 2.725rem; } }
+  @media only screen and (max-width: 600px) {
+    h3 {
+      font-size: 3rem;
+      line-height: 3.1rem; } }
 
 h4 {
   font-family: inherit;
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.1rem; }
+  @media only screen and (max-width: 900px) {
+    h4 {
+      font-size: 1.75rem;
+      line-height: 1.85rem; } }
+  @media only screen and (max-width: 600px) {
+    h4 {
+      font-size: 2rem;
+      line-height: 2.1rem; } }
 
 h5 {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.1rem; }
+  @media only screen and (max-width: 900px) {
+    h5 {
+      font-size: 0.875rem;
+      line-height: 0.975rem; } }
+  @media only screen and (max-width: 600px) {
+    h5 {
+      font-size: 1rem;
+      line-height: 1.1rem; } }
 
 h6 {
   font-family: inherit;
   font-size: 0rem;
   font-weight: 400;
   line-height: 0.1rem; }
+  @media only screen and (max-width: 900px) {
+    h6 {
+      font-size: 0rem;
+      line-height: 0.1rem; } }
+  @media only screen and (max-width: 600px) {
+    h6 {
+      font-size: 0rem;
+      line-height: 0.1rem; } }
 
 h1,
 h2,
@@ -131,6 +179,14 @@ li {
   font-weight: 600;
   line-height: 3.1rem;
   text-transform: uppercase; }
+  @media only screen and (max-width: 900px) {
+    .title {
+      font-size: 2rem;
+      line-height: 2.1rem; } }
+  @media only screen and (max-width: 600px) {
+    .title {
+      font-size: 2.2rem;
+      line-height: 2.3rem; } }
 
 /*** Import partials from the modules folder ***/
 .about {
@@ -232,6 +288,31 @@ li {
       margin-right: 0;
       width: 270px; } }
 
+.btn-secondary {
+  background-color: #9FC3DA;
+  align-items: center;
+  border-radius: 4px;
+  color: #233541;
+  display: flex;
+  font-weight: 600;
+  height: 50px;
+  justify-content: center;
+  max-width: 372px;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .btn-secondary:hover {
+    background-color: #233541;
+    color: #9FC3DA;
+    cursor: pointer; }
+  @media only screen and (max-width: 600px) {
+    .btn-secondary {
+      width: 100%; } }
+  @media only screen and (max-width: 320px) {
+    .btn-secondary {
+      margin-left: 0;
+      margin-right: 0;
+      width: 270px; } }
+
 .contact {
   align-items: center;
   display: flex;
@@ -243,6 +324,11 @@ li {
   display: flex;
   justify-content: space-between;
   width: 80%; }
+  @media only screen and (max-width: 900px) {
+    .contact-section {
+      align-items: center;
+      flex-direction: column;
+      width: 90%; } }
 
 .contact-form {
   background-color: #FFFFFF;
@@ -255,7 +341,15 @@ li {
   padding: 10px 15px;
   text-align: center;
   width: 45%; }
-  .contact-form .btn-primary {
+  @media only screen and (max-width: 900px) {
+    .contact-form {
+      margin: 10px 0;
+      width: 65%; } }
+  @media only screen and (max-width: 600px) {
+    .contact-form {
+      margin: 10px 0;
+      width: 100%; } }
+  .contact-form .btn-secondary {
     margin: 10px auto 0;
     width: 80%; }
 
@@ -302,23 +396,49 @@ li {
   color: #9FC3DA;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 25px; }
-
-.footer-section {
-  flex: 0 0 50%;
-  width: 50%; }
   @media only screen and (max-width: 600px) {
-    .footer-section {
+    .footer {
+      flex-direction: column;
+      padding: 15px; } }
+
+@media only screen and (max-width: 600px) {
+  .footer-section {
+    flex: 0 0 100%;
+    width: 100%; } }
+
+.footer-section .title {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.55rem; }
+  @media only screen and (max-width: 900px) {
+    .footer-section .title {
+      margin-bottom: 10px; } }
+
+.left {
+  flex: 0 0 65%;
+  width: 65%; }
+  @media only screen and (max-width: 900px) {
+    .left {
+      display: flex;
+      flex-direction: column;
       flex: 0 0 100%;
       width: 100%; } }
-  .footer-section .title {
-    font-size: 1.5rem; }
 
 .right {
   align-items: flex-end;
   display: flex;
+  flex: 0 0 30%;
   flex-direction: column;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  width: 30%; }
+  @media only screen and (max-width: 900px) {
+    .right {
+      align-items: flex-start;
+      flex: 0 0 100%;
+      margin-top: 5px;
+      width: 100%; } }
 
 .copyright {
   display: block;
@@ -428,3 +548,22 @@ li {
   @media only screen and (max-width: 600px) {
     .navbar-contact {
       left: 0; } }
+
+.spinner:before {
+  animation: spinner 1s linear infinite;
+  border-radius: 50%;
+  border-right: 2px solid transparent;
+  border-top: 2px solid #9FC3DA;
+  box-sizing: border-box;
+  content: '';
+  height: 60px;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  position: fixed;
+  top: 50%;
+  width: 60px; }
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg); } }

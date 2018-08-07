@@ -7,3 +7,7 @@
 .btn-primary {
   @include button($persian-green, null, $elephant);
 }
+
+.btn-secondary {
+  @include button($light-blue, null, $elephant);
+}

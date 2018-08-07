@@ -13,6 +13,12 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
+
+  @include mediaQuery(max, $tablet) {
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 .contact-form {
@@ -27,7 +33,17 @@
   text-align: center;
   width: 45%;
 
-  .btn-primary {
+  @include mediaQuery(max, $tablet) {
+    margin: 10px 0;
+    width: 65%;
+  }
+
+  @include mediaQuery(max, $mobile) {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .btn-secondary {
     margin: 10px auto 0;
     width: 80%;
   }
