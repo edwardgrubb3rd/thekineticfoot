@@ -1,5 +1,9 @@
 * {
 	box-sizing: border-box;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 html {
@@ -28,6 +32,28 @@ body {
 
 main {
 	display: block;
+}
+
+input {
+	border: 1px solid $light-gray;
+	border-radius: 2px;
+	font-size: 14px;
+	margin: 3px 0;
+	padding: 10px;
+}
+
+textarea {
+	background-color: transparent;
+	border: 1px solid $light-gray;
+	border-radius: 2px;
+	font-size: 14px;
+	resize: none;
+  outline: none;
+	padding: 10px;
+
+	&:placeholder {
+		font-size: 14px;
+	}
 }
 
 .section {

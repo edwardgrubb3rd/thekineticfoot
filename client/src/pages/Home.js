@@ -19,7 +19,9 @@ export default class Home extends Component {
           about_title,
           about_sections,
           about_button_link,
-          about_button_text
+          about_button_text,
+          contact_title,
+          contact_form
         }}) => (
           <Fragment>
             <Hero
@@ -34,7 +36,9 @@ export default class Home extends Component {
               button={about_button_text}
               link={about_button_link}
                />
-            <Contact />
+               <Contact
+                 title={contact_title}
+                 form={contact_form} />
           </Fragment>
         )}
       </DataConsumer>

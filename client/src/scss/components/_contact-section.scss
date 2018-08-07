@@ -1,7 +1,39 @@
 
 .contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 
   .title {
     color: $persian-green;
   }
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.contact-form {
+  background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: 2px;
+  box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  width: 45%;
+
+  .btn-primary {
+    margin: 10px auto 0;
+    width: 80%;
+  }
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }

@@ -33,7 +33,15 @@ export class DataProvider extends Component {
 
   getData = () => {
     axios.get('/wp-json/acf/v3/pages/5/')
-      .then(({data: {acf: {hero, about_title, about_sections, about_button_text, about_button_link}}}) => {
+      .then(({data: {acf: {
+        hero,
+        about_title,
+        about_sections,
+        about_button_text,
+        about_button_link,
+        contact_title,
+        contact_form
+      }}}) => {
         this.setState({
           hero_title: hero.hero_title,
           hero_subtitle: hero.hero_subtitle,
@@ -43,7 +51,9 @@ export class DataProvider extends Component {
           about_title,
           about_sections,
           about_button_text,
-          about_button_link
+          about_button_link,
+          contact_title,
+          contact_form
         });
       });
     axios.get('/wp-json/acf/v3/pages/40')
