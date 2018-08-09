@@ -1,17 +1,18 @@
 import React from 'react';
+import Data from '../../data/Hero.json';
 
 const Hero = (props) => (
-  <div className="hero" style={{backgroundImage: `url(${props.img})`}}>
+  <div className="hero" style={{backgroundImage: `url(${Data.img})`}}>
     <div className="hero-overlay"></div>
 
      <div className="hero-content">
-      <h1 className="title">{props.title}</h1>
+      <h1 className="title">{Data.title}</h1>
       <span className="subtitle">
-        {props.content}
+        {Data.content}
       </span>
       {
-        props.link ?
-        <a href={props.link} className="cta-button" target="_blank">{props.button}</a>
+        Data.link ?
+        <a href={Data.link} className="cta-button" target="_blank">{Data.button}</a>
         :
         null
       }

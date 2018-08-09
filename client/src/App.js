@@ -18,9 +18,6 @@ export default class App extends Component {
         <DataConsumer>
           {({data: {
             loading,
-            links,
-            contact_number,
-            logo,
             social_media,
             contact_info,
             hours_of_operation,
@@ -30,19 +27,12 @@ export default class App extends Component {
             <Spinner />
             :
             <Fragment>
-              <Nav
-                links={links}
-                contact={contact_number}
-                logo={logo} />
+              <Nav />
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="*" component={Home} />
               </Switch>
-              <Footer
-                social_media={social_media}
-                contact_info={contact_info}
-                hours_of_operation={hours_of_operation}
-                emergency_contact={emergency_contact} />
+              <Footer />
             </Fragment>
           )}
         </DataConsumer>

@@ -1,16 +1,17 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
+import Data from '../../data/About.json';
 
 const About = (props) => (
   <div className="about section">
-    <span className="title">{props.title}</span>
+    <span className="title">{Data.title}</span>
 
     <div className="about-grid">
       {
-        props.sections ?
+        Data.sections ?
         (
-          props.sections.map(({image, title, description}) => (
+          Data.sections.map(({image, title, description}) => (
             <div className="about-item" key={title}>
               <img className="about-item-img" src={image} alt="kinetic foot ankle team about us" />
               <span className="about-item-subtitle">{title}</span>
@@ -24,8 +25,8 @@ const About = (props) => (
     </div>
 
     {
-      props.link ?
-      <Link to={props.link} className="btn-secondary">{props.button}</Link>
+      Data.link ?
+      <Link to={Data.link} className="btn-secondary">{Data.button}</Link>
       :
       null
     }

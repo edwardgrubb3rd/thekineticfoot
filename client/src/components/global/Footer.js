@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Data from '../../data/Footer.json';
 
 class Footer extends Component {
   convertNumber = (num) => {
@@ -21,16 +22,16 @@ class Footer extends Component {
           <span className="title">The Kinetic Foot & Ankle Clinic</span>
           <div className="footer-contact">
             {
-              this.props.contact_info ?
+              Data.contact_info ?
               <Fragment>
-                <span>{this.props.contact_info.street_address}</span>
+                <span>{Data.contact_info.street_address}</span>
                 <div className="city-state">
-                  <span>{this.props.contact_info.city}, &nbsp;</span>
-                  <span>{this.props.contact_info.state}</span>
+                  <span>{Data.contact_info.city}, &nbsp;</span>
+                  <span>{Data.contact_info.state}</span>
                 </div>
-                <span>{this.props.contact_info.zip}</span>
-                <a href={`tel:${this.convertNumber(this.props.contact_info.phone)}`}>Phone: {this.props.contact_info.phone}</a>
-                <span>Fax: {this.props.contact_info.fax}</span>
+                <span>{Data.contact_info.zip}</span>
+                <a href={`tel:${this.convertNumber(Data.contact_info.phone)}`}>Phone: {Data.contact_info.phone}</a>
+                <span>Fax: {Data.contact_info.fax}</span>
               </Fragment>
               :
               null
@@ -39,10 +40,10 @@ class Footer extends Component {
         </div>
         <div className="footer-section right">
           {
-            this.props.social_media ?
-            <div className="social-contact" style={{width: `calc(${this.props.social_media.length} * 50px)`}}>
+            Data.social_media ?
+            <div className="social-contact" style={{width: `calc(${Data.social_media.length} * 50px)`}}>
               {
-                this.props.social_media.map(({link, social_app}) => (
+                Data.social_media.map(({link, social_app}) => (
                   <a href={link} key={social_app} className="social-icon">
                     <img src={require(`../../assets/icons/${social_app.toLowerCase()}.svg`)} alt={`'${social_app}' dr house the kinetic foot`}/>
                   </a>
