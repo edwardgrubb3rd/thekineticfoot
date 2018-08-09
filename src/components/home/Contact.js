@@ -23,7 +23,7 @@ export default class Contact extends Component {
                 </div>
                 <div className="form-field">
                   <label htmlFor="message">Message</label>
-                  <textarea name="message" name="message" cols="30" rows="10"></textarea>
+                  <textarea name="message" cols="30" rows="10"></textarea>
                 </div>
                 <button className="btn-secondary no-hover" onClick={(e) => {e.preventDefault()}}>{Data.form.button_text}</button>
               </form>
