@@ -2,7 +2,8 @@ import React from 'react';
 import Data from '../../data/Hero.json';
 
 const Hero = (props) => (
-  <div className="hero" style={{backgroundImage: `url(require(../../assets/img/${Data.img}))`}}>
+  // <div className="hero" style={{backgroundImage: `url(require(../../assets/img/${Data.img}))`}}>
+  <div className="hero">
     <div className="hero-overlay"></div>
 
      <div className="hero-content">
