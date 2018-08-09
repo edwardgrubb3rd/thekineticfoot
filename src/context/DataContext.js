@@ -29,7 +29,7 @@ export class DataProvider extends Component {
       this.setState({
         loading: false
       });
-    }, 1000);
+    }, 250);
   }
 
   render() {
