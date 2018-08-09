@@ -30,7 +30,7 @@ class Footer extends Component {
                   <span>{Data.contact_info.state}</span>
                 </div>
                 <span>{Data.contact_info.zip}</span>
-                <a href={`tel:${this.convertNumber(Data.contact_info.phone)}`}>Phone: {Data.contact_info.phone}</a>
+                <a className="footer-link" href={`tel:${this.convertNumber(Data.contact_info.phone)}`}>Phone: {Data.contact_info.phone}</a>
                 <span>Fax: {Data.contact_info.fax}</span>
               </Fragment>
               :

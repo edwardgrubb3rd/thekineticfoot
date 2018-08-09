@@ -43,6 +43,12 @@
   }
 }
 
+.footer-link {
+  @include mediaQuery(max, $tablet) {
+    font-size: 1rem;
+  }
+}
+
 .right {
   align-items: flex-end;
   display: flex;
