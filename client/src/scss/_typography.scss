@@ -62,6 +62,10 @@ a {
   }
 }
 
+a.darken {
+  color: darken($light-blue, 35);
+}
+
 button {
   font-family: inherit;
   font-size: $font-size-base;

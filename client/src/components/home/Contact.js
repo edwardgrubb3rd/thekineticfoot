@@ -31,7 +31,7 @@ export default class Contact extends Component {
                 </div>
                 <a href="https://www.google.com/maps?daddr=12510+East+Iliff+Avenue+Ste.+120,+Aurora,+Colorado+80014,+United+States"
                   target="_blank"
-                  className="form-title"
+                  className="form-title darken"
                   rel="noopener noreferrer">
                   Directions To Our Clinic
                 </a>

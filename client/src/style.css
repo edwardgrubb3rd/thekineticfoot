@@ -160,6 +160,9 @@ a {
     a {
       font-size: 0.8rem; } }
 
+a.darken {
+  color: #376d8f; }
+
 button {
   font-family: inherit;
   font-size: 1rem;
