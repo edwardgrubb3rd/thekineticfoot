@@ -15,15 +15,15 @@ export default class Contact extends Component {
                 <span className="form-title">{Data.form.form_title}</span>
                 <div className="form-field">
                   <label htmlFor="name">Name</label>
-                  <input type="text" name="name"/>
+                  <input type="text" id="name" aria-label="name"/>
                 </div>
                 <div className="form-field">
                   <label htmlFor="email">Email</label>
-                  <input type="email" name="email"/>
+                  <input type="email" id="email" aria-label="email"/>
                 </div>
                 <div className="form-field">
                   <label htmlFor="message">Message</label>
-                  <textarea name="message" cols="30" rows="10"></textarea>
+                  <textarea id="message" aria-label="message" cols="30" rows="10"></textarea>
                 </div>
                 <button className="btn-secondary no-hover" onClick={(e) => {e.preventDefault()}}>{Data.form.button_text}</button>
               </form>
