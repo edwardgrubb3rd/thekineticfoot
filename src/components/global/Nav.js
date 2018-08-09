@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import Data from '../../data/Nav.json';
@@ -54,25 +54,32 @@ class Nav extends Component {
               <Link to='/' className="navbar-link">Kinetic Foot & Ankle</Link>
             }
       		</div>
-      		<div className={this.state.class}>
-      			{
-              Data.links ?
-              (
-                Data.links.map(({title, link}) => (
-                  <div className="navbar-item" key={title}>
-                    <Link to={link} className="navbar-link">{title}</Link>
-            			</div>
-                ))
-              )
-              :
-              null
-            }
-      		</div>
-      		<div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
-      			<div className="nav-list bar1"></div>
-      			<div className="nav-list bar2"></div>
-      			<div className="nav-list bar3"></div>
-      		</div>
+      		{
+            Data.linkActive ?
+            <Fragment>
+              <div className={this.state.class}>
+          			{
+                  Data.links ?
+                  (
+                    Data.links.map(({title, link}) => (
+                      <div className="navbar-item" key={title}>
+                        <Link to={link} className="navbar-link">{title}</Link>
+                			</div>
+                    ))
+                  )
+                  :
+                  null
+                }
+          		</div>
+          		<div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
+          			<div className="nav-list bar1"></div>
+          			<div className="nav-list bar2"></div>
+          			<div className="nav-list bar3"></div>
+          		</div>
+            </Fragment>
+            :
+            null
+          }
       		<div className="navbar-contact">
       			<a href={`tel:${this.convertNumber()}`} className="navbar-link">{Data.contact}</a>
       		</div>

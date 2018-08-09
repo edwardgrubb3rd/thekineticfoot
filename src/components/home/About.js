@@ -25,7 +25,7 @@ const About = (props) => (
     </div>
 
     {
-      Data.link ?
+      Data.linkActive ?
       <Link to={Data.link} className="btn-secondary">{Data.button}</Link>
       :
       null
