@@ -14,14 +14,10 @@ import Spinner from './components/global/Spinner';
 export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <DataConsumer>
           {({data: {
             loading,
-            social_media,
-            contact_info,
-            hours_of_operation,
-            emergency_contact
           }}) => (
             loading ?
             <Spinner />
