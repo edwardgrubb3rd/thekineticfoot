@@ -402,7 +402,17 @@ li {
   background-size: cover;
   display: flex;
   height: 780px;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
+
+.hero-overlay {
+  background-color: rgba(35, 53, 65, 0.4);
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1; }
 
 .hero-content {
   align-items: center;
@@ -410,9 +420,14 @@ li {
   border-radius: 2px;
   display: flex;
   flex-direction: column;
+  left: 50%;
   padding: 25px;
+  position: absolute;
   text-align: center;
-  width: 45%; }
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  z-index: 2; }
   @media only screen and (max-width: 900px) {
     .hero-content {
       padding: 20px;
@@ -503,7 +518,8 @@ li {
   max-width: 1440px;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 3; }
 
 .navbar-wrapper {
   align-items: center;
