@@ -2,15 +2,15 @@
   "links": [
     {
       "title": "our team",
-      "link": "/team"
+      "link": "#"
     },
     {
       "title": "our office",
-      "link": "/office"
+      "link": "3"
     },
     {
       "title": "advanced therapies",
-      "link": "/therapies"
+      "link": "#"
     }
   ],
   "contact": "720.295.4864",
