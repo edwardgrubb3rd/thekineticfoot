@@ -9,7 +9,8 @@ class Nav extends Component {
 
     this.state = {
       class: 'navbar-menu',
-      contactLink: ''
+      contactLink: '',
+      bar: ''
     }
   }
 
@@ -29,12 +30,14 @@ class Nav extends Component {
   handleClick = () => {
     if(this.state.class === 'navbar-menu') {
       this.setState({
-        class: 'navbar-menu active'
+        class: 'navbar-menu mobile',
+        bar: 'change'
       });
     }
-    if(this.state.class === 'navbar-menu active') {
+    if(this.state.class === 'navbar-menu mobile') {
       this.setState({
-        class: 'navbar-menu'
+        class: 'navbar-menu',
+        bar: ''
       });
     }
   }
@@ -65,7 +68,7 @@ class Nav extends Component {
               null
             }
       		</div>
-      		<div className="mobile-menu" onClick={this.handleClick}>
+      		<div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
       			<div className="nav-list bar1"></div>
       			<div className="nav-list bar2"></div>
       			<div className="nav-list bar3"></div>
