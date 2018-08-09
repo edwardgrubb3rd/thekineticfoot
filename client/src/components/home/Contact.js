@@ -15,7 +15,7 @@ export default class Contact extends Component {
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email"/>
                 <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
-                <button className="btn-secondary">{this.props.form.button_text}</button>
+                <button className="btn-secondary no-hover">{this.props.form.button_text}</button>
               </form>
               <div className="more-info">
                 <span className="form-title">Hours of Operation</span>

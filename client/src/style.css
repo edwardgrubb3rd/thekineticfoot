@@ -255,8 +255,7 @@ li {
   text-transform: uppercase;
   width: 50%; }
   .cta-button:hover {
-    background-color: #1C1C1C;
-    color: #FFFFFF;
+    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
   @media only screen and (max-width: 600px) {
     .cta-button {
@@ -280,8 +279,7 @@ li {
   text-decoration: none;
   text-transform: uppercase; }
   .btn-primary:hover {
-    background-color: #233541;
-    color: #59798E;
+    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
   @media only screen and (max-width: 600px) {
     .btn-primary {
@@ -305,8 +303,7 @@ li {
   text-decoration: none;
   text-transform: uppercase; }
   .btn-secondary:hover {
-    background-color: #233541;
-    color: #9FC3DA;
+    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
   @media only screen and (max-width: 600px) {
     .btn-secondary {
@@ -316,6 +313,10 @@ li {
       margin-left: 0;
       margin-right: 0;
       width: 270px; } }
+
+.no-hover:hover {
+  box-shadow: none;
+  cursor: pointer; }
 
 .contact {
   align-items: center;

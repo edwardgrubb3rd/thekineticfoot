@@ -21,11 +21,7 @@
   text-transform: uppercase;
 
   &:hover {
-    @if $borderColor {
-      border-color: $backgroundColor;
-    }
-    background-color: $fontColor;
-    color: $backgroundColor;
+    box-shadow: $box-shadow;
     cursor: pointer;
   }
 

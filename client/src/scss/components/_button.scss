@@ -11,3 +11,10 @@
 .btn-secondary {
   @include button($light-blue, null, $elephant);
 }
+
+.no-hover {
+  &:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
