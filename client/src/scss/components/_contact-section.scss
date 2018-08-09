@@ -77,6 +77,10 @@
   flex-direction: column;
   margin: 10px 0 25px;
   width: 80%;
+
+  @include mediaQuery(max, $tablet) {
+    width: 100%;
+  }
 }
 
 .time-slot {

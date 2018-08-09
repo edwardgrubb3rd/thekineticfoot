@@ -193,6 +193,7 @@ li {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 20px;
   text-align: center; }
   .about .title {
     color: #59798E; }
@@ -226,6 +227,7 @@ li {
   @media only screen and (max-width: 900px) {
     .about-item {
       flex: 0 0 80%;
+      margin: 15px 0;
       width: 80%; } }
 
 .about-item-img {
@@ -382,6 +384,9 @@ li {
   flex-direction: column;
   margin: 10px 0 25px;
   width: 80%; }
+  @media only screen and (max-width: 900px) {
+    .hours-operation {
+      width: 100%; } }
 
 .time-slot {
   display: flex;
