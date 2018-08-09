@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:8888/",
+  "homepage" : "http://trevans24.github.io/thekineticfoot",
   "dependencies": {
     "axios": "^0.18.0",
     "google-map-react": "^1.0.6",
@@ -22,6 +23,8 @@
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   }
 }
