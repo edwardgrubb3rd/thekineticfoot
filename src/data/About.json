@@ -4,17 +4,17 @@
     {
       "title": "Our Health Mission",
       "description": "Our experienced medical professionals put your healing needs first. We are proud to provide a high quality level of customer service, medical experience, and commitment to health and wellness to all our patients. Our goal is to make you feel better as quickly as possible.",
-      "image": "../../assets/icons/heart.svg"
+      "image": "/assets/icons/heart.svg"
     },
     {
       "title": "Experience and Professionalism",
       "description": "With years of experience, our medical team will assess you and create a custom recovery plan that's right for you. We understand the importance of educating you on the most effective ways to take care of your body, so that you can heal quickly. We treat the source of foot pain. Podiatry in Denver Metro Area.  ",
-      "image": "../../assets/icons/doctor.svg"
+      "image": "/assets/icons/doctor.svg"
     },
     {
       "title": "A Team Who Cares",
       "description": "Not only will our team treat your existing conditions, we also work to prevent pain and illness from occurring. We strive to help you improve your quality of life, achieve your wellness goals, and heal your body to live your best life possible.  ",
-      "image": "../../assets/icons/hands.svg"
+      "image": "/assets/icons/hands.svg"
     }
   ],
   "button": "find out more",
