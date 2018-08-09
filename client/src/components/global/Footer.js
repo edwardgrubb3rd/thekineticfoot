@@ -1,9 +1,4 @@
 import React, { Component, Fragment } from 'react';
-// import { Facebook } from '../../assets/icons/facebook.svg';
-// import { Twitter } from '../../assets/icons/twitter.svg';
-// import { LinkedIn } from '../../assets/icons/linkedin.svg';
-// import { YouTube } from '../../assets/icons/youtube.svg';
-// import { Instagram } from '../../assets/icons/instagram.svg';
 
 class Footer extends Component {
   convertNumber = (num) => {

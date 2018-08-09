@@ -38,7 +38,7 @@ export default class Contact extends Component {
                 <div className="bottom-section">
                   <span className="form-title">{this.props.emergency_contact}</span>
                   <p className="disclaimer">
-                    If you are having a medical emergency please call <a href="tel:911">911</a>,
+                    If you are having a medical emergency please call <a href="tel:911" className="darken">911</a>,
                     or go to the nearest Emergency Room or Urgent Care facility.
                   </p>
                 </div>
