@@ -16,7 +16,7 @@ export default class Contact extends Component {
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email"/>
                 <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
-                <button className="btn-secondary no-hover">{Data.form.button_text}</button>
+                <button className="btn-secondary no-hover" onClick={(e) => {e.preventDefault()}}>{Data.form.button_text}</button>
               </form>
               <div className="more-info">
                 <span className="form-title">Hours of Operation</span>
@@ -39,7 +39,7 @@ export default class Contact extends Component {
                 <div className="bottom-section">
                   <span className="form-title">{Data.emergency_contact}</span>
                   <p className="disclaimer">
-                    If you are having a medical emergency please call <a href="tel:911" className="darken">911</a>,
+                    If you are having a medical emergency please call <a href="tel:911" className="darken large">911</a>,
                     or go to the nearest Emergency Room or Urgent Care facility.
                   </p>
                 </div>

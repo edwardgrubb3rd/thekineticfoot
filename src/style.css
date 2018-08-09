@@ -163,6 +163,9 @@ a {
 a.darken {
   color: #376d8f; }
 
+a.large {
+  font-size: 1.1rem; }
+
 button {
   font-family: inherit;
   font-size: 1rem;
@@ -252,6 +255,8 @@ li {
 
 .cta-button {
   background-color: #FFFFFF;
+  border: none;
+  border-color: none;
   align-items: center;
   border-radius: 4px;
   color: #1C1C1C;
@@ -277,6 +282,8 @@ li {
 
 .btn-primary {
   background-color: #59798E;
+  border: none;
+  border-color: none;
   align-items: center;
   border-radius: 4px;
   color: #233541;
@@ -301,6 +308,8 @@ li {
 
 .btn-secondary {
   background-color: #9FC3DA;
+  border: none;
+  border-color: none;
   align-items: center;
   border-radius: 4px;
   color: #233541;
