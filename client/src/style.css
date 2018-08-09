@@ -229,6 +229,10 @@ li {
       flex: 0 0 80%;
       margin: 15px 0;
       width: 80%; } }
+  @media only screen and (max-width: 600px) {
+    .about-item {
+      flex: 0 0 100%;
+      width: 100%; } }
 
 .about-item-img {
   width: 50%; }
