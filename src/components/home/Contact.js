@@ -13,9 +13,18 @@ export default class Contact extends Component {
             <Fragment>
               <form className="contact-form">
                 <span className="form-title">{Data.form.form_title}</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email"/>
-                <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+                <div className="form-field">
+                  <label>Name</label>
+                  <input type="text"/>
+                </div>
+                <div className="form-field">
+                  <label>Email</label>
+                  <input type="email"/>
+                </div>
+                <div className="form-field">
+                  <label>Message</label>
+                  <textarea name="message" cols="30" rows="10"></textarea>
+                </div>
                 <button className="btn-secondary no-hover" onClick={(e) => {e.preventDefault()}}>{Data.form.button_text}</button>
               </form>
               <div className="more-info">

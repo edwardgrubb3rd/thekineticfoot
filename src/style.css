@@ -52,6 +52,18 @@ button {
   padding: 25px 0;
   width: 100%; }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%; }
+  .form-field label {
+    font-size: .85rem;
+    margin: 3px 0; }
+  .form-field input,
+  .form-field textarea {
+    width: 100%; }
+
 *, html {
   font-family: "Montserrat", sans-serif; }
 
