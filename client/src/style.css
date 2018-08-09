@@ -191,13 +191,12 @@ li {
 /*** Import partials from the modules folder ***/
 .about {
   align-items: center;
-  background-color: #9FC3DA;
   display: flex;
   flex-direction: column;
   text-align: center; }
   .about .title {
-    color: #233541; }
-  .about .btn-primary {
+    color: #59798E; }
+  .about .btn-secondary {
     margin-top: 20px;
     width: 50%; }
 
@@ -213,19 +212,24 @@ li {
 
 .about-item {
   align-items: center;
+  background-color: #F0F7F4;
+  border: 1px solid #dfeee8;
+  border-radius: 4px;
   display: flex;
   flex: 0 0 30%;
   flex-direction: column;
   padding: 20px;
   width: 30%; }
+  .about-item:hover {
+    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer; }
   @media only screen and (max-width: 900px) {
     .about-item {
       flex: 0 0 80%;
       width: 80%; } }
 
 .about-item-img {
-  border-radius: 50%;
-  width: 75%; }
+  width: 50%; }
 
 .about-item-subtitle {
   color: #1C1C1C;
@@ -406,7 +410,7 @@ li {
   position: relative; }
 
 .hero-overlay {
-  background-color: rgba(35, 53, 65, 0.4);
+  background: linear-gradient(90deg, rgba(35, 53, 65, 0.6), transparent);
   bottom: 0;
   position: absolute;
   left: 0;
@@ -416,7 +420,7 @@ li {
 
 .hero-content {
   align-items: center;
-  background-color: rgba(89, 121, 142, 0.84);
+  background-color: rgba(150, 189, 198, 0.84);
   border-radius: 2px;
   display: flex;
   flex-direction: column;
@@ -437,9 +441,9 @@ li {
       padding: 15px;
       width: 85%; } }
   .hero-content .title {
-    color: #FDFFFC; }
+    color: #233541; }
   .hero-content .subtitle {
-    color: #FDFFFC;
+    color: #233541;
     display: block;
     margin: 10px 0 15px;
     width: 85%; }

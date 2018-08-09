@@ -11,7 +11,7 @@
 }
 
 .hero-overlay {
-  background-color: rgba(35, 53, 65, 0.4);
+  background: linear-gradient(90deg, rgba(35, 53, 65, 0.6), transparent);
   bottom: 0;
   position: absolute;
   left: 0;
@@ -22,7 +22,7 @@
 
 .hero-content {
   align-items: center;
-  background-color: rgba(89, 121, 142, 0.84);
+  background-color: rgba(150, 189, 198, 0.84);
   border-radius: 2px;
   display: flex;
   flex-direction: column;
@@ -47,11 +47,11 @@
   }
 
   .title {
-    color: $off-white;
+    color: $elephant;
   }
 
   .subtitle {
-    color: $off-white;
+    color: $elephant;
     display: block;
     margin: 10px 0 15px;
     width: 85%;

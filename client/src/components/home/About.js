@@ -25,7 +25,7 @@ const About = (props) => (
 
     {
       props.link ?
-      <Link to={props.link} className="btn-primary">{props.button}</Link>
+      <Link to={props.link} className="btn-secondary">{props.button}</Link>
       :
       null
     }
