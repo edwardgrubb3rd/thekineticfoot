@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react'
 
-const key = 'AIzaSyCBBphg7655iUt3b_VX-szE52Zyno6Qbws';
-
 class Map extends Component {
 
   state = {

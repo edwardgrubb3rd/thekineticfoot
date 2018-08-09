@@ -54,7 +54,48 @@
   margin-bottom: 5px;
 }
 
-.map {
-  height: 450px;
-  width: 450px;
+.more-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 45%;
+
+  @include mediaQuery(max, $tablet) {
+    margin: 10px 0;
+    width: 65%;
+  }
+
+  @include mediaQuery(max, $mobile) {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+.hours-operation {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 25px;
+  width: 80%;
+}
+
+.time-slot {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  width: 100%;
+}
+
+.day {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hours {
+  font-size: 1rem;
+}
+
+.bottom-section {
+  margin-top: auto;
+  margin-bottom: 0;
 }
