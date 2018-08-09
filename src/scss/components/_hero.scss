@@ -9,6 +9,10 @@
   height: 780px;
   justify-content: center;
   position: relative;
+
+  @include mediaQuery(max, $mobile) {
+    height: 100vh;
+  }
 }
 
 .hero-overlay {
