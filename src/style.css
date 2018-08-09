@@ -44,6 +44,10 @@ textarea {
   textarea:placeholder {
     font-size: 14px; }
 
+button {
+  border: none;
+  border-color: none; }
+
 .section {
   padding: 25px 0;
   width: 100%; }
@@ -255,8 +259,6 @@ li {
 
 .cta-button {
   background-color: #FFFFFF;
-  border: none;
-  border-color: none;
   align-items: center;
   border-radius: 4px;
   color: #1C1C1C;
@@ -282,8 +284,6 @@ li {
 
 .btn-primary {
   background-color: #59798E;
-  border: none;
-  border-color: none;
   align-items: center;
   border-radius: 4px;
   color: #233541;
@@ -308,8 +308,6 @@ li {
 
 .btn-secondary {
   background-color: #9FC3DA;
-  border: none;
-  border-color: none;
   align-items: center;
   border-radius: 4px;
   color: #233541;

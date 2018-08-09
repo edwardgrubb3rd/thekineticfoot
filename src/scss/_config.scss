@@ -1,26 +1,63 @@
-/////     GLOBAL DEFAULTS     /////
-// Colors
-$white: #FFFFFF;
-$off-white: #F0F7F4;
-$black: #000;
-$dark-gray: #1C1C1C;
-$light-gray: #D4DBE3;
-$persian-green: #59798E;
-$shadow-green: #96BDC6;
-$light-blue: #9FC3DA;
-$elephant: #233541;
-$brown: #41321C;
-$clay: #8E7859;
-$bubbles: #A2E3C4;
 
-$box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+* {
+	box-sizing: border-box;
 
-// Transition duration
-$duration: 0.3s;
+	&:focus {
+		outline: none;
+	}
+}
 
-// Variables
-$mobile: 600px;
-$tablet: 900px;
-$smDesktop: 1024px;
-$desktop: 1280px;
-$lgDesktop: 1440px;
+html {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+
+	@include mediaQuery(max, $tablet) {
+		font-size: 18px;
+	}
+
+	@include mediaQuery(max, $mobile) {
+		font-size: 20px;
+	}
+}
+
+body {
+	margin: 0;
+	max-width: $lgDesktop;
+	padding: 0;
+
+	@include mediaQuery(min, $lgDesktop) {
+		margin: 0 auto;
+	}
+}
+
+main {
+	display: block;
+}
+
+input {
+	border: 1px solid $light-gray;
+	border-radius: 2px;
+	font-size: 14px;
+	margin: 3px 0;
+	padding: 10px;
+}
+
+textarea {
+	background-color: transparent;
+	border: 1px solid $light-gray;
+	border-radius: 2px;
+	font-size: 14px;
+	resize: none;
+  outline: none;
+	padding: 10px;
+
+	&:placeholder {
+		font-size: 14px;
+	}
+}
+
+button {
+	border: none;
+	border-color: none;
+}

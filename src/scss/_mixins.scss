@@ -9,10 +9,6 @@
   @if $borderColor {
     border: 2px solid $borderColor;
   }
-  @if $borderColor == null {
-    border: none;
-    border-color: none;
-  }
   align-items: center;
   border-radius: 4px;
   color: $fontColor;
