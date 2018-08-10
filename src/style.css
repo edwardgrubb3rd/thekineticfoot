@@ -478,7 +478,12 @@ li {
       width: 85%; } }
   .hero-content .title {
     color: #233541;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    line-height: 1.85rem; }
+    @media only screen and (max-width: 600px) {
+      .hero-content .title {
+        font-size: 1.5rem;
+        line-height: 1.55rem; } }
   .hero-content .subtitle {
     color: #233541;
     display: block;
