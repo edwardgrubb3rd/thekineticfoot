@@ -5,9 +5,9 @@ export default class Hero extends Component {
   state = {
     data: null
   }
-  
+
   componentDidMount() {
-    if(window.location.href.includes('github') || window.location.href.includes('localhost')) {
+    if(window.location.href.includes('github')) {
       this.setState({data});
     }
     else {

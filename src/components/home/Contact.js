@@ -16,7 +16,7 @@ export default class Contact extends Component {
   };
 
   componentDidMount() {
-    if(window.location.href.includes('github') || window.location.href.includes('localhost')) {
+    if(window.location.href.includes('github')) {
       this.setState({data});
     }
     else {
