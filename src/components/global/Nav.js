@@ -56,7 +56,7 @@ class Nav extends Component {
       		</div>
       		<div className={this.state.class}>
       			{
-              Data.links ?
+              Data.active ?
               (
                 Data.links.map(({title, link}) => (
                   <div className="navbar-item" key={title}>
