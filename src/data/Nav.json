@@ -2,18 +2,39 @@
   "links": [
     {
       "title": "our team",
-      "link": "#"
+      "link": "#",
+      "active": false
     },
     {
       "title": "our office",
-      "link": "#"
+      "link": "#",
+      "active": false
     },
     {
       "title": "advanced therapies",
-      "link": "#"
+      "link": "#",
+      "active": false
+    },
+    {
+      "title": "Patient Documents",
+      "link": "#",
+      "active": true,
+      "sublinks": [
+        {
+          "title": "Record Request",
+          "link": "https://docs.google.com/document/d/1uQ0YMbGkGmrBEdn4PaRjYZRVi-Eqg48RRBvWE8OiYlc/edit?usp=sharing"
+        },
+        {
+          "title": "Record Release",
+          "link": "https://docs.google.com/document/d/1-2-1Q2YeJQdthJMemqW3PjwnW7kqV-3DAYmOZ-a0cBw/edit?usp=sharing"
+        },
+        {
+          "title": "New Patient",
+          "link": "https://docs.google.com/document/d/1YKlKyZD2zCZSbStIebEEe4pOgI71kexsQY35dxyeu6s/edit?usp=sharing"
+        }
+      ]
     }
   ],
-  "active": false,
   "contact": "720.295.4864",
   "logo": false
 }

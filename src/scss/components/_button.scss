@@ -5,11 +5,11 @@
 }
 
 .btn-primary {
-  @include button($persian-green, null, $elephant);
+  @include button($riptide, null, $cyprus);
 }
 
 .btn-secondary {
-  @include button($light-blue, null, $elephant);
+  @include button($lola, null, $cyprus);
 }
 
 .no-hover {

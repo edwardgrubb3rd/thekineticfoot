@@ -3,6 +3,8 @@ import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import data from '../../data/Nav.json';
 
+import NavbarItem from './NavbarItem';
+
 class Nav extends Component {
   state = {
     class: 'navbar-menu',
@@ -64,28 +66,24 @@ class Nav extends Component {
         		</div>
         		<div className={this.state.class}>
         			{
-                this.props.nav.active ?
-                (
-                  this.props.nav.links.map(({title, link}) => (
-                    <div className="navbar-item" key={title}>
-                      <Link to={link} className="navbar-link">{title}</Link>
-              			</div>
-                  ))
-                )
-                :
-                null
+                this.props.nav.links.map(({title, link, active, sublinks}) => (
+                  active ?
+                  <NavbarItem
+                    key={title}
+                    title={title}
+                    link={link}
+                    sublinks={sublinks}
+                  />
+                  :
+                  null
+                ))
               }
         		</div>
-            {
-              this.props.nav.active ?
-              <div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
-          			<div className="nav-list bar1"></div>
-          			<div className="nav-list bar2"></div>
-          			<div className="nav-list bar3"></div>
-          		</div>
-              :
-              null
-            }
+            <div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
+              <div className="nav-list bar1"></div>
+              <div className="nav-list bar2"></div>
+              <div className="nav-list bar3"></div>
+            </div>
         		<div className="navbar-contact">
         			<a href={`tel:${this.convertNumber(this.props.nav.contact)}`} className="navbar-link">{this.props.nav.contact}</a>
         		</div>
@@ -103,16 +101,17 @@ class Nav extends Component {
         		</div>
         		<div className={this.state.class}>
         			{
-                this.state.data.active ?
-                (
-                  this.props.nav.links.map(({title, link}) => (
-                    <div className="navbar-item" key={title}>
-                      <Link to={link} className="navbar-link">{title}</Link>
-              			</div>
-                  ))
-                )
-                :
-                null
+                this.state.data.links.map(({title, link, active, sublinks}) => (
+                  active ?
+                  <NavbarItem
+                    key={title}
+                    title={title}
+                    link={link}
+                    sublinks={sublinks}
+                  />
+                  :
+                  null
+                ))
               }
         		</div>
             {

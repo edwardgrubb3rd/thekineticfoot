@@ -116,7 +116,7 @@ export default class Contact extends Component {
                         type="text"
                         aria-label="name"
                         onChange={(e) => this.handleInputChange(e, 'name', 'nameError')}
-                        style={{borderColor: this.state.nameError ? '#FF5057' : '#D3DFB8'}}
+                        style={{borderColor: this.state.nameError ? '#C57B57' : '#D3DFB8'}}
                       />
                     </div>
                     <div className="form-field">
@@ -125,7 +125,7 @@ export default class Contact extends Component {
                         type="email"
                         aria-label="email"
                         onChange={(e) => this.handleInputChange(e, 'email', 'emailError')}
-                        style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
+                        style={{borderColor: this.state.emailError ? '#C57B57' : '#D3DFB8'}}
                       />
                     </div>
                     <div className="form-field">
