@@ -285,6 +285,11 @@ li {
   .cta-button:hover {
     box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
+  .cta-button:disabled {
+    background-color: white;
+    color: #4f4f4f; }
+    .cta-button:disabled:hover {
+      cursor: not-allowed; }
   @media only screen and (max-width: 600px) {
     .cta-button {
       width: 100%; } }
@@ -309,6 +314,11 @@ li {
   .btn-primary:hover {
     box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
+  .btn-primary:disabled {
+    background-color: #7392a7;
+    color: #476b83; }
+    .btn-primary:disabled:hover {
+      cursor: not-allowed; }
   @media only screen and (max-width: 600px) {
     .btn-primary {
       width: 100%; } }
@@ -333,6 +343,11 @@ li {
   .btn-secondary:hover {
     box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
+  .btn-secondary:disabled {
+    background-color: #c4dae8;
+    color: #476b83; }
+    .btn-secondary:disabled:hover {
+      cursor: not-allowed; }
   @media only screen and (max-width: 600px) {
     .btn-secondary {
       width: 100%; } }
@@ -430,6 +445,11 @@ li {
 .bottom-section {
   margin-top: auto;
   margin-bottom: 0; }
+
+.error-message {
+  background-color: #FF5057;
+  margin-top: 5px;
+  padding: 3px 0; }
 
 .hero {
   align-items: center;

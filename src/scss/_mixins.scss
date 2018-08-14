@@ -25,6 +25,15 @@
     cursor: pointer;
   }
 
+  &:disabled {
+    background-color: lighten($backgroundColor, 10);
+    color: lighten($fontColor, 20);
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
   @include mediaQuery(max, $mobile) {
     width: 100%;
   }
