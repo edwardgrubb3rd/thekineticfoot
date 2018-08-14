@@ -75,9 +75,17 @@ export default class Contact extends Component {
       }
     };
 
-    axios.post('/contact', message, header).then(res => {
-      console.log(res);
-    });
+    if(window.location.href.includes('github')) {
+      axios.post('/thekineticfoot/contact', message, header).then(res => {
+        console.log(res);
+      });
+    }
+    else {
+      axios.post('/contact', message, header).then(res => {
+        console.log(res);
+      });
+    }
+
   }
 
   checkDisabled = () => {
