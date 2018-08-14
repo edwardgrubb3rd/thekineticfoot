@@ -4,6 +4,10 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "homepage": "http://trevans24.github.io/thekineticfoot",
+  "engines": {
+    "npm": "6.3.0",
+    "node": "10.7.0"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
