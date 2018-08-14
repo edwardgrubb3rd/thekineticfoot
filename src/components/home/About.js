@@ -1,37 +1,38 @@
-import React from 'react';
+import React, { Component, Fragment} from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
-import Data from '../../data/About.json';
 
-const About = (props) => (
-  <div className="about section">
-    <span className="title">{Data.title}</span>
+class About extends Component {
+  componentDidMount() {
+    this.props.get();
+  }
 
-    <div className="about-grid">
-      {
-        Data.sections ?
-        (
-          Data.sections.map(({image, title, description}) => (
-            <div className="about-item" key={title}>
-              <img className="about-item-img" src={require(`../../assets/icons/${image}`)} alt="kinetic foot ankle team about us" />
-              <span className="about-item-subtitle">{title}</span>
-              <p className="about-item-desc">{description}</p>
+  render() {
+    return (
+      <Fragment>
+        {
+          this.props.about ?
+          <div className="about section">
+            <span className="title">{this.props.about.title}</span>
+            <div className="about-grid">
+              {
+                this.props.about.sections.map(({image, title, description}) => (
+                  <div className="about-item" key={title}>
+                    <img className="about-item-img" src={require(`../../assets/icons/${image}`)} alt="kinetic foot ankle team about us" />
+                    <span className="about-item-subtitle">{title}</span>
+                    <p className="about-item-desc">{description}</p>
+                  </div>
+                ))
+              }
             </div>
-          ))
-        )
-        :
-        null
-      }
-    </div>
-
-    {
-      Data.link ?
-      <Link to={Data.link} className="btn-secondary">{Data.button}</Link>
-      :
-      null
-    }
-
-  </div>
-)
+            <Link to={this.props.about.link} className="btn-secondary">{this.props.about.button}</Link>
+          </div>
+          :
+          null
+        }
+      </Fragment>
+    )
+  }
+}
 
 export default withRouter(About);

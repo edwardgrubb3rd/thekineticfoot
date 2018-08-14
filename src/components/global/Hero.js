@@ -1,25 +1,35 @@
-import React from 'react';
-import Data from '../../data/Hero.json';
+import React, { Component, Fragment } from 'react';
 
-const Hero = (props) => (
-  // <div className="hero" style={{backgroundImage: `url(require(../../assets/img/${Data.img}))`}}>
-  <div className="hero">
-    <div className="hero-overlay"></div>
+export default class Hero extends Component {
+  componentDidMount() {
+    this.props.get();
+  }
 
-     <div className="hero-content">
-      <h1 className="title">{Data.title}</h1>
-      <span className="subtitle">
-        {Data.content}
-      </span>
-      {
-        Data.link ?
-        <a href={Data.link} className="cta-button" target="_blank">{Data.button}</a>
-        :
-        null
-      }
-    </div>
+  render() {
+    return (
+      <Fragment>
+        {
+          this.props.hero ?
+          <div className="hero">
+            <div className="hero-overlay"></div>
 
-  </div>
-);
-
-export default Hero;
+             <div className="hero-content">
+              <h1 className="title">{this.props.hero.title}</h1>
+              <span className="subtitle">
+                {this.props.hero.content}
+              </span>
+              {
+                this.props.hero.link ?
+                <a href={this.props.hero.link} className="cta-button" target="_blank">{this.props.hero.button}</a>
+                :
+                null
+              }
+            </div>
+          </div>
+          :
+          null
+        }
+      </Fragment>
+    )
+  }
+};
