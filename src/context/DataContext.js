@@ -11,22 +11,6 @@ export class DataProvider extends Component {
     loading: false
   }
 
-  componentDidMount() {
-    this.getData();
-  }
-
-  getData = (url) => {
-    this.setState({
-      loading: true
-    });
-
-    setTimeout(() => {
-      this.setState({
-        loading: false
-      });
-    }, 250);
-  }
-
   getContactData = () => {
     api.getData('/api/pages/contact').then(({data}) => {
       this.setState({

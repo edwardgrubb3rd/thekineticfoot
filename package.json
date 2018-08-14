@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
-  "engines": {
-    "npm": "6.3.0",
-    "node": "10.7.0"
-  },
+  "homepage": "http://trevans24.github.io/thekineticfoot",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
@@ -26,11 +23,12 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm-run-all -p watch-css start-js server",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "nodemon index.js",
-    "heroku-postbuild": "yarn run build"
+    "deploy": "gh-pages -d build",
+    "server": "nodemon index.js"
   }
 }

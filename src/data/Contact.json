@@ -1,0 +1,22 @@
+{
+  "title": "contact us",
+  "form": {
+    "form_title": "Message Us or to Schedule an Appointment",
+    "button_text": "Send",
+    "form_additional_info": "Please contact us directly with any questions, comments, or scheduling inquiries you may have. "
+  },
+  "hours_of_operation": [{
+      "days": "Monday - Thursday",
+      "hours": "8 AM – 5 PM"
+    },
+    {
+      "days": "Friday",
+      "hours": "8 AM - 3 PM"
+    },
+    {
+      "days": "Saturday - Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "emergency_contact": "Emergency Service: 24/7, on call"
+}

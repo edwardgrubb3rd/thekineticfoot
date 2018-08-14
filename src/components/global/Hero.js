@@ -1,8 +1,18 @@
 import React, { Component, Fragment } from 'react';
+import data from '../../data/Hero.json';
 
 export default class Hero extends Component {
+  state = {
+    data: null
+  }
+  
   componentDidMount() {
-    this.props.get();
+    if(window.location.href.includes('github') || window.location.href.includes('localhost')) {
+      this.setState({data});
+    }
+    else {
+      this.props.get();
+    }
   }
 
   render() {
@@ -21,6 +31,24 @@ export default class Hero extends Component {
               {
                 this.props.hero.link ?
                 <a href={this.props.hero.link} className="cta-button" target="_blank">{this.props.hero.button}</a>
+                :
+                null
+              }
+            </div>
+          </div>
+          :
+          this.state.data ?
+          <div className="hero">
+            <div className="hero-overlay"></div>
+
+             <div className="hero-content">
+              <h1 className="title">{this.state.data.title}</h1>
+              <span className="subtitle">
+                {this.state.data.content}
+              </span>
+              {
+                this.state.data.link ?
+                <a href={this.state.data.link} className="cta-button" target="_blank">{this.state.data.button}</a>
                 :
                 null
               }
