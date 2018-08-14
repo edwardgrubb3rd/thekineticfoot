@@ -53,7 +53,13 @@ export default class Contact extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('/contact', this.state).then(res => {
+    let message = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    }
+
+    axios.post('/contact', message, {headers: {'Access-Control-Allow-Origin': '*'}}).then(res => {
       console.log(res);
     });
   }
