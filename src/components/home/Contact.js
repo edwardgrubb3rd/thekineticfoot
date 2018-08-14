@@ -59,7 +59,7 @@ export default class Contact extends Component {
       message: this.state.message
     }
 
-    axios.post('/contact', message, {headers: {'Access-Control-Allow-Origin': '*'}}).then(res => {
+    axios.post('/thekineticfoot/contact', message, {headers: {'Access-Control-Allow-Origin': '*'}}).then(res => {
       console.log(res);
     });
   }
