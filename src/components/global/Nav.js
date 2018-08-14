@@ -68,11 +68,16 @@ class Nav extends Component {
               null
             }
       		</div>
-      		<div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
-      			<div className="nav-list bar1"></div>
-      			<div className="nav-list bar2"></div>
-      			<div className="nav-list bar3"></div>
-      		</div>
+          {
+            Data.active ?
+            <div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
+        			<div className="nav-list bar1"></div>
+        			<div className="nav-list bar2"></div>
+        			<div className="nav-list bar3"></div>
+        		</div>
+            :
+            null
+          }
       		<div className="navbar-contact">
       			<a href={`tel:${this.convertNumber()}`} className="navbar-link">{Data.contact}</a>
       		</div>
