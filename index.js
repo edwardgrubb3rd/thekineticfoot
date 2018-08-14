@@ -15,6 +15,7 @@ app.use((req, res, next) => {
 
 // Emailing
 app.post('/contact', (req, res) => {
+  console.log('contact');
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
