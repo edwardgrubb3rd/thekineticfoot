@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
-  "homepage": "http://trevans24.github.io/thekineticfoot",
   "engines": {
     "npm": "6.3.0",
     "node": "10.7.0"
@@ -29,7 +28,6 @@
     "start-js": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "server": "nodemon index.js",
