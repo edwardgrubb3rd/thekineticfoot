@@ -87,7 +87,7 @@ class Nav extends Component {
               null
             }
         		<div className="navbar-contact">
-        			<a href={`tel:${this.convertNumber(this.state.data.contact)}`} className="navbar-link">{this.state.data.contact}</a>
+        			<a href={`tel:${this.convertNumber(this.props.nav.contact)}`} className="navbar-link">{this.props.nav.contact}</a>
         		</div>
         	</div>
           :
