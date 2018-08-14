@@ -14,40 +14,40 @@ app.use((req, res, next) => {
 });
 
 // Pages
-app.get('/thekineticfoot/api', (req, res) => {
+app.get('/api', (req, res) => {
   res.json({
     message: "Welcome to The Kinetic Foot API",
     clientEndpoints: [
       {
         method: 'GET',
-        path: '/thekineticfoot/api/pages',
+        path: '/api/pages',
         description: 'Get all pages'
       },
       {
         method: 'POST',
-        path: '/thekineticfoot/api/pages',
+        path: '/api/pages',
         description: 'Add a new page to the database'
       },
       {
         method: 'SHOW',
-        path: '/thekineticfoot/api/pages/:id',
+        path: '/api/pages/:id',
         description: 'Show one page section data'
       },
       {
         method: 'PUT',
-        path: '/thekineticfoot/api/pages/:id',
+        path: '/api/pages/:id',
         description: 'Update page information'
       },
       {
         method: 'DELETE',
-        path: '/thekineticfoot/api/pages/:id',
+        path: '/api/pages/:id',
         description: 'Delete a page from the database'
       }
     ]
   })
 });
 
-app.get('/thekineticfoot/api/pages/contact', (req, res) => {
+app.get('/api/pages/contact', (req, res) => {
   res.json(
     {
       "title": "contact us",
@@ -74,7 +74,7 @@ app.get('/thekineticfoot/api/pages/contact', (req, res) => {
   )
 });
 
-app.get('/thekineticfoot/api/pages/about', (req, res) => {
+app.get('/api/pages/about', (req, res) => {
   res.json(
     {
       "title": "About Us",
@@ -101,7 +101,7 @@ app.get('/thekineticfoot/api/pages/about', (req, res) => {
   )
 });
 
-app.get('/thekineticfoot/api/pages/footer', (req, res) => {
+app.get('/api/pages/footer', (req, res) => {
   res.json(
     {
       "social_media": [
@@ -126,7 +126,7 @@ app.get('/thekineticfoot/api/pages/footer', (req, res) => {
   )
 });
 
-app.get('/thekineticfoot/api/pages/hero', (req, res) => {
+app.get('/api/pages/hero', (req, res) => {
   res.json(
     {
       "img": "hero.jpg",
@@ -138,7 +138,7 @@ app.get('/thekineticfoot/api/pages/hero', (req, res) => {
   )
 });
 
-app.get('/thekineticfoot/api/pages/nav', (req, res) => {
+app.get('/api/pages/nav', (req, res) => {
   res.json(
     {
       "links": [
@@ -163,7 +163,7 @@ app.get('/thekineticfoot/api/pages/nav', (req, res) => {
 });
 
 // Emailing
-app.post('/thekineticfoot/contact', (req, res) => {
+app.post('/contact', (req, res) => {
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,

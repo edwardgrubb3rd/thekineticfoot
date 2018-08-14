@@ -28,7 +28,7 @@ export class DataProvider extends Component {
   }
 
   getContactData = () => {
-    api.getData('/thekineticfoot/api/pages/contact').then(({data}) => {
+    api.getData('/api/pages/contact').then(({data}) => {
       this.setState({
         contact: data
       });
@@ -36,7 +36,7 @@ export class DataProvider extends Component {
   }
 
   getHeroData = () => {
-    api.getData('/thekineticfoot/api/pages/hero').then(({data}) => {
+    api.getData('/api/pages/hero').then(({data}) => {
       this.setState({
         hero: data
       });
@@ -44,7 +44,7 @@ export class DataProvider extends Component {
   }
 
   getAboutData = () => {
-    api.getData('/thekineticfoot/api/pages/about').then(({data}) => {
+    api.getData('/api/pages/about').then(({data}) => {
       this.setState({
         about: data
       });
@@ -52,7 +52,7 @@ export class DataProvider extends Component {
   }
 
   getFooterData = () => {
-    api.getData('/thekineticfoot/api/pages/footer').then(({data}) => {
+    api.getData('/api/pages/footer').then(({data}) => {
       this.setState({
         footer: data
       });
@@ -60,7 +60,7 @@ export class DataProvider extends Component {
   }
 
   getNavData = () => {
-    api.getData('/thekineticfoot/api/pages/nav').then(({data}) => {
+    api.getData('/api/pages/nav').then(({data}) => {
       this.setState({
         nav: data
       });
