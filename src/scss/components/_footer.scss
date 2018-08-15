@@ -84,6 +84,10 @@
 .footer-contact {
   display: flex;
   flex-direction: column;
+
+  span {
+    font-size: 1rem;
+  }
 }
 
 .city-state {

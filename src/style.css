@@ -167,7 +167,7 @@ p {
   line-height: 1.25; }
 
 a {
-  color: #9FC3DA;
+  color: #F8F1FF;
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.1;
@@ -177,7 +177,7 @@ a {
       font-size: 0.8rem; } }
 
 a.darken {
-  color: #376d8f; }
+  color: #c58bff; }
 
 a.large {
   font-size: 1.1rem; }
@@ -579,6 +579,8 @@ li {
 .footer-contact {
   display: flex;
   flex-direction: column; }
+  .footer-contact span {
+    font-size: 1rem; }
 
 .city-state {
   display: flex; }

@@ -51,7 +51,7 @@ p {
 }
 
 a {
-  color: $light-blue;
+  color: $magnolia;
   font-family: inherit;
   font-size: $font-size-base;
   line-height: 1.1;
@@ -63,7 +63,7 @@ a {
 }
 
 a.darken {
-  color: darken($light-blue, 35);
+  color: darken($magnolia, 20);
 }
 
 a.large {
