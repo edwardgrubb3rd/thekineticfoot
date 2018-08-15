@@ -26,8 +26,8 @@
   }
 
   &:disabled {
-    background-color: lighten($backgroundColor, 10);
-    color: lighten($fontColor, 20);
+    background-color: lighten($backgroundColor, 20);
+    color: lighten($fontColor, 60);
 
     &:hover {
       cursor: not-allowed;

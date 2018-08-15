@@ -1,6 +1,6 @@
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $transparent-white;
   max-width: $lgDesktop;
   position: fixed;
   top: 0;
@@ -45,7 +45,7 @@
 }
 
 .navbar-menu.mobile {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $transparent-white;
   display: flex;
   flex-direction: column;
   padding: 10px 0;
@@ -66,7 +66,7 @@
 }
 
 .navbar-item-submenu {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $transparent-white;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -137,7 +137,7 @@
 }
 
 .navbar-contact {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $transparent-white;
   left: 40px;
   padding: 15px 10px;
   position: absolute;
