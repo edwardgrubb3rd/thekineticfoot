@@ -631,6 +631,9 @@ li {
   right: 0;
   top: 50px;
   width: 250px; }
+  @media only screen and (max-width: 600px) {
+    .navbar-menu.mobile {
+      width: 200px; } }
   .navbar-menu.mobile .navbar-item {
     padding: 5px 0;
     width: 100%; }
@@ -650,7 +653,7 @@ li {
   @media only screen and (max-width: 900px) {
     .navbar-item-submenu {
       align-items: flex-end;
-      right: 250px;
+      right: 200px;
       top: 0;
       width: 80%; } }
 
