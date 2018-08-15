@@ -244,7 +244,7 @@ li {
   padding: 20px;
   width: 30%; }
   .about-item:hover {
-    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
   @media only screen and (max-width: 900px) {
     .about-item {
@@ -283,7 +283,7 @@ li {
   text-transform: uppercase;
   width: 50%; }
   .cta-button:hover {
-    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
   .cta-button:disabled {
     background-color: white;
@@ -312,7 +312,7 @@ li {
   text-decoration: none;
   text-transform: uppercase; }
   .btn-primary:hover {
-    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
   .btn-primary:disabled {
     background-color: #e6f7f1;
@@ -341,7 +341,7 @@ li {
   text-decoration: none;
   text-transform: uppercase; }
   .btn-secondary:hover {
-    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
     cursor: pointer; }
   .btn-secondary:disabled {
     background-color: #e9e4ea;
@@ -382,7 +382,7 @@ li {
   background-color: #FFFFFF;
   border: 1px solid #D4DBE3;
   border-radius: 6px;
-  box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -587,6 +587,7 @@ li {
 
 .navbar {
   background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16), 0px 0px 0px rgba(0, 0, 0, 0.05);
   max-width: 1440px;
   position: fixed;
   top: 0;
