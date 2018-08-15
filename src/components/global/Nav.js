@@ -114,16 +114,11 @@ class Nav extends Component {
                 ))
               }
         		</div>
-            {
-              this.state.data.active ?
-              <div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
-          			<div className="nav-list bar1"></div>
-          			<div className="nav-list bar2"></div>
-          			<div className="nav-list bar3"></div>
-          		</div>
-              :
-              null
-            }
+            <div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
+              <div className="nav-list bar1"></div>
+              <div className="nav-list bar2"></div>
+              <div className="nav-list bar3"></div>
+            </div>
         		<div className="navbar-contact">
         			<a href={`tel:${this.convertNumber(this.state.data.contact)}`} className="navbar-link">{this.state.data.contact}</a>
         		</div>
