@@ -670,6 +670,9 @@ li {
   .navbar-link:hover {
     color: #62305f;
     cursor: pointer; }
+  @media only screen and (max-width: 600px) {
+    .navbar-link {
+      font-size: .85rem; } }
 
 .mobile-menu {
   display: none;
@@ -704,7 +707,7 @@ li {
   top: 50px; }
   @media only screen and (max-width: 600px) {
     .navbar-contact {
-      left: 0; } }
+      display: none; } }
 
 .spinner:before {
   animation: spinner 1s linear infinite;

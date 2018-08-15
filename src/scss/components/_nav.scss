@@ -104,6 +104,10 @@
     color: lighten($castro, 10);
     cursor: pointer;
   }
+
+  @include mediaQuery(max, $mobile) {
+    font-size: .85rem;
+  }
 }
 
 .mobile-menu {
@@ -145,6 +149,6 @@
   top: 50px;
 
   @include mediaQuery(max, $mobile) {
-    left: 0;
+    display: none;
   }
 }
