@@ -466,7 +466,7 @@ li {
       height: 100vh; } }
 
 .hero-overlay {
-  background: linear-gradient(90deg, rgba(35, 53, 65, 0.6), transparent);
+  background: linear-gradient(90deg, rgba(56, 77, 90, 0.5), transparent);
   bottom: 0;
   position: absolute;
   left: 0;
@@ -476,7 +476,7 @@ li {
 
 .hero-content {
   align-items: center;
-  background-color: rgba(186, 171, 189, 0.84);
+  background-color: rgba(186, 171, 189, 0.7);
   border-radius: 2px;
   bottom: 0;
   display: flex;
@@ -584,7 +584,7 @@ li {
   display: flex; }
 
 .navbar {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   max-width: 1440px;
   position: fixed;
   top: 0;
@@ -603,7 +603,7 @@ li {
       padding: 0 20px; } }
 
 .logo .navbar-link {
-  color: #F8F1FF;
+  color: #401F3E;
   font-weight: 600;
   text-transform: uppercase; }
 
@@ -620,7 +620,7 @@ li {
   width: 55%; }
 
 .navbar-menu.mobile {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   padding: 10px 0;
@@ -636,12 +636,8 @@ li {
   position: relative;
   text-align: center; }
 
-@media only screen and (max-width: 900px) {
-  .navbar-item.active {
-    background-color: #F8F1FF; } }
-
 .navbar-item-submenu {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -656,20 +652,20 @@ li {
       width: 80%; } }
 
 .navbar-submenu-link {
-  color: #F8F1FF;
+  color: #401F3E;
   margin: 4px 0;
   padding: 0 5px;
   text-transform: capitalize; }
   .navbar-submenu-link:hover {
-    color: white;
+    color: #62305f;
     cursor: pointer; }
 
 .navbar-link {
-  color: #F8F1FF;
+  color: #401F3E;
   padding: 0 5px;
   text-transform: capitalize; }
   .navbar-link:hover {
-    color: white;
+    color: #62305f;
     cursor: pointer; }
 
 .mobile-menu {
@@ -681,7 +677,7 @@ li {
       display: flex; } }
 
 .nav-list {
-  background-color: #F8F1FF;
+  background-color: #401F3E;
   border-radius: 5px;
   height: 3px;
   margin: 3px 0;
@@ -698,7 +694,7 @@ li {
   transform: rotate(45deg) translate(-10px, -4px); }
 
 .navbar-contact {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   left: 40px;
   padding: 15px 10px;
   position: absolute;

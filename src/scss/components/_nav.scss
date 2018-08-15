@@ -1,6 +1,6 @@
 
 .navbar {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   max-width: $lgDesktop;
   position: fixed;
   top: 0;
@@ -23,7 +23,7 @@
 
 .logo {
   .navbar-link {
-    color: $magnolia;
+    color: $castro;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -45,7 +45,7 @@
 }
 
 .navbar-menu.mobile {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   padding: 10px 0;
@@ -65,15 +65,8 @@
   text-align: center;
 }
 
-.navbar-item.active {
-
-  @include mediaQuery(max, $tablet) {
-    background-color: $magnolia;
-  }
-}
-
 .navbar-item-submenu {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -90,24 +83,24 @@
 }
 
 .navbar-submenu-link {
-  color: $magnolia;
+  color: $castro;
   margin: 4px 0;
   padding: 0 5px;
   text-transform: capitalize;
 
   &:hover {
-    color: lighten($magnolia, 10);
+    color: lighten($castro, 10);
     cursor: pointer;
   }
 }
 
 .navbar-link {
-  color: $magnolia;
+  color: $castro;
   padding: 0 5px;
   text-transform: capitalize;
 
   &:hover {
-    color: lighten($magnolia, 10);
+    color: lighten($castro, 10);
     cursor: pointer;
   }
 }
@@ -123,7 +116,7 @@
 }
 
 .nav-list {
-  background-color: $magnolia;
+  background-color: $castro;
   border-radius: 5px;
 	height: 3px;
 	margin: 3px 0;
@@ -144,7 +137,7 @@
 }
 
 .navbar-contact {
-  background-color: rgba(64, 31, 62, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   left: 40px;
   padding: 15px 10px;
   position: absolute;
