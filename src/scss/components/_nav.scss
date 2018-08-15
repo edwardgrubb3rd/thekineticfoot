@@ -1,6 +1,6 @@
 
 .navbar {
-  background-color: rgba(16, 37, 66, 0.95);
+  background-color: rgba(64, 31, 62, 0.9);
   max-width: $lgDesktop;
   position: fixed;
   top: 0;
@@ -45,7 +45,7 @@
 }
 
 .navbar-menu.mobile {
-  background-color: rgba(16, 37, 66, 0.95);
+  background-color: rgba(64, 31, 62, 0.9);
   display: flex;
   flex-direction: column;
   padding: 10px 0;
@@ -66,15 +66,14 @@
 }
 
 .navbar-item.active {
-  background-color: $magnolia;
 
-  .navbar-link {
-    color: $black;
+  @include mediaQuery(max, $tablet) {
+    background-color: $magnolia;
   }
 }
 
 .navbar-item-submenu {
-  background-color: rgba(16, 37, 66, 0.95);
+  background-color: rgba(64, 31, 62, 0.9);
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -97,7 +96,7 @@
   text-transform: capitalize;
 
   &:hover {
-    color: lighten($light-blue, 10);
+    color: lighten($magnolia, 10);
     cursor: pointer;
   }
 }
@@ -108,7 +107,7 @@
   text-transform: capitalize;
 
   &:hover {
-    color: lighten($light-blue, 10);
+    color: lighten($magnolia, 10);
     cursor: pointer;
   }
 }
@@ -145,7 +144,7 @@
 }
 
 .navbar-contact {
-  background-color: rgba(16, 37, 66, 0.95);
+  background-color: rgba(64, 31, 62, 0.9);
   left: 40px;
   padding: 15px 10px;
   position: absolute;
