@@ -80,17 +80,17 @@ app.get('/api/pages/about', (req, res) => {
       "sections": [
         {
           "title": "Our Health Mission",
-          "description": "Our experienced medical professionals put your healing needs first. We are proud to provide a high quality level of customer service, medical experience, and commitment to health and wellness to all our patients. Our goal is to make you feel better as quickly as possible.",
+          "description": "Our experienced medical professionals put your healing needs first with care and compassion. We are proud to provide a high quality level of customer service, medical experience, and commitment to health and wellness to all our patients.",
           "image": "hands.svg"
         },
         {
-          "title": "Experience and Professionalism",
-          "description": "With years of experience, we will assist you in creating a custom recovery plan that's right for you. We understand the importance of educating you on the most effective ways to take care of your body, so that you can get back to what you love faster.",
+          "title": "Experience",
+          "description": "With 12 years of experience, we assist you in creating a custom recovery plan that's right for you, so that you can get back to what you love faster.",
           "image": "doctor.svg"
         },
         {
           "title": "A Team Who Cares",
-          "description": "Not only will our team treat your existing conditions, we also work to prevent pain and illness from occurring. We strive to help you improve your quality of life, achieve your wellness goals, and heal your body to live your best life possible.  ",
+          "description": "We strive to help you improve your quality of life and achieve your wellness goals, so you can live your best life possible. Our team aims to provide you with the highest quality treatments to help you get back on track.",
           "image": "team.svg"
         }
       ],
@@ -130,7 +130,7 @@ app.get('/api/pages/hero', (req, res) => {
     {
       "img": "hero.jpg",
       "title": "The Kinetic Foot & Ankle Clinic",
-      "content": "Advanced compassionate foot and ankle solutions in Denver",
+      "content": "Advanced compassionate podiatry solutions in Denver",
       "button": "visit our clinic",
       "link": "https://www.google.com/maps?q=kinetic+foot+and+ankle+clinic&rlz=1C5CHFA_enUS797US797&um=1&ie=UTF-8&sa=X&ved=0ahUKEwi7mLL13NbcAhVmw4MKHSOwAW0Q_AUICigB"
     }
