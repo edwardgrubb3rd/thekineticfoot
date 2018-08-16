@@ -85,7 +85,7 @@ app.get('/api/pages/about', (req, res) => {
         },
         {
           "title": "Experience",
-          "description": "With 12 years of experience, we assist you in creating a custom recovery plan that's right for you, so that you can get back to what you love faster.",
+          "description": "With more than 15 years of experience, we assist you in creating a custom recovery plan that's right for you, so that you can get back to what you love faster.",
           "image": "doctor.svg"
         },
         {

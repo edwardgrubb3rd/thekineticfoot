@@ -35,7 +35,12 @@ class About extends Component {
                 ))
               }
             </div>
-            <Link to={this.props.about.link} className="btn-secondary">{this.props.about.button}</Link>
+            {
+              this.props.link !== '#' ?
+              <Link to={this.props.about.link} className="btn-secondary">{this.props.about.button}</Link>
+              :
+              null
+            }
           </div>
           :
           this.state.data ?
@@ -52,7 +57,12 @@ class About extends Component {
                 ))
               }
             </div>
-            <Link to={this.state.data.link} className="btn-secondary">{this.state.data.button}</Link>
+            {
+              this.state.data.link !== '#' ?
+              <Link to={this.state.data.link} className="btn-secondary">{this.state.data.button}</Link>
+              :
+              null
+            }
           </div>
           :
           null
