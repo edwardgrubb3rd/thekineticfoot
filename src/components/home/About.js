@@ -36,7 +36,7 @@ class About extends Component {
               }
             </div>
             {
-              this.props.link !== '#' ?
+              this.props.about.link !== '#' ?
               <Link to={this.props.about.link} className="btn-secondary">{this.props.about.button}</Link>
               :
               null
