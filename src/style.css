@@ -636,10 +636,11 @@ li {
     width: 100%; }
 
 .navbar-item {
-  position: relative;
-  text-align: center; }
+  padding: 0 15px;
+  position: relative; }
 
-.navbar-item-submenu {
+.navbar-item-menu {
+  align-items: flex-start;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -648,20 +649,39 @@ li {
   top: 34px;
   width: 100%; }
   @media only screen and (max-width: 900px) {
-    .navbar-item-submenu {
+    .navbar-item-menu {
       align-items: flex-end;
       right: 200px;
       top: 0;
       width: 80%; } }
 
-.navbar-submenu-link {
+.navbar-menu-link {
   color: #401F3E;
+  display: block;
   margin: 4px 0;
-  padding: 0 5px;
+  position: relative;
   text-transform: capitalize; }
-  .navbar-submenu-link:hover {
+  .navbar-menu-link:hover {
     color: #62305f;
     cursor: pointer; }
+
+.navbar-submenu {
+  background-color: #FFFFFF;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  width: 100%; }
+
+.navbar-submenu-recursive {
+  background-color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  right: 100%;
+  text-align: left;
+  top: 50%;
+  width: 100%; }
 
 .navbar-link {
   color: #401F3E;

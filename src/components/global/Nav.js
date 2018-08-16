@@ -66,16 +66,18 @@ class Nav extends Component {
         		</div>
         		<div className={this.state.class}>
         			{
-                this.props.nav.links.map(({title, link, active, sublinks}) => (
-                  active ?
-                  <NavbarItem
-                    key={title}
-                    title={title}
-                    link={link}
-                    sublinks={sublinks}
-                  />
+                this.props.nav.links.map(({active, title, options}, index) => (
+                  options ?
+                  <div className="navbar-item" key={index}>
+                    <span className="navbar-menu-link">{title}</span>
+                    <NavbarItem
+                      options={options}
+                    />
+                  </div>
                   :
-                  null
+                  <div className="navbar-item" key={index}>
+                    <span className="navbar-menu-link">{title}</span>
+                  </div>
                 ))
               }
         		</div>
@@ -101,16 +103,18 @@ class Nav extends Component {
         		</div>
         		<div className={this.state.class}>
         			{
-                this.state.data.links.map(({title, link, active, sublinks}) => (
-                  active ?
-                  <NavbarItem
-                    key={title}
-                    title={title}
-                    link={link}
-                    sublinks={sublinks}
-                  />
+                this.state.data.links.map(({active, title, options}, index) => (
+                  options ?
+                  <div className="navbar-item" key={index}>
+                    <span className="navbar-menu-link">{title}</span>
+                    <NavbarItem
+                      options={options}
+                    />
+                  </div>
                   :
-                  null
+                  <div className="navbar-item" key={index}>
+                    <span className="navbar-menu-link">{title}</span>
+                  </div>
                 ))
               }
         		</div>
