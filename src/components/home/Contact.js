@@ -8,10 +8,8 @@ export default class Contact extends Component {
     name: '',
     email: '',
     message: '',
-    formError: true,
-    nameError: true,
-    emailError: true,
-    messageError: true,
+    formError: false,
+    emailError: false,
     data: null
   };
 
@@ -24,44 +22,15 @@ export default class Contact extends Component {
     }
   }
 
-  handleInputChange = (e, name, err) => {
-
-    if((e.target.value !== '' || null) && name !== 'email') {
-
-      let val = {...this.state, [name] : e.target.value, [err]: false};
-
-      this.setState(val);
-    }
-    if((e.target.value !== '' || null ) && name === 'email') {
-
-      let test = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-      if(e.target.value.match(test)) {
-        let val = {...this.state, [name] : e.target.value, [err]: false};
-
-        this.setState(val);
-      }
-      if(!e.target.value.match(test)) {
-        let val = {...this.state, [name] : e.target.value, [err]: true};
-
-        this.setState(val);
-      }
-    }
-    if(e.target.value === '') {
-
-      let val = {...this.state, [name] : e.target.value, [err]: true};
-
-      this.setState(val);
-    }
-    if(!this.state.nameError && !this.state.emailError && !this.state.messageError) {
-      this.setState({
-        formError: false
-      });
-    }
+  handleInputChange = (e, name) => {
+    let val = {...this.state, [name] : e.target.value};
+    this.setState(val);
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    let test = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     let message = {
       name: this.state.name,
@@ -75,12 +44,23 @@ export default class Contact extends Component {
       }
     };
 
-    if(window.location.href.includes('github')) {
+    if(!this.state.email.match(test)) {
+      this.setState({
+        emailError: true
+      });
+    }
+    if(this.state.name === '' || this.state.message === '' || this.state.email === '') {
+      this.setState({
+        formError: true
+      });
+    }
+
+    if(window.location.href.includes('github') && !this.state.formError && !this.state.emailError) {
       axios.post('/thekineticfoot/contact', message, header).then(res => {
         console.log(res);
       });
     }
-    else {
+    if(!this.state.formError && !this.state.emailError) {
       axios.post('/contact', message, header).then(res => {
         console.log(res);
       });
@@ -89,7 +69,12 @@ export default class Contact extends Component {
   }
 
   checkDisabled = () => {
-    if(!this.state.nameError && !this.state.emailError && !this.state.messageError && !this.state.formError) {
+    if(!this.state.emailError
+      && !this.state.formError
+      && this.state.email !== ''
+      && this.state.name !== ''
+      && this.state.message !== ''
+    ) {
       return false;
     }
     else {
@@ -115,8 +100,8 @@ export default class Contact extends Component {
                       <input
                         type="text"
                         aria-label="name"
-                        onChange={(e) => this.handleInputChange(e, 'name', 'nameError')}
-                        style={{borderColor: this.state.nameError ? '#FF5057' : '#D3DFB8'}}
+                        onChange={(e) => this.handleInputChange(e, 'name')}
+                        style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
                       />
                     </div>
                     <div className="form-field">
@@ -124,7 +109,7 @@ export default class Contact extends Component {
                       <input
                         type="email"
                         aria-label="email"
-                        onChange={(e) => this.handleInputChange(e, 'email', 'emailError')}
+                        onChange={(e) => this.handleInputChange(e, 'email')}
                         style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
                       />
                     </div>
@@ -134,8 +119,8 @@ export default class Contact extends Component {
                         aria-label="message"
                         cols="30"
                         rows="10"
-                        onChange={(e) => this.handleInputChange(e, 'message', 'messageError')}
-                        style={{borderColor: this.state.messageError ? '#FF5057' : '#D3DFB8'}}
+                        onChange={(e) => this.handleInputChange(e, 'message')}
+                        style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
                         ></textarea>
                     </div>
                     {
@@ -144,19 +129,9 @@ export default class Contact extends Component {
                         <span>** Required Fields Cannot Be Empty</span>
                       </div>
                       :
-                      this.state.nameError ?
-                      <div className="error-message">
-                        <span>** Name Cannot Be Empty</span>
-                      </div>
-                      :
                       this.state.emailError ?
                       <div className="error-message">
-                        <span>** Email Cannot Be Empty</span>
-                      </div>
-                      :
-                      this.state.messageError ?
-                      <div className="error-message">
-                        <span>** Message Cannot Be Empty</span>
+                        <span>** Please provide a correct email</span>
                       </div>
                       :
                       null
