@@ -142,24 +142,8 @@ app.get('/api/pages/nav', (req, res) => {
     {
       "links": [
         {
-          "title": "our team",
-          "link": "#",
-          "active": true
-        },
-        {
-          "title": "our office",
-          "link": "#",
-          "active": true
-        },
-        {
-          "title": "advanced therapies",
-          "link": "#",
-          "active": true
-        },
-        {
           "title": "Patient Documents",
           "link": "#",
-          "active": true,
           "options": [
             {
               "title": "forms",

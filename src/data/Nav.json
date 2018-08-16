@@ -1,24 +1,8 @@
 {
   "links": [
     {
-      "title": "our team",
-      "link": "#",
-      "active": false
-    },
-    {
-      "title": "our office",
-      "link": "#",
-      "active": false
-    },
-    {
-      "title": "advanced therapies",
-      "link": "#",
-      "active": false
-    },
-    {
       "title": "Patient Documents",
       "link": "#",
-      "active": true,
       "options": [
         {
           "title": "forms",
