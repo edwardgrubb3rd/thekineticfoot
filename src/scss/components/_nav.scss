@@ -1,6 +1,6 @@
 
 .navbar {
-  background-color: $transparent-white;
+  background-color: $white;
   box-shadow: $box-shadow3;
   max-width: $lgDesktop;
   position: fixed;
@@ -46,7 +46,7 @@
 }
 
 .navbar-menu.mobile {
-  background-color: $transparent-white;
+  background-color: $white;
   display: flex;
   flex-direction: column;
   padding: 10px 0;
@@ -71,7 +71,7 @@
 }
 
 .navbar-item-submenu {
-  background-color: $transparent-white;
+  background-color: $white;
   display: flex;
   flex-direction: column;
   padding: 10px;
