@@ -81,7 +81,7 @@ app.get('/api/pages/about', (req, res) => {
         {
           "title": "Our Health Mission",
           "description": "Our experienced medical professionals put your healing needs first with care and compassion. We are proud to provide a high quality level of customer service, medical experience, and commitment to health and wellness to all our patients.",
-          "image": "hands.svg"
+          "image": "checked.svg"
         },
         {
           "title": "Experience",
