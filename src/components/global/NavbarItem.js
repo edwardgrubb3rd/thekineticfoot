@@ -3,15 +3,24 @@ import { withRouter } from 'react-router';
 
 class NavbarItem extends Component {
   state = {
-    show: false,
     forms: false,
     handouts: false
   }
 
-  showMenu = () => {
-    this.setState({
-      show: !this.state.show
-    });
+  forms = React.createRef();
+  handouts = React.createRef();
+
+  showMenu = (val) => {
+    if(val === 'forms') {
+      this.forms.current.focus();
+    }
+    else {
+      this.handouts.current.focus();
+    }
+  }
+
+  hideMenu = (val) => {
+    // console.log(this[val].current);
   }
 
   showSubMenu = (name) => {
@@ -25,22 +34,15 @@ class NavbarItem extends Component {
     // console.log(parent);
   }
 
-  componentDidMount() {
-    console.log(this.props.options);
-  }
-
-  renderSubMenu = (options = []) => {
-    console.log(options);
-    // console.log(!options.length);
-
+  renderSubMenu = (options = [], title) => {
     if(!options.length) return null;
 
     return (
-      <div className="navbar-submenu-recursive">
+      <div className="navbar-submenu-recursive" contextMenu={title} ref={title === 'forms' ? this.forms : this.handouts}>
         {
           options.map(({title, options}) => (
             <Fragment key={title}>
-              <span className="navbar-menu-link">{title}</span>
+              <span className="navbar-menu-link lower">{title}</span>
               {this.renderSubMenu(options)}
             </Fragment>
           ))
@@ -51,12 +53,18 @@ class NavbarItem extends Component {
 
   render() {
     return (
-      <div className={this.state.show ? "navbar-submenu active" : "navbar-submenu"}>
+      <div className="navbar-submenu">
         {
           this.props.options.map(({title, options}) => (
             <Fragment key={title}>
-              <span className="navbar-menu-link" onClick={this.showMenu}>{title}</span>
-              {this.renderSubMenu(options)}
+              <span
+                className="navbar-menu-link mid"
+                onMouseEnter={() => this.showMenu(title)}
+                onMouseLeave={() => this.hideMenu(title)}
+              >
+                {title}
+              </span>
+              {this.renderSubMenu(options, title)}
             </Fragment>
           ))
         }

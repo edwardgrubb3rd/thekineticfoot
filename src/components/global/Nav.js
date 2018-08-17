@@ -69,7 +69,7 @@ class Nav extends Component {
                 this.props.nav.links.map(({title, options}, index) => (
                   options ?
                   <div className="navbar-item" key={index}>
-                    <span className="navbar-menu-link">{title}</span>
+                    <span className="navbar-menu-link top">{title}</span>
                     <NavbarItem
                       options={options}
                     />

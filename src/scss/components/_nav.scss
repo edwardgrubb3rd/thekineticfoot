@@ -119,6 +119,10 @@
   text-align: left;
   top: 50%;
   width: 285px;
+
+  &:focus {
+    background-color: #FFCC00;
+  }
 }
 
 .navbar-link {
