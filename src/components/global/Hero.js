@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import data from '../../data/Hero.json';
+import Hero1 from '../../assets/img/hero1.jpg';
+import Hero2 from '../../assets/img/hero2.jpg';
+import Hero3 from '../../assets/img/hero3.jpg';
 
 export default class Hero extends Component {
   state = {
@@ -50,8 +53,21 @@ export default class Hero extends Component {
       <Fragment>
         {
           this.props.hero ?
-          <div className="hero" style={{backgroundImage: `url('../assets/img/hero${this.state.activeIndex}.jpg')`}}>
-            <div className="hero-overlay"></div>
+          <div className="hero">
+            <div className="hero-overlay">
+              {
+                this.state.activeIndex === 1 ?
+                <img src={Hero1} alt="the kinetic foot active after treatment" className="hero-img"/>
+                :
+                this.state.activeIndex === 2 ?
+                <img src={Hero2} alt="the kinetic foot active after treatment" className="hero-img"/>
+                :
+                this.state.activeIndex === 3 ?
+                <img src={Hero3} alt="the kinetic foot active after treatment" className="hero-img"/>
+                :
+                null
+              }
+            </div>
 
              <div className="hero-content">
               <h1 className="title">{this.props.hero.title}</h1>
