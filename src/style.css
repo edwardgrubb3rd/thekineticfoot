@@ -366,7 +366,8 @@ li {
   display: flex;
   flex-direction: column; }
   .contact .title {
-    color: #1C1C1C; }
+    color: #1C1C1C;
+    margin-bottom: 20px; }
 
 .contact-section {
   display: flex;
@@ -449,7 +450,6 @@ li {
 
 .hero {
   align-items: center;
-  background-image: url("./assets/img/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

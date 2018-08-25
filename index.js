@@ -144,16 +144,16 @@ app.get('/api/pages/nav', (req, res) => {
         {
           "title": "our team",
           "link": "#",
-          "active": true
+          "active": false
         },
         {
           "title": "our office",
           "link": "#",
-          "active": true
+          "active": false
         },
         {
-          "title": "advanced therapies",
-          "link": "#",
+          "title": "treatments",
+          "link": "/treatments",
           "active": true
         },
         {
