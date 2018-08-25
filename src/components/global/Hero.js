@@ -16,7 +16,9 @@ export default class Hero extends Component {
       this.props.get();
     }
 
-    this.startInterval();
+    this.startInterval = setInterval(() => {
+      this.carousel();
+    }, 8000);
   }
 
   componentWillUnmount() {
@@ -25,21 +27,9 @@ export default class Hero extends Component {
   }
 
   stopInterval = () => {
-    console.log('stopping interval');
     this.setState({
       interval: false
     });
-  }
-
-  startInterval = () => {
-    if(this.state.interval) {
-      setInterval(() => {
-        this.carousel();
-      }, 8000);
-    }
-    else {
-      clearInterval();
-    }
   }
 
   carousel = () => {
