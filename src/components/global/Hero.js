@@ -35,7 +35,7 @@ export default class Hero extends Component {
     if(this.state.interval) {
       setInterval(() => {
         this.carousel();
-      }, 5000);
+      }, 8000);
     }
     else {
       clearInterval();
