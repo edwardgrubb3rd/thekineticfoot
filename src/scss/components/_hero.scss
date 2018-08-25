@@ -8,6 +8,7 @@
   height: 780px;
   justify-content: center;
   position: relative;
+  transition: 1s ease-in-out;
 
   @include mediaQuery(max, $mobile) {
     height: 100vh;

@@ -128,7 +128,11 @@ app.get('/api/pages/footer', (req, res) => {
 app.get('/api/pages/hero', (req, res) => {
   res.json(
     {
-      "img": "hero.jpg",
+      "img": [
+        "hero1.jpg",
+        "hero2.jpg",
+        "hero3.jpg"
+      ],
       "title": "The Kinetic Foot & Ankle Clinic",
       "content": "Advanced compassionate podiatry solutions in Denver",
       "button": "visit our clinic",

@@ -30,7 +30,7 @@ export default class App extends Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/treatments" component={Treatments} />
-                {/* <Route exact path="*" component={Home} /> */}
+                <Route exact path="*" component={Home} />
               </Switch>
               <Footer get={getFooter} footer={footer} />
             </Fragment>
