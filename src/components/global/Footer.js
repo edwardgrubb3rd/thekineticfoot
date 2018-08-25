@@ -34,7 +34,7 @@ class Footer extends Component {
         {
           this.props.footer ?
           <div className="footer">
-            <div className="section">
+            <div className="footer-section section">
               <div className="footer-section left">
                 <span className="title">The Kinetic Foot & Ankle Clinic</span>
                 <div className="footer-contact">
@@ -65,7 +65,7 @@ class Footer extends Component {
           :
           this.state.data ?
           <div className="footer">
-            <div className="section">
+            <div className="footer-section section">
               <div className="footer-section left">
                 <span className="title">The Kinetic Foot & Ankle Clinic</span>
                 <div className="footer-contact">
