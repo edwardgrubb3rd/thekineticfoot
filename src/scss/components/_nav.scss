@@ -115,6 +115,11 @@
   }
 }
 
+.active {
+  border-bottom: 1px solid $green;
+  padding-bottom: 4px;
+}
+
 .mobile-menu {
   display: none;
   flex-direction: column;

@@ -677,6 +677,10 @@ li {
     .navbar-link {
       font-size: .85rem; } }
 
+.active {
+  border-bottom: 1px solid #61BA14;
+  padding-bottom: 4px; }
+
 .mobile-menu {
   display: none;
   flex-direction: column;

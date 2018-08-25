@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 class NavbarItem extends Component {
@@ -34,7 +34,7 @@ class NavbarItem extends Component {
             }
           </Fragment>
           :
-          <Link to={this.props.link} className="navbar-link">{this.props.title}</Link>
+          <NavLink to={this.props.link} className="navbar-link" activeClassName="active">{this.props.title}</NavLink>
         }
       </div>
     )
