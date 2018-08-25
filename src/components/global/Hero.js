@@ -1,8 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import data from '../../data/Hero.json';
-import Hero1 from '../../assets/img/hero1.jpg';
-import Hero2 from '../../assets/img/hero2.jpg';
-import Hero3 from '../../assets/img/hero3.jpg';
 
 export default class Hero extends Component {
   state = {
@@ -57,13 +54,13 @@ export default class Hero extends Component {
             <div className="hero-overlay">
               {
                 this.state.activeIndex === 1 ?
-                <img src={Hero1} alt="the kinetic foot active after treatment" className="hero-img"/>
+                <img src={require(`../../assets/img/hero${this.state.activeIndex}.jpg`)} alt="the kinetic foot active after treatment" className="hero-img"/>
                 :
                 this.state.activeIndex === 2 ?
-                <img src={Hero2} alt="the kinetic foot active after treatment" className="hero-img"/>
+                <img src={require(`../../assets/img/hero${this.state.activeIndex}.jpg`)} alt="the kinetic foot active after treatment" className="hero-img"/>
                 :
                 this.state.activeIndex === 3 ?
-                <img src={Hero3} alt="the kinetic foot active after treatment" className="hero-img"/>
+                <img src={require(`../../assets/img/hero${this.state.activeIndex}.jpg`)} alt="the kinetic foot active after treatment" className="hero-img"/>
                 :
                 null
               }
