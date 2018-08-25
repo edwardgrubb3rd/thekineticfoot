@@ -18,11 +18,7 @@ html {
 
 body {
   margin: 0;
-  max-width: 1440px;
   padding: 0; }
-  @media only screen and (min-width: 1440px) {
-    body {
-      margin: 0 auto; } }
 
 main {
   display: block; }
@@ -50,8 +46,12 @@ button {
   border-color: none; }
 
 .section {
+  max-width: 1440px;
   padding: 25px 0;
   width: 100%; }
+  @media only screen and (min-width: 1440px) {
+    .section {
+      margin: 0 auto; } }
 
 .form-field {
   display: flex;
@@ -384,6 +384,7 @@ li {
   background-color: #FFFFFF;
   border: 1px solid #D4DBE3;
   border-radius: 6px;
+  color: #1C1C1C;
   box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -408,6 +409,7 @@ li {
   margin-bottom: 5px; }
 
 .more-info {
+  color: #1C1C1C;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -481,12 +483,16 @@ li {
   display: flex;
   flex-direction: column;
   left: 50%;
+  max-width: 1440px;
   padding: 25px;
   position: absolute;
   text-align: center;
   transform: translate(-50%, 0);
   width: 45%;
   z-index: 2; }
+  @media only screen and (min-width: 1440px) {
+    .hero-content {
+      margin: 0 auto; } }
   @media only screen and (max-width: 900px) {
     .hero-content {
       padding: 20px;
@@ -511,13 +517,16 @@ li {
 
 .footer {
   background-color: #384D5A;
+  width: 100%; }
+
+.section {
   color: #99DDC8;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 25px; }
   @media only screen and (max-width: 600px) {
-    .footer {
+    .section {
       flex-direction: column;
       padding: 15px; } }
 
@@ -587,7 +596,6 @@ li {
 .navbar {
   background-color: #FFFFFF;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16), 0px 0px 0px rgba(0, 0, 0, 0.05);
-  max-width: 1440px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -598,8 +606,12 @@ li {
   display: flex;
   height: 50px;
   justify-content: space-between;
+  max-width: 1440px;
   padding: 0 40px;
   position: relative; }
+  @media only screen and (min-width: 1440px) {
+    .navbar-wrapper {
+      margin: 0 auto; } }
   @media only screen and (max-width: 600px) {
     .navbar-wrapper {
       padding: 0 20px; } }
@@ -707,7 +719,7 @@ li {
   transform: rotate(45deg) translate(-10px, -4px); }
 
 .navbar-contact {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(56, 77, 90, 0.4);
   left: 40px;
   padding: 15px 10px;
   position: absolute;
@@ -715,6 +727,8 @@ li {
   @media only screen and (max-width: 600px) {
     .navbar-contact {
       display: none; } }
+  .navbar-contact .navbar-link {
+    color: #FFFFFF; }
 
 .spinner:before {
   animation: spinner 1s linear infinite;
@@ -734,3 +748,6 @@ li {
 @keyframes spinner {
   to {
     transform: rotate(360deg); } }
+
+.treatments {
+  padding: 100px 0; }

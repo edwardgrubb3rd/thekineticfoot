@@ -1,7 +1,12 @@
 
 .section {
+	max-width: $lgDesktop;
 	padding: 25px 0;
 	width: 100%;
+
+	@include mediaQuery(min, $lgDesktop) {
+		margin: 0 auto;
+	}
 }
 
 .form-field {

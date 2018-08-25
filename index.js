@@ -118,8 +118,8 @@ app.get('/api/pages/footer', (req, res) => {
         "city": "Aurora",
         "state": "Colorado",
         "zip": "80014",
-        "phone": "720-295-4864",
-        "fax": "855-805-9391"
+        "phone": "720.295.4864",
+        "fax": "1.855.805.9391"
       }
     }
   )

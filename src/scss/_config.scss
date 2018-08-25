@@ -24,12 +24,7 @@ html {
 
 body {
 	margin: 0;
-	max-width: $lgDesktop;
 	padding: 0;
-
-	@include mediaQuery(min, $lgDesktop) {
-		margin: 0 auto;
-	}
 }
 
 main {
