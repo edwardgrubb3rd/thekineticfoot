@@ -616,16 +616,14 @@ li {
   text-transform: uppercase; }
 
 .navbar-menu {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  max-width: 70%; }
+  max-width: 70%;
+  position: relative; }
   @media only screen and (max-width: 900px) {
     .navbar-menu {
       display: none; } }
-
-.navbar-menu.active {
-  display: flex;
-  width: 55%; }
 
 .navbar-menu.mobile {
   background-color: #FFFFFF;
@@ -645,10 +643,10 @@ li {
 
 .navbar-item {
   padding: 0 15px;
-  position: relative;
-  text-align: center; }
+  position: relative; }
 
-.navbar-item-submenu {
+.navbar-item-menu {
+  align-items: flex-start;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -657,7 +655,7 @@ li {
   top: 34px;
   width: 100%; }
   @media only screen and (max-width: 900px) {
-    .navbar-item-submenu {
+    .navbar-item-menu {
       align-items: flex-end;
       right: 200px;
       top: 0;
@@ -665,12 +663,26 @@ li {
 
 .navbar-submenu-link {
   color: #401F3E;
-  margin: 4px 0;
-  padding: 0 5px;
+  display: block;
+  margin: 15px 0;
+  position: relative;
   text-transform: capitalize; }
+  .navbar-submenu-link:first-child {
+    margin-top: 0; }
+  .navbar-submenu-link:last-child {
+    margin-bottom: 0; }
   .navbar-submenu-link:hover {
     color: #62305f;
     cursor: pointer; }
+
+.navbar-submenu {
+  background-color: #FFFFFF;
+  left: 0;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: left;
+  top: calc(100% + 15px);
+  width: 100%; }
 
 .navbar-link {
   color: #401F3E;

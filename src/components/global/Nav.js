@@ -66,7 +66,7 @@ class Nav extends Component {
         		</div>
         		<div className={this.state.class}>
         			{
-                this.props.nav.links.map(({title, link, active, sublinks}) => (
+                this.props.nav.links.map(({active, title, sublinks, link}, index) => (
                   active ?
                   <NavbarItem
                     key={title}
@@ -101,7 +101,7 @@ class Nav extends Component {
         		</div>
         		<div className={this.state.class}>
         			{
-                this.state.data.links.map(({title, link, active, sublinks}) => (
+                this.state.data.links.map(({active, title, sublinks, link}, index) => (
                   active ?
                   <NavbarItem
                     key={title}

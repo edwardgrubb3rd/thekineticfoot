@@ -13,16 +13,23 @@ class NavbarItem extends Component {
     });
   }
 
+  showSubMenu = (name) => {
+
+    let val = {...this.state, [name]: !this.state[name]};
+
+    this.setState(val);
+  }
+
   render() {
     return (
-      <div className={this.state.show ? "navbar-item active" : "navbar-item"}>
+      <div className="navbar-item">
         {
           this.props.link === '#' ?
           <Fragment>
             <span className="navbar-link" onClick={this.showMenu}>{this.props.title}</span>
             {
               this.state.show ?
-              <div className="navbar-item-submenu">
+              <div className="navbar-submenu">
                 {
                   this.props.sublinks.map(({title, link}) => (
                     <a key={title} href={link} target="_blank" className="navbar-submenu-link">{title}</a>

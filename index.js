@@ -162,8 +162,8 @@ app.get('/api/pages/nav', (req, res) => {
         },
         {
           "title": "Patient Documents",
-          "link": "#",
           "active": true,
+          "link": "#",
           "sublinks": [
             {
               "title": "Record Request",
@@ -183,6 +183,7 @@ app.get('/api/pages/nav', (req, res) => {
       "contact": "720.295.4864",
       "logo": false
     }
+
   )
 });
 

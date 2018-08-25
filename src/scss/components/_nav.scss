@@ -35,18 +35,15 @@
 }
 
 .navbar-menu {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   max-width: 70%;
+  position: relative;
 
   @include mediaQuery(max, $tablet) {
     display: none;
   }
-}
-
-.navbar-menu.active {
-  display: flex;
-  width: 55%;
 }
 
 .navbar-menu.mobile {
@@ -72,10 +69,10 @@
 .navbar-item {
   padding: 0 15px;
   position: relative;
-  text-align: center;
 }
 
-.navbar-item-submenu {
+.navbar-item-menu {
+  align-items: flex-start;
   background-color: $white;
   display: flex;
   flex-direction: column;
@@ -94,14 +91,33 @@
 
 .navbar-submenu-link {
   color: $castro;
-  margin: 4px 0;
-  padding: 0 5px;
+  display: block;
+  margin: 15px 0;
+  position: relative;
   text-transform: capitalize;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover {
     color: lighten($castro, 10);
     cursor: pointer;
   }
+}
+
+.navbar-submenu {
+  background-color: $white;
+  left: 0;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: left;
+  top: calc(100% + 15px);
+  width: 100%;
 }
 
 .navbar-link {
