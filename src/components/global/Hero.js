@@ -50,21 +50,17 @@ export default class Hero extends Component {
       <Fragment>
         {
           this.props.hero ?
-          <div className="hero">
-            <div className="hero-overlay">
-              {
-                this.state.activeIndex === 1 ?
-                <img src={require(`../../assets/img/hero${this.state.activeIndex}.jpg`)} alt="the kinetic foot active after treatment" className="hero-img"/>
-                :
-                this.state.activeIndex === 2 ?
-                <img src={require(`../../assets/img/hero${this.state.activeIndex}.jpg`)} alt="the kinetic foot active after treatment" className="hero-img"/>
-                :
-                this.state.activeIndex === 3 ?
-                <img src={require(`../../assets/img/hero${this.state.activeIndex}.jpg`)} alt="the kinetic foot active after treatment" className="hero-img"/>
-                :
-                null
-              }
-            </div>
+          <div className="hero"
+            style={{
+              backgroundImage: this.state.activeIndex === 1 ? `url(../../assets/img/hero${this.state.activeIndex}.jpg)`
+              :
+              this.state.activeIndex === 2 ? `url(../../assets/img/hero${this.state.activeIndex}.jpg)`
+              :
+              this.state.activeIndex === 3 ? `url(../../assets/img/hero${this.state.activeIndex}.jpg)`
+              :
+              null
+            }}>
+            <div className="hero-overlay"></div>
 
              <div className="hero-content">
               <h1 className="title">{this.props.hero.title}</h1>

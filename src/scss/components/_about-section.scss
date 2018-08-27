@@ -47,6 +47,7 @@
   @include mediaQuery(max, $tablet) {
     flex: 0 0 80%;
     margin: 15px 0;
+    min-height: 475px;
     width: 80%;
   }
 
