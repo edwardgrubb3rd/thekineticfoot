@@ -173,9 +173,6 @@ a {
   font-size: 1rem;
   line-height: 1.1;
   text-decoration: none; }
-  @media only screen and (max-width: 900px) {
-    a {
-      font-size: 0.8rem; } }
 
 a.darken {
   color: #c58bff; }
@@ -207,6 +204,9 @@ li {
   @media only screen and (max-width: 600px) {
     .title {
       font-size: 2.2rem; } }
+
+.white {
+  color: #FFFFFF; }
 
 /*** Import partials from the modules folder ***/
 .about {
@@ -637,17 +637,17 @@ li {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 20px 15px;
   position: absolute;
   right: 0;
-  top: 50px;
-  width: 250px; }
-  @media only screen and (max-width: 600px) {
-    .navbar-menu.mobile {
-      width: 200px; } }
+  top: 50px; }
   .navbar-menu.mobile .navbar-item {
-    padding: 5px 0;
+    padding: 10px 0;
     width: 100%; }
+    .navbar-menu.mobile .navbar-item:first-child {
+      padding-top: 0; }
+    .navbar-menu.mobile .navbar-item:last-child {
+      padding-bottom: 0; }
 
 .navbar-item {
   padding: 0 15px;

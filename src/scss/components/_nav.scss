@@ -50,19 +50,22 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 20px 15px;
   position: absolute;
   right: 0;
   top: 50px;
-  width: 250px;
-
-  @include mediaQuery(max, $mobile) {
-    width: 200px;
-  }
 
   .navbar-item {
-    padding: 5px 0;
+    padding: 10px 0;
     width: 100%;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 }
 
