@@ -208,6 +208,9 @@ li {
 .white {
   color: #FFFFFF; }
 
+.center {
+  text-align: center; }
+
 /*** Import partials from the modules folder ***/
 .about {
   align-items: center;
@@ -451,7 +454,7 @@ li {
   background-image: url("./assets/img/hero1.jpg"); }
 
 .treatments .hero {
-  background-image: url("./assets/img/hero2.jpg"); }
+  background-image: url("./assets/img/hero3.jpg"); }
 
 .hero {
   align-items: center;

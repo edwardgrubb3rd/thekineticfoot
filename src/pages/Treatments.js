@@ -4,8 +4,8 @@ export default class Treatments extends Component {
   render() {
     return (
       <div className="treatments section">
-        <div className="hero" style={{backgroundImage: `url(../../assets/img/hero2.jpg)`}}>
-          <h1 className="title white">conditions we treat</h1>
+        <div className="hero">
+          <h1 className="title white center">conditions we treat</h1>
         </div>
       </div>
     );
