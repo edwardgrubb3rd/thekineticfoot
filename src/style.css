@@ -740,7 +740,7 @@ li {
   top: 50px; }
   @media only screen and (max-width: 600px) {
     .navbar-contact {
-      display: none; } }
+      left: 20px; } }
   .navbar-contact .navbar-link {
     color: #FFFFFF; }
 
