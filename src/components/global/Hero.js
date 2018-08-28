@@ -4,7 +4,6 @@ import data from '../../data/Hero.json';
 export default class Hero extends Component {
   state = {
     data: null,
-    activeIndex: 1,
     interval: true
   }
 
@@ -16,33 +15,6 @@ export default class Hero extends Component {
       this.props.get();
     }
 
-    this.startInterval = setInterval(() => {
-      this.carousel();
-    }, 8000);
-  }
-
-  componentWillUnmount() {
-    this.stopInterval();
-    clearInterval(this.startInterval);
-  }
-
-  stopInterval = () => {
-    this.setState({
-      interval: false
-    });
-  }
-
-  carousel = () => {
-    if(this.state.activeIndex >= 1 && this.state.activeIndex < 4) {
-      this.setState({
-        activeIndex: this.state.activeIndex + 1
-      });
-    }
-    if(this.state.activeIndex === 4) {
-      this.setState({
-        activeIndex: 1
-      });
-    }
   }
 
   render() {
@@ -50,16 +22,7 @@ export default class Hero extends Component {
       <Fragment>
         {
           this.props.hero ?
-          <div className="hero"
-            style={{
-              backgroundImage: this.state.activeIndex === 1 ? `url(../../assets/img/hero${this.state.activeIndex}.jpg)`
-              :
-              this.state.activeIndex === 2 ? `url(../../assets/img/hero${this.state.activeIndex}.jpg)`
-              :
-              this.state.activeIndex === 3 ? `url(../../assets/img/hero${this.state.activeIndex}.jpg)`
-              :
-              null
-            }}>
+          <div className="hero" style={{backgroundImage: `url(../../assets/img/hero1.jpg)`}}>
             <div className="hero-overlay"></div>
 
              <div className="hero-content">
