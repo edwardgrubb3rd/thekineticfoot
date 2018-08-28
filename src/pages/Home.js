@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { DataConsumer } from '../context/DataContext';
 
 // Components
@@ -11,11 +11,11 @@ export default class Home extends Component {
     return (
       <DataConsumer>
         {({getContact, getHero, getAbout, data: {contact, hero, about}}) => (
-          <Fragment>
+          <div className="homepage">
             <Hero get={getHero} hero={hero} />
             <About get={getAbout} about={about} />
             <Contact get={getContact} contact={contact} />
-          </Fragment>
+          </div>
         )}
       </DataConsumer>
     )

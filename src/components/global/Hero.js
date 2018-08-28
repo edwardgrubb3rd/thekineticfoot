@@ -22,7 +22,7 @@ export default class Hero extends Component {
       <Fragment>
         {
           this.props.hero ?
-          <div className="hero" style={{backgroundImage: `url(../../assets/img/hero1.jpg)`}}>
+          <div className="hero">
             <div className="hero-overlay"></div>
 
              <div className="hero-content">
@@ -40,7 +40,7 @@ export default class Hero extends Component {
           </div>
           :
           this.state.data ?
-          <div className="hero" style={{backgroundImage: `url('../assets/img/hero1.jpg')`}}>
+          <div className="hero">
             <div className="hero-overlay"></div>
 
              <div className="hero-content">
