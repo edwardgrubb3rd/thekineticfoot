@@ -10,16 +10,27 @@ class Nav extends Component {
     class: 'navbar-menu',
     contactLink: '',
     bar: '',
-    data: null
+    data: null,
+    lastScrollY: 0,
+    activeClass: ''
   }
 
   componentDidMount() {
     if(window.location.href.includes('github')) {
       this.setState({data});
+      window.addEventListener("resize", this.updateDimensions);
+      window.addEventListener("scroll", this.handleScroll);
     }
     else {
       this.props.get();
+      window.addEventListener("resize", this.updateDimensions);
+      window.addEventListener("scroll", this.handleScroll);
     }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   convertNumber(num) {
@@ -32,6 +43,15 @@ class Nav extends Component {
         let contactLink = num.split('-').join('');
         return contactLink;
       }
+    }
+  }
+
+  updateDimensions = () => {
+    if(window.innerWidth > 600 && this.state.class === 'navbar-menu mobile') {
+      this.setState({
+        class: 'navbar-menu',
+        bar: ''
+      });
     }
   }
 
@@ -50,9 +70,40 @@ class Nav extends Component {
     }
   }
 
+  handleScroll = () => {
+    const { lastScrollY } = this.state;
+    const currentScrollY = window.scrollY;
+
+    if(window.innerWidth <= 900) {
+      if(currentScrollY < lastScrollY) {
+        this.setState({
+          activeClass: ' scrollUp',
+        });
+      }
+      if(currentScrollY > lastScrollY) {
+        this.setState({
+          activeClass: ' scrollDown',
+        });
+      }
+      if(currentScrollY <= 102 || lastScrollY <= 102) {
+        this.setState({
+          activeClass: '',
+        });
+      }
+      this.setState({
+        lastScrollY: currentScrollY
+      });
+    }
+    if(window.innerWidth > 900) {
+      this.setState({
+        activeClass: ''
+      });
+    }
+  }
+
   render() {
     return (
-      <div className="navbar">
+      <div className={"navbar" + this.state.activeClass}>
       	{
           this.props.nav ?
           <div className="navbar-wrapper">

@@ -93,10 +93,6 @@ li {
   @include mediaQuery(max, $tablet) {
     font-size: 2rem;
   }
-
-  @include mediaQuery(max, $mobile) {
-    font-size: 2.2rem;
-  }
 }
 
 .white {

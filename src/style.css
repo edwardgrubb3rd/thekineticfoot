@@ -201,9 +201,6 @@ li {
   @media only screen and (max-width: 900px) {
     .title {
       font-size: 2rem; } }
-  @media only screen and (max-width: 600px) {
-    .title {
-      font-size: 2.2rem; } }
 
 .white {
   color: #FFFFFF; }
@@ -601,10 +598,20 @@ li {
 .navbar {
   background-color: #FFFFFF;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16), 0px 0px 0px rgba(0, 0, 0, 0.05);
-  position: fixed;
-  top: 0;
+  position: absolute;
   width: 100%;
   z-index: 3; }
+
+.scrollUp {
+  position: fixed;
+  top: 0;
+  transform: translateY(0);
+  transition: .5s ease-in-out; }
+
+.scrollDown {
+  position: fixed;
+  transform: translateY(-102px);
+  transition: .1s ease-in-out; }
 
 .navbar-wrapper {
   align-items: center;
@@ -727,7 +734,7 @@ li {
   width: 35px; }
 
 .change .bar1 {
-  transform: rotate(-45deg) translate(-9px, 3px); }
+  transform: rotate(-45deg) translate(-9px, 2px); }
 
 .change .bar2 {
   opacity: 0; }
