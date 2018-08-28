@@ -610,7 +610,7 @@ li {
 
 .scrollDown {
   position: fixed;
-  transform: translateY(-102px);
+  transform: translateY(-110px);
   transition: .1s ease-in-out; }
 
 .navbar-wrapper {
