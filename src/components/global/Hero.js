@@ -40,7 +40,7 @@ export default class Hero extends Component {
           </div>
           :
           this.state.data ?
-          <div className="hero" style={{backgroundImage: `url('../assets/img/hero${this.state.activeIndex}.jpg')`}}>
+          <div className="hero" style={{backgroundImage: `url('../assets/img/hero1.jpg')`}}>
             <div className="hero-overlay"></div>
 
              <div className="hero-content">
