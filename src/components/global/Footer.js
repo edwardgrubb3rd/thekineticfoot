@@ -11,7 +11,7 @@ class Footer extends Component {
       this.setState({data});
     }
     else {
-      this.props.get();
+      this.props.get('footer');
     }
   }
 

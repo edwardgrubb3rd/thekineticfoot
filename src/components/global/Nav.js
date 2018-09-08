@@ -22,7 +22,7 @@ class Nav extends Component {
       window.addEventListener("scroll", this.handleScroll);
     }
     else {
-      this.props.get();
+      this.props.get('nav');
       window.addEventListener("resize", this.updateDimensions);
       window.addEventListener("scroll", this.handleScroll);
     }

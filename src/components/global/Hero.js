@@ -11,8 +11,8 @@ export default class Hero extends Component {
     if(window.location.href.includes('github')) {
       this.setState({data});
     }
-    else {
-      this.props.get();
+    if(this.props.get) {
+      this.props.get('hero');
     }
 
   }
@@ -24,19 +24,28 @@ export default class Hero extends Component {
           this.props.hero ?
           <div className="hero">
             <div className="hero-overlay"></div>
-
+            {
+              this.props.hero.hero_card ?
+              <div className="hero-content-card">
+               <h1 className="title">{this.props.hero.title}</h1>
+               <span className="subtitle">
+                 {this.props.hero.content}
+               </span>
+               {
+                 this.props.hero.link ?
+                 <a href={this.props.hero.link} className="cta-button" target="_blank">{this.props.hero.button}</a>
+                 :
+                 null
+               }
+             </div>
+             :
              <div className="hero-content">
-              <h1 className="title">{this.props.hero.title}</h1>
-              <span className="subtitle">
-                {this.props.hero.content}
-              </span>
-              {
-                this.props.hero.link ?
-                <a href={this.props.hero.link} className="cta-button" target="_blank">{this.props.hero.button}</a>
-                :
-                null
-              }
-            </div>
+               <h1 className="title white center">{this.props.hero.title}</h1>
+               <span className="title-sm white center">
+                 {this.props.hero.content}
+               </span>
+             </div>
+            }
           </div>
           :
           this.state.data ?

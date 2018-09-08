@@ -18,7 +18,7 @@ export default class Contact extends Component {
       this.setState({data});
     }
     else {
-      this.props.get();
+      this.props.get('contact');
     }
   }
 

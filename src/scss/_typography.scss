@@ -95,6 +95,16 @@ li {
   }
 }
 
+.title-sm {
+  @extend .title;
+  display: block;
+  font-size: 2rem;
+
+  @include mediaQuery(max, $tablet) {
+    font-size: 1.5rem;
+  }
+}
+
 .white {
   color: $white;
 }

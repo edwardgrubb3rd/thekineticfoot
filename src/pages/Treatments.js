@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
+import { DataConsumer } from '../context/DataContext';
+
+// Components
+import Hero from '../components/global/Hero';
 
 export default class Treatments extends Component {
+  componentDidMount() {
+    this.props.get('treatments');
+  }
+
   render() {
     return (
-      <div className="treatments section">
-        <div className="hero">
-          <h1 className="title white center">conditions we treat</h1>
-        </div>
-      </div>
+      <DataConsumer>
+        {({data: {treatments}}) => (
+          <div className="treatments">
+            <Hero hero={treatments} />
+            <div className="section treatment-grid">
+
+            </div>
+          </div>
+        )}
+      </DataConsumer>
     );
   }
 };

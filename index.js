@@ -128,6 +128,7 @@ app.get('/api/pages/footer', (req, res) => {
 app.get('/api/pages/hero', (req, res) => {
   res.json(
     {
+      "hero_card": true,
       "img": [
         "hero1.jpg",
         "hero2.jpg",
@@ -187,6 +188,20 @@ app.get('/api/pages/nav', (req, res) => {
   )
 });
 
+app.get('/api/pages/treatments', (req, res) => {
+  res.json({
+    "hero_card": false,
+    "title": "conditions we treat",
+    "content": "so you can get back to doing what you love",
+    "treatments": [
+      {
+        "name": "",
+        "description": ""
+      }
+    ]
+  })
+})
+
 // Emailing
 app.post('/contact', (req, res) => {
   let transporter = nodemailer.createTransport({
@@ -219,36 +234,36 @@ app.post('/contact', (req, res) => {
   });
 });
 
-app.post('/thekineticfoot/contact', (req, res) => {
-  let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      type: 'OAuth2',
-      user: 'trevans24@gmail.com',
-      clientId: '106001694039-9c9sf90sccoecjbskll5u0r4nvdchio7.apps.googleusercontent.com',
-      clientSecret: 'wYluNHxCohGG0ycWz8FkFXQp',
-      refreshToken: '1/MeYeW3iIROpttVEd-zsgVyozhj1kck2kkW5hMILrxoI'
-    }
-  });
-
-  let mailOptions = {
-    from: `"${req.body.name}" <${req.body.email}>`,
-    to: 'trevans24@gmail.com',
-    subject: 'Message from The Kinetic Foot Contact Form',
-    text: `${req.body.message}`
-  }
-
-  transporter.sendMail(mailOptions, (err, info) => {
-    if(err) {
-      console.log('send error', err);
-    }
-    else {
-      console.log('sent', info.messageId);
-    }
-  });
-});
+// app.post('/thekineticfoot/contact', (req, res) => {
+//   let transporter = nodemailer.createTransport({
+//     host: 'smtp.gmail.com',
+//     port: 465,
+//     secure: true,
+//     auth: {
+//       type: 'OAuth2',
+//       user: 'trevans24@gmail.com',
+//       clientId: '106001694039-9c9sf90sccoecjbskll5u0r4nvdchio7.apps.googleusercontent.com',
+//       clientSecret: 'wYluNHxCohGG0ycWz8FkFXQp',
+//       refreshToken: '1/MeYeW3iIROpttVEd-zsgVyozhj1kck2kkW5hMILrxoI'
+//     }
+//   });
+//
+//   let mailOptions = {
+//     from: `"${req.body.name}" <${req.body.email}>`,
+//     to: 'trevans24@gmail.com',
+//     subject: 'Message from The Kinetic Foot Contact Form',
+//     text: `${req.body.message}`
+//   }
+//
+//   transporter.sendMail(mailOptions, (err, info) => {
+//     if(err) {
+//       console.log('send error', err);
+//     }
+//     else {
+//       console.log('sent', info.messageId);
+//     }
+//   });
+// });
 
 app.listen(process.env.PORT || 3001, () => {
   console.log('Listening on 3001');

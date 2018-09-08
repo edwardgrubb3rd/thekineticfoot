@@ -16,7 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <DataConsumer>
-        {({getFooter, getNav, data: {
+        {({getPageData, data: {
           loading,
           footer,
           nav
@@ -26,13 +26,15 @@ export default class App extends Component {
           :
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Fragment>
-              <Nav get={getNav} nav={nav} />
+              <Nav get={getPageData} nav={nav} />
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/treatments" component={Treatments} />
+                <Route path="/treatments" render={() => (
+                  <Treatments get={getPageData} />
+                )} />
                 <Route exact path="*" component={Home} />
               </Switch>
-              <Footer get={getFooter} footer={footer} />
+              <Footer get={getPageData} footer={footer} />
             </Fragment>
           </BrowserRouter>
         )}

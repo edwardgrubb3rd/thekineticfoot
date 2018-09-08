@@ -8,6 +8,7 @@
 .treatments {
   .hero {
     background-image: url('./assets/img/hero3.jpg');
+    flex-direction: column;
   }
 }
 
@@ -17,7 +18,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 50vh;
+  height: 60vh;
   justify-content: center;
   position: relative;
 
@@ -40,7 +41,7 @@
   z-index: 1;
 }
 
-.hero-content {
+.hero-content-card {
   align-items: center;
   background-color: rgba(56, 77, 90, 0.85);
   border-top-left-radius: 4px;
@@ -88,4 +89,8 @@
     margin: 10px 0 15px;
     width: 85%;
   }
+}
+
+.hero-content {
+  z-index: 2;
 }
