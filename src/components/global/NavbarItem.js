@@ -41,7 +41,7 @@ class NavbarItem extends Component {
             }
           </Fragment>
           :
-          <NavLink to={this.props.link} className="navbar-link" activeClassName="active">{this.props.title}</NavLink>
+          <NavLink to={this.props.link} className="navbar-link" activeClassName="active" onClick={this.props.onClick}>{this.props.title}</NavLink>
         }
       </div>
     )

@@ -192,7 +192,7 @@ app.get('/api/pages/treatments', (req, res) => {
   res.json({
     "hero_card": false,
     "title": "conditions and treatments",
-    "content": "so you can get back to doing what you love",
+    "content": "get back to doing what you love faster",
     "treatments": [
       {
         "name": "Accessory Navicular Syndrome",

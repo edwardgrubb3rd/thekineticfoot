@@ -34,17 +34,21 @@
   @include mediaQuery(max, $smDesktop) {
     flex: 0 0 45%;
   }
+
+  @include mediaQuery(max, $mobile) {
+    flex: 0 0 100%;
+  }
 }
 
 .treatment-card-title {
   border-bottom: 1px solid $green;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   padding-bottom: 5px;
 }
 
 .treatment-card-description {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .treatment-card-link {

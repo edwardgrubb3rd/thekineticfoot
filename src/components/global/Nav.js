@@ -53,12 +53,14 @@ class Nav extends Component {
         class: 'navbar-menu mobile',
         bar: 'change'
       });
+      document.body.classList.add('nav-open');
     }
     if(this.state.class === 'navbar-menu mobile') {
       this.setState({
         class: 'navbar-menu',
         bar: ''
       });
+      document.body.classList.remove('nav-open');
     }
   }
 
@@ -66,7 +68,7 @@ class Nav extends Component {
     const { lastScrollY } = this.state;
     const currentScrollY = window.scrollY;
 
-    if(window.innerWidth <= 900) {
+    if(window.innerWidth <= 900 && this.state.class !== 'navbar-menu mobile') {
       if(currentScrollY < lastScrollY) {
         this.setState({
           activeClass: ' scrollUp',
@@ -102,9 +104,9 @@ class Nav extends Component {
         		<div className="logo">
               {
                 this.props.nav.logo ?
-                <Link to='/' className="navbar-link"><img src={this.props.nav.logo} alt="the kinetic foot and ankle clinic logo"/></Link>
+                <Link to='/' className="navbar-link" onClick={this.handleClick}><img src={this.props.nav.logo} alt="the kinetic foot and ankle clinic logo"/></Link>
                 :
-                <Link to='/' className="navbar-link">Kinetic Foot & Ankle</Link>
+                <Link to='/' className="navbar-link" onClick={this.handleClick}>Kinetic Foot & Ankle</Link>
               }
         		</div>
         		<div className={this.state.class}>
@@ -116,6 +118,8 @@ class Nav extends Component {
                     title={title}
                     link={link}
                     sublinks={sublinks}
+                    index={index}
+                    onClick={this.handleClick}
                   />
                   :
                   null
