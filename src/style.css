@@ -738,7 +738,11 @@ li {
     padding: 5px 5px 3px; }
   @media only screen and (max-width: 600px) {
     .navbar-link {
-      font-size: .85rem; } }
+      font-size: .85rem; }
+      .navbar-link:hover {
+        border-bottom: none;
+        cursor: pointer;
+        padding: 5px 5px 3px; } }
 
 .active {
   border-bottom: 1px solid #61BA14;
@@ -820,7 +824,7 @@ li {
   box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
   flex: 0 0 30%;
   margin-bottom: 20px;
-  min-height: 300px;
+  min-height: 335px;
   padding: 20px;
   position: relative; }
   .treatment-card:hover {
@@ -828,7 +832,8 @@ li {
     cursor: pointer; }
   @media only screen and (max-width: 1024px) {
     .treatment-card {
-      flex: 0 0 45%; } }
+      flex: 0 0 45%;
+      padding: 40px 20px; } }
   @media only screen and (max-width: 600px) {
     .treatment-card {
       flex: 0 0 100%; } }

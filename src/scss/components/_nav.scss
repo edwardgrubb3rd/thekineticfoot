@@ -158,6 +158,12 @@
 
   @include mediaQuery(max, $mobile) {
     font-size: .85rem;
+
+    &:hover {
+      border-bottom: none;
+      cursor: pointer;
+      padding: 5px 5px 3px;
+    }
   }
 }
 
