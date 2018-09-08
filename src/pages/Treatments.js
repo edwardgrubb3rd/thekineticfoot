@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DataConsumer } from '../context/DataContext';
+import { NavLink } from 'react-router-dom';
 
 // Components
 import Hero from '../components/global/Hero';
@@ -13,12 +14,25 @@ export default class Treatments extends Component {
     return (
       <DataConsumer>
         {({data: {treatments}}) => (
-          <div className="treatments">
-            <Hero hero={treatments} />
-            <div className="section treatment-grid">
-
+          (
+            treatments ?
+            <div className="treatments">
+              <Hero hero={treatments} />
+              <div className="section treatment-grid">
+                {
+                  treatments.treatments.map(({name, description, id}) => (
+                    <div className="treatment-card" key={name}>
+                      <span className="title-sm treatment-card-title">{name}</span>
+                      <p className="treatment-card-description">{description}</p>
+                      <NavLink to={`/treatments/${id}`} className="treatment-card-link">Learn More</NavLink>
+                    </div>
+                  ))
+                }
+              </div>
             </div>
-          </div>
+            :
+            null
+          )
         )}
       </DataConsumer>
     );

@@ -1,4 +1,55 @@
 
-.treatments {
-  margin-bottom: 50px;
+.treatment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 25px auto;
+  max-width: $lgDesktop;
+
+  @include mediaQuery(max, $lgDesktop) {
+    padding: 0 32px;
+  }
+
+  @include mediaQuery(max, $tablet) {
+    padding: 0 16px;
+  }
+}
+
+.treatment-card {
+  background-color: $white;
+  border: 1px solid $off-white;
+  border-radius: 6px;
+  box-shadow: $box-shadow;
+  flex: 0 0 30%;
+  margin-bottom: 20px;
+  min-height: 300px;
+  padding: 20px;
+  position: relative;
+
+  &:hover {
+    box-shadow: $box-shadow2;
+    cursor: pointer;
+  }
+
+  @include mediaQuery(max, $smDesktop) {
+    flex: 0 0 45%;
+  }
+}
+
+.treatment-card-title {
+  border-bottom: 1px solid $green;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.treatment-card-description {
+  margin: 10px 0;
+}
+
+.treatment-card-link {
+  bottom: 20px;
+  color: $cello;
+  left: 20px;
+  position: absolute;
 }

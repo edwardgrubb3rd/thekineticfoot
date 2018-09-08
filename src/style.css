@@ -785,5 +785,47 @@ li {
   to {
     transform: rotate(360deg); } }
 
-.treatments {
-  margin-bottom: 50px; }
+.treatment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 25px auto;
+  max-width: 1440px; }
+  @media only screen and (max-width: 1440px) {
+    .treatment-grid {
+      padding: 0 32px; } }
+  @media only screen and (max-width: 900px) {
+    .treatment-grid {
+      padding: 0 16px; } }
+
+.treatment-card {
+  background-color: #FFFFFF;
+  border: 1px solid #F0F7F4;
+  border-radius: 6px;
+  box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.16), 0px 1px 0px rgba(0, 0, 0, 0.05);
+  flex: 0 0 30%;
+  margin-bottom: 20px;
+  min-height: 300px;
+  padding: 20px;
+  position: relative; }
+  .treatment-card:hover {
+    box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.16), -15px 0px 35px rgba(0, 0, 0, 0.05);
+    cursor: pointer; }
+  @media only screen and (max-width: 1024px) {
+    .treatment-card {
+      flex: 0 0 45%; } }
+
+.treatment-card-title {
+  border-bottom: 1px solid #61BA14;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 5px; }
+
+.treatment-card-description {
+  margin: 10px 0; }
+
+.treatment-card-link {
+  bottom: 20px;
+  color: #384D5A;
+  left: 20px;
+  position: absolute; }
