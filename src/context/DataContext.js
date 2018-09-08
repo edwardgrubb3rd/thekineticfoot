@@ -16,7 +16,7 @@ export class DataProvider extends Component {
 
     api.getData(url).then(({data}) => {
       this.setState({
-        [page]: data
+        [page]: data,
       });
     });
   }

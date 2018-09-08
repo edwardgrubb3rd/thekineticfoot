@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
-import data from '../../data/Contact.json';
 
 
 export default class Contact extends Component {
@@ -9,17 +8,11 @@ export default class Contact extends Component {
     email: '',
     message: '',
     formError: false,
-    emailError: false,
-    data: null
+    emailError: false
   };
 
   componentDidMount() {
-    if(window.location.href.includes('github')) {
-      this.setState({data});
-    }
-    else {
-      this.props.get('contact');
-    }
+    this.props.get('contact');
   }
 
   handleInputChange = (e, name) => {
@@ -168,94 +161,6 @@ export default class Contact extends Component {
                 :
                 null
               }
-            </div>
-          </div>
-          :
-          this.state.data ?
-          <div className="contact section">
-            <span className="title">{this.state.data.title}</span>
-            <div className="contact-section">
-              <form className="contact-form" onSubmit={this.handleSubmit}>
-                <span className="form-title">{this.state.data.form.form_title}</span>
-                <div className="form-field">
-                  <label htmlFor="name">Name *</label>
-                  <input
-                    type="text"
-                    aria-label="name"
-                    onChange={(e) => this.handleInputChange(e, 'name', 'nameError')}
-                    style={{borderColor: this.state.nameError ? '#FF5057' : '#D3DFB8'}}
-                  />
-                </div>
-                <div className="form-field">
-                  <label htmlFor="email">Email *</label>
-                  <input
-                    type="email"
-                    aria-label="email"
-                    onChange={(e) => this.handleInputChange(e, 'email', 'emailError')}
-                    style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
-                  />
-                </div>
-                <div className="form-field">
-                  <label htmlFor="message">Message *</label>
-                  <textarea
-                    aria-label="message"
-                    cols="30"
-                    rows="10"
-                    onChange={(e) => this.handleInputChange(e, 'message', 'messageError')}
-                    style={{borderColor: this.state.messageError ? '#FF5057' : '#D3DFB8'}}
-                    ></textarea>
-                </div>
-                {
-                  this.state.formError ?
-                  <div className="error-message">
-                    <span>** Required Fields Cannot Be Empty</span>
-                  </div>
-                  :
-                  this.state.nameError ?
-                  <div className="error-message">
-                    <span>** Name Cannot Be Empty</span>
-                  </div>
-                  :
-                  this.state.emailError ?
-                  <div className="error-message">
-                    <span>** Email Cannot Be Empty</span>
-                  </div>
-                  :
-                  this.state.messageError ?
-                  <div className="error-message">
-                    <span>** Message Cannot Be Empty</span>
-                  </div>
-                  :
-                  null
-                }
-                <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.state.data.form.button_text}</button>
-              </form>
-              <div className="more-info">
-                <span className="form-title">Hours of Operation</span>
-                <div className="hours-operation">
-                  {
-                    this.state.data.hours_of_operation.map(({days, hours}) => (
-                      <div className="time-slot" key={days}>
-                        <span className="day">{days}:</span>
-                        <span className="hours">{hours}</span>
-                      </div>
-                    ))
-                  }
-                </div>
-                <a href="https://www.google.com/maps?daddr=12510+East+Iliff+Avenue+Ste.+120,+Aurora,+Colorado+80014,+United+States"
-                  target="_blank"
-                  className="form-title darken"
-                  rel="noopener noreferrer">
-                  Directions To Our Clinic
-                </a>
-                <div className="bottom-section">
-                  <span className="form-title">{this.state.data.emergency_contact}</span>
-                  <p className="disclaimer">
-                    If you are having a medical emergency please call <a href="tel:911" className="darken large">911</a>,
-                    or go to the nearest Emergency Room or Urgent Care facility.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
           :

@@ -1,20 +1,15 @@
 import React, { Component, Fragment } from 'react';
-import data from '../../data/Hero.json';
+import Spinner from './Spinner';
 
 export default class Hero extends Component {
   state = {
-    data: null,
     interval: true
   }
 
   componentDidMount() {
-    if(window.location.href.includes('github')) {
-      this.setState({data});
-    }
-    if(this.props.get) {
+    if(this.props.get !== undefined) {
       this.props.get('hero');
     }
-
   }
 
   render() {
@@ -48,25 +43,7 @@ export default class Hero extends Component {
             }
           </div>
           :
-          this.state.data ?
-          <div className="hero">
-            <div className="hero-overlay"></div>
-
-             <div className="hero-content">
-              <h1 className="title">{this.state.data.title}</h1>
-              <span className="subtitle">
-                {this.state.data.content}
-              </span>
-              {
-                this.state.data.link ?
-                <a href={this.state.data.link} className="cta-button" target="_blank">{this.state.data.button}</a>
-                :
-                null
-              }
-            </div>
-          </div>
-          :
-          null
+          <Spinner />
         }
       </Fragment>
     )
