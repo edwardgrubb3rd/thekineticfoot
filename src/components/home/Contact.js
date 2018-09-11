@@ -87,7 +87,7 @@ export default class Contact extends Component {
                 this.props.contact.form ?
                 <Fragment>
                   <form className="contact-form" onSubmit={this.handleSubmit}>
-                    <span className="form-title">{this.props.contact.form.form_title}</span>
+                    <span className="form-title">{this.props.contact.form.formTitle}</span>
                     <div className="form-field">
                       <label htmlFor="name">Name *</label>
                       <input
@@ -129,13 +129,13 @@ export default class Contact extends Component {
                       :
                       null
                     }
-                    <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.props.contact.form.button_text}</button>
+                    <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.props.contact.form.buttonText}</button>
                   </form>
                   <div className="more-info">
                     <span className="form-title">Hours of Operation</span>
                     <div className="hours-operation">
                       {
-                        this.props.contact.hours_of_operation.map(({days, hours}) => (
+                        this.props.contact.hoursOfOperation.map(({days, hours}) => (
                           <div className="time-slot" key={days}>
                             <span className="day">{days}:</span>
                             <span className="hours">{hours}</span>
@@ -150,7 +150,7 @@ export default class Contact extends Component {
                       Directions To Our Clinic
                     </a>
                     <div className="bottom-section">
-                      <span className="form-title">{this.props.contact.emergency_contact}</span>
+                      <span className="form-title">{this.props.contact.emergencyContact}</span>
                       <p className="disclaimer">
                         If you are having a medical emergency please call <a href="tel:911" className="darken large">911</a>,
                         or go to the nearest Emergency Room or Urgent Care facility.

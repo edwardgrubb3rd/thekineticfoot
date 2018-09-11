@@ -20,11 +20,11 @@ export default class Treatments extends Component {
               <Hero hero={treatments} />
               <div className="section treatment-grid">
                 {
-                  treatments.treatments.map(({name, description, id}) => (
+                  treatments.treatments.map(({name, description, linkName}) => (
                     <div className="treatment-card" key={name}>
                       <span className="title-sm treatment-card-title">{name}</span>
                       <p className="treatment-card-description">{description}</p>
-                      <NavLink to={`/treatments/${id}`} className="treatment-card-link">Learn More</NavLink>
+                      <NavLink to={`/treatments/${linkName}`} className="treatment-card-link">Learn More</NavLink>
                     </div>
                   ))
                 }

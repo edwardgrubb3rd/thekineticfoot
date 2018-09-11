@@ -20,9 +20,27 @@ class NavbarItem extends Component {
     this.setState(val);
   }
 
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClick, false);
+  }
+
+  handleClick = (e) => {
+    if(this.node.contains(e.target)) {
+      return;
+    }
+    if(!this.node.contains(e.target) && this.state.show) {
+      this.showSubMenu('show');
+    }
+
+  }
+
   render() {
     return (
-      <div className="navbar-item">
+      <div className="navbar-item" ref={node => this.node = node}>
         {
           this.props.link === '#' ?
           <Fragment>

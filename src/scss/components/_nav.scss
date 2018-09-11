@@ -136,7 +136,7 @@
   padding: 10px 15px;
   position: absolute;
   text-align: left;
-  top: calc(100% + 15px);
+  top: calc(100% + 10px);
   width: 100%;
 
   @include mediaQuery(max, $tablet) {

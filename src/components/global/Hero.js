@@ -20,7 +20,7 @@ export default class Hero extends Component {
           <div className="hero">
             <div className="hero-overlay"></div>
             {
-              this.props.hero.hero_card ?
+              this.props.hero.heroCard ?
               <div className="hero-content-card">
                <h1 className="title">{this.props.hero.title}</h1>
                <span className="subtitle">
@@ -28,7 +28,7 @@ export default class Hero extends Component {
                </span>
                {
                  this.props.hero.link ?
-                 <a href={this.props.hero.link} className="cta-button" target="_blank">{this.props.hero.button}</a>
+                 <a href={this.props.hero.link} className="cta-button" target="_blank">{this.props.hero.buttonText}</a>
                  :
                  null
                }
