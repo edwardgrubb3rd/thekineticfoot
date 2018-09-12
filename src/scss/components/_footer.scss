@@ -1,11 +1,11 @@
 
 .footer {
-  background-color: $cello;
+  background-color: $melanzane;
   width: 100%;
 }
 
 .footer-section {
-  color: $riptide;
+  color: $columbiaBlue;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -34,15 +34,19 @@
 }
 
 .left {
+  display: flex;
   flex: 0 0 65%;
+  flex-direction: column;
   width: 65%;
 
   @include mediaQuery(max, $tablet) {
-    display: flex;
-    flex-direction: column;
     flex: 0 0 100%;
     width: 100%;
   }
+}
+
+.logo-img {
+  max-width: 200px;
 }
 
 .footer-link {

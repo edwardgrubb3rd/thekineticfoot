@@ -2,6 +2,7 @@
 .navbar {
   background-color: $white;
   box-shadow: $box-shadow3;
+  padding: 5px 0;
   position: absolute;
   width: 100%;
   z-index: 3;
@@ -39,10 +40,20 @@
 }
 
 .logo {
+  flex: 0 0 15%;
+
   .navbar-link {
     color: $castro;
+    display: block;
+    height: 100%;
     font-weight: 600;
     text-transform: uppercase;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -136,7 +147,7 @@
   padding: 10px 15px;
   position: absolute;
   text-align: left;
-  top: calc(100% + 10px);
+  top: calc(100% + 15px);
   width: 100%;
 
   @include mediaQuery(max, $tablet) {
@@ -150,7 +161,7 @@
   padding: 4px 5px;
   text-transform: capitalize;
 
-  &:hover {
+  &:hover:not(.logo-link) {
     border-bottom: 1px solid $riptide;
     cursor: pointer;
     padding: 5px 5px 3px;
@@ -168,7 +179,7 @@
 }
 
 .active {
-  border-bottom: 1px solid $green;
+  border-bottom: 1px solid $turbo;
   padding-bottom: 3px;
 }
 
@@ -208,7 +219,7 @@
   left: 40px;
   padding: 15px 10px;
   position: absolute;
-  top: 50px;
+  top: 55px;
 
   @include mediaQuery(max, $mobile) {
     left: 20px;

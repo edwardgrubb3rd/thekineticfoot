@@ -104,7 +104,7 @@ class Nav extends Component {
         		<div className="logo">
               {
                 this.props.nav.logo ?
-                <Link to='/' className="navbar-link"><img src={this.props.nav.logo} alt="the kinetic foot and ankle clinic logo"/></Link>
+                <Link to='/' className="navbar-link logo-link"><img src={require('../../assets/logo/logo-alt.svg')} alt="the kinetic foot and ankle clinic logo"/></Link>
                 :
                 <Link to='/' className="navbar-link">Kinetic Foot & Ankle</Link>
               }

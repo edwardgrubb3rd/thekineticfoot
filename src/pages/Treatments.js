@@ -24,7 +24,7 @@ export default class Treatments extends Component {
                     <div className="treatment-card" key={name}>
                       <span className="title-sm treatment-card-title">{name}</span>
                       <p className="treatment-card-description">{description}</p>
-                      <NavLink to={`/treatments/${linkName}`} className="treatment-card-link">Learn More</NavLink>
+                      <NavLink to={`/condition/${linkName}`} className="treatment-card-link">Learn More</NavLink>
                     </div>
                   ))
                 }

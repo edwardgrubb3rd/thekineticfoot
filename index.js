@@ -152,8 +152,8 @@ app.get('/api/pages/nav', (req, res) => {
           "active": false
         },
         {
-          "title": "treatments",
-          "link": "/treatments",
+          "title": "Common Conditions",
+          "link": "/conditions",
           "active": true
         },
         {
@@ -177,7 +177,7 @@ app.get('/api/pages/nav', (req, res) => {
         }
       ],
       "contact": "720.295.4864",
-      "logo": false
+      "logo": true
     }
 
   )

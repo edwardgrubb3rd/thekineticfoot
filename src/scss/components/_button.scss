@@ -9,7 +9,7 @@
 }
 
 .btn-secondary {
-  @include button($cello, null, $riptide);
+  @include button($atomic, null, $riptide);
 }
 
 .no-hover {
