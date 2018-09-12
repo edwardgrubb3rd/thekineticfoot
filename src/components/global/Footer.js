@@ -29,7 +29,6 @@ class Footer extends Component {
               <div className="footer-section left">
                 <div className="footer-title">
                   <img className="logo-img" src={require('../../assets/logo/logo.svg')} alt="the kinetic foot & ankle clinic logo"/>
-                  <span className="title-sm">The Kinetic Foot & Ankle Clinic</span>
                 </div>
                 <div className="footer-contact">
                   <span>{this.props.footer.contactInfo.streetAddress}</span>
