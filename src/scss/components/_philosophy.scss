@@ -1,0 +1,21 @@
+
+.philosophy {
+  background-color: $columbiaBlue;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.philosophy-wrapper {
+  margin: 0 auto;
+  max-width: 620px;
+
+  .title-sm {
+    display: block;
+  }
+}
+
+.word {
+  display: block;
+  margin: 8px 0;
+}

@@ -73,6 +73,19 @@ app.get('/api/pages/contact', (req, res) => {
   )
 });
 
+app.get('/api/pages/philosophy', (req, res) => {
+  res.json({
+    "title": "Our Philosophy",
+    "word": "ki·net·ic",
+    "pronounce": "kəˈnedik/",
+    "adjective": "adjective: kinetic",
+    "definition": [
+      "1. relating to or resulting from motion.",
+      "o (of a work of art) depending on movement for its effect. The human body and specifically the foot are just that: a work of art in motion.  Millenia of evolution have produced a beautiful functional device that can take you anywhere over an entire lifetime.  When its injured, you need a compassionate,skilled craftsman with a specific toolkit designed especially for you and your lifestyle.  Entrust Kinetic Foot and Ankle Clinic to mend, maintain and optimize one of the most important human components. Stay in motion."
+    ]
+  });
+});
+
 app.get('/api/pages/about', (req, res) => {
   res.json(
     {

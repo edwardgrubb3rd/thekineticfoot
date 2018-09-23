@@ -817,6 +817,22 @@ li {
   to {
     transform: rotate(360deg); } }
 
+.philosophy {
+  background-color: #A3E7FC;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0; }
+
+.philosophy-wrapper {
+  margin: 0 auto;
+  max-width: 620px; }
+  .philosophy-wrapper .title-sm {
+    display: block; }
+
+.word {
+  display: block;
+  margin: 8px 0; }
+
 .treatment-grid {
   display: flex;
   flex-wrap: wrap;
