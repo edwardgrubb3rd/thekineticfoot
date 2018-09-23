@@ -2,6 +2,8 @@ import React, { Component, Fragment} from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
+import Spinner from '../global/Spinner';
+
 class About extends Component {
 
   componentDidMount() {
@@ -34,7 +36,7 @@ class About extends Component {
             }
           </div>
           :
-          null
+          <Spinner />
         }
       </Fragment>
     )

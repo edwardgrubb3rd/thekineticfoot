@@ -3,6 +3,7 @@ import { DataConsumer } from '../context/DataContext';
 
 // Components
 import Hero from '../components/global/Hero';
+import Spinner from '../components/global/Spinner';
 
 export default class Treatments extends Component {
   componentDidMount() {
@@ -31,7 +32,7 @@ export default class Treatments extends Component {
                   }
                 </div>
                 :
-                null
+                <Spinner />
               }
             </div>
             :

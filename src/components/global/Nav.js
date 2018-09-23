@@ -47,20 +47,31 @@ class Nav extends Component {
     }
   }
 
-  handleClick = () => {
-    if(this.state.class === 'navbar-menu') {
-      this.setState({
-        class: 'navbar-menu mobile',
-        bar: 'change'
-      });
-      document.body.classList.add('nav-open');
+  handleClick = (val) => {
+    if(!val) {
+      if(this.state.class === 'navbar-menu') {
+        this.setState({
+          class: 'navbar-menu mobile',
+          bar: 'change'
+        });
+        document.body.classList.add('nav-open');
+      }
+      if(this.state.class === 'navbar-menu mobile') {
+        this.setState({
+          class: 'navbar-menu',
+          bar: ''
+        });
+        document.body.classList.remove('nav-open');
+      }
     }
-    if(this.state.class === 'navbar-menu mobile') {
-      this.setState({
-        class: 'navbar-menu',
-        bar: ''
-      });
-      document.body.classList.remove('nav-open');
+    if(val) {
+      if(this.state.class === 'navbar-menu mobile') {
+        this.setState({
+          class: 'navbar-menu',
+          bar: ''
+        });
+        document.body.classList.remove('nav-open');
+      }
     }
   }
 
@@ -102,7 +113,7 @@ class Nav extends Component {
           this.props.nav ?
           <div className="navbar-wrapper">
         		<div className="logo">
-              <Link to='/' className="navbar-link logo-link" onClick={this.handleClick}><img src={require('../../assets/logo/logo-alt.svg')} alt="the kinetic foot and ankle clinic logo"/></Link>
+              <Link to='/' className="navbar-link logo-link" onClick={() => this.handleClick(1)}><img src={require('../../assets/logo/logo-alt.svg')} alt="the kinetic foot and ankle clinic logo"/></Link>
         		</div>
         		<div className={this.state.class}>
         			{
@@ -114,14 +125,14 @@ class Nav extends Component {
                     link={link}
                     sublinks={sublinks}
                     index={index}
-                    onClick={this.handleClick}
+                    onClick={() => this.handleClick()}
                   />
                   :
                   null
                 ))
               }
         		</div>
-            <div className={`mobile-menu ${this.state.bar}`} onClick={this.handleClick}>
+            <div className={`mobile-menu ${this.state.bar}`} onClick={() => this.handleClick()}>
               <div className="nav-list bar1"></div>
               <div className="nav-list bar2"></div>
               <div className="nav-list bar3"></div>

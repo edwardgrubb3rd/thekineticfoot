@@ -12,11 +12,13 @@ export class DataProvider extends Component {
   }
 
   getPageData = (page) => {
+
     let url = '/api/pages/' + page;
 
     api.getData(url).then(({data}) => {
       this.setState({
         [page]: data,
+        loading: false
       });
     });
   }
