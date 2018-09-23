@@ -217,6 +217,9 @@ li {
 .white {
   color: #FFFFFF; }
 
+.magnolia {
+  color: #F8F1FF; }
+
 .center {
   text-align: center; }
 
@@ -652,10 +655,15 @@ li {
 
 .logo {
   flex: 0 0 15%; }
+  @media only screen and (max-width: 900px) {
+    .logo {
+      flex: 0 0 25%; } }
+  @media only screen and (max-width: 600px) {
+    .logo {
+      flex: 0 0 45%; } }
   .logo .navbar-link {
     color: #401F3E;
     display: block;
-    height: 100%;
     font-weight: 600;
     text-transform: uppercase;
     width: 100%; }
@@ -818,20 +826,62 @@ li {
     transform: rotate(360deg); } }
 
 .philosophy {
-  background-color: #A3E7FC;
+  background-color: #435058;
+  color: #1C1C1C;
   display: flex;
   flex-direction: column;
-  padding: 20px 0; }
+  margin: 25px 0;
+  padding: 25px 0; }
+  @media only screen and (max-width: 600px) {
+    .philosophy {
+      padding: 25px; } }
 
 .philosophy-wrapper {
-  margin: 0 auto;
-  max-width: 620px; }
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 0;
+  max-width: 750px; }
+  @media only screen and (max-width: 600px) {
+    .philosophy-wrapper {
+      flex-direction: column; } }
   .philosophy-wrapper .title-sm {
     display: block; }
 
+.philosopy-definition {
+  flex: 0 0 35%; }
+
+.philosophy-description {
+  border-left: 1px solid #A3E7FC;
+  flex: 0 0 65%;
+  padding-left: 15px; }
+  @media only screen and (max-width: 600px) {
+    .philosophy-description {
+      border-left: none;
+      border-top: 1px solid #A3E7FC;
+      margin-top: 10px;
+      padding-left: 0;
+      padding-top: 15px; } }
+
 .word {
   display: block;
-  margin: 8px 0; }
+  font-size: 24px;
+  font-weight: 600;
+  margin: 8px 0 4px; }
+
+.pronounce {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px; }
+
+.adjective {
+  display: block;
+  font-style: italic;
+  margin-bottom: 4px; }
+
+.definition {
+  display: block;
+  margin: 4px 0; }
 
 .treatment-grid {
   display: flex;

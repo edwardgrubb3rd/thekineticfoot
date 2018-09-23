@@ -102,12 +102,7 @@ class Nav extends Component {
           this.props.nav ?
           <div className="navbar-wrapper">
         		<div className="logo">
-              {
-                this.props.nav.logo ?
-                <Link to='/' className="navbar-link logo-link"><img src={require('../../assets/logo/logo-alt.svg')} alt="the kinetic foot and ankle clinic logo"/></Link>
-                :
-                <Link to='/' className="navbar-link">Kinetic Foot & Ankle</Link>
-              }
+              <Link to='/' className="navbar-link logo-link" onClick={this.handleClick}><img src={require('../../assets/logo/logo-alt.svg')} alt="the kinetic foot and ankle clinic logo"/></Link>
         		</div>
         		<div className={this.state.class}>
         			{
@@ -119,6 +114,7 @@ class Nav extends Component {
                     link={link}
                     sublinks={sublinks}
                     index={index}
+                    onClick={this.handleClick}
                   />
                   :
                   null

@@ -77,12 +77,10 @@ app.get('/api/pages/philosophy', (req, res) => {
   res.json({
     "title": "Our Philosophy",
     "word": "ki·net·ic",
-    "pronounce": "kəˈnedik/",
-    "adjective": "adjective: kinetic",
-    "definition": [
-      "1. relating to or resulting from motion.",
-      "o (of a work of art) depending on movement for its effect. The human body and specifically the foot are just that: a work of art in motion.  Millenia of evolution have produced a beautiful functional device that can take you anywhere over an entire lifetime.  When its injured, you need a compassionate,skilled craftsman with a specific toolkit designed especially for you and your lifestyle.  Entrust Kinetic Foot and Ankle Clinic to mend, maintain and optimize one of the most important human components. Stay in motion."
-    ]
+    "pronounce": "/kəˈnedik/",
+    "adjective": "adjective",
+    "definition": "1. relating to or resulting from motion.",
+    "description": "o (of a work of art) depending on movement for its effect. The human body and specifically the foot are just that: a work of art in motion.  Millenia of evolution have produced a beautiful functional device that can take you anywhere over an entire lifetime.  When its injured, you need a compassionate,skilled craftsman with a specific toolkit designed especially for you and your lifestyle.  Entrust Kinetic Foot and Ankle Clinic to mend, maintain and optimize one of the most important human components. Stay in motion."
   });
 });
 
@@ -199,17 +197,9 @@ app.get('/api/pages/nav', (req, res) => {
 app.get('/api/pages/treatments', (req, res) => {
   res.json({
     "heroCard": false,
-    "title": "Our Team",
-    "content": "get back to doing what you love faster",
-  })
-});
-
-app.get('/api/pages/treatments', (req, res) => {
-  res.json({
-    "heroCard": false,
     "title": "conditions and treatments",
     "content": "get back to doing what you love faster",
-    "treatments": [
+    "conditions": [
       {
         "name": "Accessory Navicular Syndrome",
         "link": "https://docs.google.com/document/d/1Z68c1Pb2NoMuEHcaSXmOjnaD2U6kuak7Uo3EbaPcPBM/edit",

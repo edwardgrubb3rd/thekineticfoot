@@ -17,17 +17,22 @@ export default class Treatments extends Component {
             treatments ?
             <div className="treatments">
               <Hero hero={treatments} />
-              <div className="section treatment-grid">
-                {
-                  treatments.treatments.map(({name, description, link}) => (
-                    <div className="treatment-card" key={name}>
-                      <span className="title-sm treatment-card-title">{name}</span>
-                      <p className="treatment-card-description">{description}</p>
-                      <a href={link} target="_blank" className="treatment-card-link">Learn More</a>
-                    </div>
-                  ))
-                }
-              </div>
+              {
+                treatments.conditions ?
+                <div className="section treatment-grid">
+                  {
+                    treatments.conditions.map(({name, description, link}) => (
+                      <div className="treatment-card" key={name}>
+                        <span className="title-sm treatment-card-title">{name}</span>
+                        <p className="treatment-card-description">{description}</p>
+                        <a href={link} target="_blank" className="treatment-card-link">Learn More</a>
+                      </div>
+                    ))
+                  }
+                </div>
+                :
+                null
+              }
             </div>
             :
             null

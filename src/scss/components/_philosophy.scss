@@ -1,21 +1,71 @@
 
 .philosophy {
-  background-color: $columbiaBlue;
+  background-color: $atomic;
+  color: $dark-gray;
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  margin: 25px 0;
+  padding: 25px 0;
+
+  @include mediaQuery(max, $mobile) {
+    padding: 25px;
+  }
 }
 
 .philosophy-wrapper {
-  margin: 0 auto;
-  max-width: 620px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 0;
+  max-width: 750px;
+
+  @include mediaQuery(max, $mobile) {
+    flex-direction: column;
+  }
 
   .title-sm {
     display: block;
   }
 }
 
+.philosopy-definition {
+  flex: 0 0 35%;
+}
+
+.philosophy-description {
+  border-left: 1px solid $columbiaBlue;
+  flex: 0 0 65%;
+  padding-left: 15px;
+
+  @include mediaQuery(max, $mobile) {
+    border-left: none;
+    border-top: 1px solid $columbiaBlue;
+    margin-top: 10px;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+}
+
 .word {
   display: block;
-  margin: 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 8px 0 4px;
+}
+
+.pronounce {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.adjective {
+  display: block;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.definition {
+  display: block;
+  margin: 4px 0;
 }

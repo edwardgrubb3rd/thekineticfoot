@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 export default class Philosophy extends Component {
   componentDidMount() {
@@ -10,11 +10,20 @@ export default class Philosophy extends Component {
       <div className="philosophy">
         {
           this.props.philosophy ?
-          <div className="philosophy-wrapper">
-            <span className="title center">{this.props.philosophy.title}</span>
-            <span className="word">{this.props.philosophy.word}</span>
-            <span className="word">{this.props.philosophy.pronounce}</span>
-          </div>
+          <Fragment>
+            <span className="title center magnolia">{this.props.philosophy.title}</span>
+            <div className="philosophy-wrapper magnolia">
+              <div className="philosopy-definition magnolia">
+                <span className="word magnolia">{this.props.philosophy.word}</span>
+                <span className="pronounce magnolia">{this.props.philosophy.pronounce}</span>
+                <span className="adjective magnolia">{this.props.philosophy.adjective}</span>
+                <span className="definition magnolia">{this.props.philosophy.definition}</span>
+              </div>
+              <div className="philosophy-description magnolia">
+                {this.props.philosophy.description}
+              </div>
+            </div>
+          </Fragment>
           :
           null
         }
