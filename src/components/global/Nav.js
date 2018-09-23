@@ -48,29 +48,31 @@ class Nav extends Component {
   }
 
   handleClick = (val) => {
-    if(!val) {
-      if(this.state.class === 'navbar-menu') {
-        this.setState({
-          class: 'navbar-menu mobile',
-          bar: 'change'
-        });
-        document.body.classList.add('nav-open');
+    if(window.innerWidth < 900) {
+      if(!val) {
+        if(this.state.class === 'navbar-menu') {
+          this.setState({
+            class: 'navbar-menu mobile',
+            bar: 'change'
+          });
+          document.body.classList.add('nav-open');
+        }
+        if(this.state.class === 'navbar-menu mobile') {
+          this.setState({
+            class: 'navbar-menu',
+            bar: ''
+          });
+          document.body.classList.remove('nav-open');
+        }
       }
-      if(this.state.class === 'navbar-menu mobile') {
-        this.setState({
-          class: 'navbar-menu',
-          bar: ''
-        });
-        document.body.classList.remove('nav-open');
-      }
-    }
-    if(val) {
-      if(this.state.class === 'navbar-menu mobile') {
-        this.setState({
-          class: 'navbar-menu',
-          bar: ''
-        });
-        document.body.classList.remove('nav-open');
+      if(val) {
+        if(this.state.class === 'navbar-menu mobile') {
+          this.setState({
+            class: 'navbar-menu',
+            bar: ''
+          });
+          document.body.classList.remove('nav-open');
+        }
       }
     }
   }
