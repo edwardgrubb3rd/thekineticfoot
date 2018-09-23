@@ -147,9 +147,9 @@ app.get('/api/pages/nav', (req, res) => {
           "active": false
         },
         {
-          "title": "about",
-          "link": "/about",
-          "active": true
+          "title": "Our Team",
+          "link": "/team",
+          "active": false
         },
         {
           "title": "Common Conditions",
@@ -181,6 +181,14 @@ app.get('/api/pages/nav', (req, res) => {
     }
 
   )
+});
+
+app.get('/api/pages/treatments', (req, res) => {
+  res.json({
+    "heroCard": false,
+    "title": "Our Team",
+    "content": "get back to doing what you love faster",
+  })
 });
 
 app.get('/api/pages/treatments', (req, res) => {
@@ -281,7 +289,7 @@ app.get('/api/pages/treatments', (req, res) => {
       }
     ]
   })
-})
+});
 
 // Emailing
 app.post('/contact', (req, res) => {

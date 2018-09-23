@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
 import Treatments from './pages/Treatments';
-import About from './pages/About';
+import Team from './pages/Team';
 
 // Components
 import Nav from './components/global/Nav';
@@ -33,7 +33,7 @@ export default class App extends Component {
                 <Route path="/conditions" render={() => (
                   <Treatments get={getPageData} />
                 )} />
-                <Route path="/about" component={About} />
+                <Route path="/team" component={Team} />
                 <Route exact path="*" component={Home} />
               </Switch>
               <Footer get={getPageData} footer={footer} />
