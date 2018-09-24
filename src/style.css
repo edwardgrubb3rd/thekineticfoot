@@ -621,7 +621,9 @@ li {
   display: flex;
   flex-direction: column; }
   .footer-contact span {
-    font-size: 1rem; }
+    display: block;
+    font-size: 1rem;
+    margin: 3px 0; }
 
 .city-state {
   display: flex; }

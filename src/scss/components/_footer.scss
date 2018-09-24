@@ -95,7 +95,9 @@
   flex-direction: column;
 
   span {
+    display: block;
     font-size: 1rem;
+    margin: 3px 0;
   }
 }
 
