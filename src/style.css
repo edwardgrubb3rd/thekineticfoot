@@ -843,16 +843,17 @@ li {
   padding: 25px 0; }
   @media only screen and (max-width: 600px) {
     .philosophy {
-      padding: 25px; } }
+      padding: 20px; } }
 
 .philosophy-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 10px auto 0;
-  max-width: 750px; }
+  max-width: 700px; }
   @media only screen and (max-width: 600px) {
     .philosophy-wrapper {
-      flex-direction: column; } }
+      flex-direction: column;
+      margin: 10px 0 0; } }
   .philosophy-wrapper .title-sm {
     display: block; }
 
