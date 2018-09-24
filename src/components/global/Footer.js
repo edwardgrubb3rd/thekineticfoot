@@ -53,7 +53,7 @@ class Footer extends Component {
                 <span>{this.state.data.contactInfo.state}</span>
               </div>
               <span>{this.state.data.contactInfo.zip}</span>
-              <a className="footer-link" href={`tel:${this.convertNumber(this.state.data.contactInfo.phone)}`}>Phone: {this.state.data.contactInfo.phone}</a>
+              <a className="footer-link magnolia" href={`tel:${this.convertNumber(this.state.data.contactInfo.phone)}`}>Phone: {this.state.data.contactInfo.phone}</a>
               <span>Fax: {this.state.data.contactInfo.fax}</span>
             </div>
           </div>

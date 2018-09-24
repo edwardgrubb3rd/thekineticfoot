@@ -31,3 +31,11 @@
 	position: fixed;
   width: 100%;
 }
+
+.card {
+	background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: 6px;
+  box-shadow: $box-shadow;
+	padding: 10px 15px;
+}

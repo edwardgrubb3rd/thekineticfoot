@@ -52,19 +52,15 @@ p {
 }
 
 a {
-  color: $columbiaBlue;
+  color: $melanzane;
   font-family: inherit;
   font-size: $font-size-base;
   line-height: 1.1;
   text-decoration: none;
 }
 
-a.darken {
-  color: darken($magnolia, 20);
-}
-
 a.large {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 button {
@@ -111,6 +107,14 @@ li {
 
 .magnolia {
   color: $magnolia;
+}
+
+.melanzane {
+  color: $melanzane;
+}
+
+.green {
+  color: $green;
 }
 
 .center {

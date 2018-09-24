@@ -23,14 +23,9 @@
 }
 
 .contact-form {
-  background-color: $white;
-  border: 1px solid $light-gray;
-  border-radius: 6px;
-  box-shadow: $box-shadow;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  padding: 10px 15px;
   text-align: center;
   width: 45%;
 
@@ -98,11 +93,6 @@
 
 .hours {
   font-size: 1rem;
-}
-
-.bottom-section {
-  // margin-top: auto;
-  // margin-bottom: 0;
 }
 
 .error-message {

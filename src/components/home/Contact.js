@@ -95,7 +95,7 @@ export default class Contact extends Component {
           {
             this.state.data.form ?
             <Fragment>
-              <form className="contact-form" onSubmit={this.handleSubmit}>
+              <form className="contact-form card" onSubmit={this.handleSubmit}>
                 <span className="form-title">{this.state.data.form.formTitle}</span>
                 <div className="form-field">
                   <label htmlFor="name">Name *</label>
@@ -154,14 +154,14 @@ export default class Contact extends Component {
                 </div>
                 <a href="https://www.google.com/maps?daddr=12510+East+Iliff+Avenue+Ste.+120,+Aurora,+Colorado+80014,+United+States"
                   target="_blank"
-                  className="form-title darken"
+                  className="form-title"
                   rel="noopener noreferrer">
                   Directions To Our Clinic
                 </a>
                 <div className="bottom-section">
                   <span className="form-title">{this.state.data.emergencyContact}</span>
                   <p className="disclaimer">
-                    If you are having a medical emergency please call <a href="tel:911" className="darken large">911</a>,
+                    If you are having a medical emergency please call <a href="tel:911" className="large">911</a>,
                     or go to the nearest Emergency Room or Urgent Care facility.
                   </p>
                 </div>
