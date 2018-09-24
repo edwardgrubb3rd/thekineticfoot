@@ -804,7 +804,7 @@ li {
   transform: rotate(45deg) translate(-10px, -4px); }
 
 .navbar-contact {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(50, 41, 47, 0.4);
   left: 40px;
   padding: 15px 10px;
   position: absolute;
