@@ -6,6 +6,9 @@ const nodemailer = require('nodemailer');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(require('prerender-node')
+  .set('prerenderToken', 'ms0jRShRz2guknPunP9n')
+  );
 
 app.use((req, res, next) => {
   res.append('Access-Control-Allow-Origin', ['*']);
