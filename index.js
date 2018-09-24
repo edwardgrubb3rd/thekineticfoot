@@ -73,7 +73,10 @@ app.post('/contact', (req, res) => {
       console.log('send error', err);
     }
     else {
-      console.log('sent', info.messageId);
+      return {
+        status: 200,
+        message: "successfully sent"
+      }
     }
   });
 });
