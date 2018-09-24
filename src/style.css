@@ -629,7 +629,7 @@ li {
   display: flex; }
 
 .navbar {
-  background-color: #FFFFFF;
+  background-color: #32292F;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16), 0px 0px 0px rgba(0, 0, 0, 0.05);
   padding: 5px 0;
   position: absolute;
@@ -671,7 +671,7 @@ li {
     .logo {
       flex: 0 0 45%; } }
   .logo .navbar-link {
-    color: #401F3E;
+    color: #F8F1FF;
     display: block;
     font-weight: 600;
     text-transform: uppercase;
@@ -692,7 +692,7 @@ li {
 
 .navbar-menu.mobile {
   align-items: flex-start;
-  background-color: #FFFFFF;
+  background-color: #32292F;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -717,7 +717,7 @@ li {
 
 .navbar-item-menu {
   align-items: flex-start;
-  background-color: #FFFFFF;
+  background-color: #32292F;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -732,7 +732,7 @@ li {
       width: 80%; } }
 
 .navbar-submenu-link {
-  color: #401F3E;
+  color: #F8F1FF;
   display: block;
   margin: 15px 0;
   position: relative;
@@ -742,11 +742,11 @@ li {
   .navbar-submenu-link:last-child {
     margin-bottom: 0; }
   .navbar-submenu-link:hover {
-    color: #62305f;
+    color: white;
     cursor: pointer; }
 
 .navbar-submenu {
-  background-color: #FFFFFF;
+  background-color: #32292F;
   left: 0;
   padding: 10px 15px;
   position: absolute;
@@ -758,12 +758,12 @@ li {
       padding: 0 15px; } }
 
 .navbar-link {
-  color: #401F3E;
+  color: #F8F1FF;
   display: block;
   padding: 4px 5px;
   text-transform: capitalize; }
   .navbar-link:hover:not(.logo-link) {
-    border-bottom: 1px solid #99DDC8;
+    border-bottom: 1px solid #618C58;
     cursor: pointer;
     padding: 5px 5px 3px; }
   @media only screen and (max-width: 600px) {
@@ -787,7 +787,7 @@ li {
       display: flex; } }
 
 .nav-list {
-  background-color: #401F3E;
+  background-color: #F8F1FF;
   border-radius: 5px;
   height: 3px;
   margin: 3px 0;
