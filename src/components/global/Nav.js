@@ -56,7 +56,7 @@ class Nav extends Component {
           },
           {
             "title": "Patient Portal",
-            "link": "#"
+            "link": "https://Id.patientfusion.com/signin"
           }
         ]
       }
