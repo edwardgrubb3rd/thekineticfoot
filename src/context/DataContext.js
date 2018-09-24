@@ -12,22 +12,17 @@ export class DataProvider extends Component {
   }
 
   getPageData = (page) => {
-
-    this.setLoading(true);
-
     let url = '/api/pages/' + page;
 
     api.getData(url).then(({data}) => {
       this.setState({
         [page]: data
       });
-
-      this.setLoading(false);
     });
   }
 
   setLoading = (loading) => {
-    this.setState({loading})
+    this.setState({loading});
   }
 
   render() {

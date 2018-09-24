@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { DataConsumer } from '../context/DataContext';
 
 // Components
 import Hero from '../components/global/Hero';
@@ -8,18 +7,30 @@ import Philosophy from '../components/home/Philosophy';
 import Contact from '../components/home/Contact';
 
 export default class Home extends Component {
+  state = {
+    data: {
+      "heroCard": true,
+      "title": "The Kinetic Foot & Ankle Clinic",
+      "content": "Advanced compassionate podiatry solutions in Denver",
+      "buttonText": "visit our clinic",
+      "link": "https://www.google.com/maps?q=kinetic+foot+and+ankle+clinic&rlz=1C5CHFA_enUS797US797&um=1&ie=UTF-8&sa=X&ved=0ahUKEwi7mLL13NbcAhVmw4MKHSOwAW0Q_AUICigB/"
+    }
+  }
+
   render() {
     return (
-      <DataConsumer>
-        {({getPageData, data: {contact, hero, about, philosophy}}) => (
-          <div className="homepage">
-            <Hero get={getPageData} hero={hero} />
-            <About get={getPageData} about={about} />
-            <Philosophy get={getPageData} philosophy={philosophy} />
-            <Contact get={getPageData} contact={contact} />
-          </div>
-        )}
-      </DataConsumer>
+      <div className="homepage">
+        <Hero
+          heroCard={this.state.heroCard}
+          title={this.state.title}
+          content={this.state.content}
+          buttonText={this.state.buttonText}
+          link={this.state.link}
+        />
+        <About />
+        <Philosophy />
+        <Contact />
+      </div>
     )
   }
 }

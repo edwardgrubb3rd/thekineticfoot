@@ -9,13 +9,46 @@ class Nav extends Component {
     class: 'navbar-menu',
     contactLink: '',
     bar: '',
-    data: null,
     lastScrollY: 0,
-    activeClass: ''
+    activeClass: '',
+    data: {
+      "contact": "720.295.4864",
+      "logo": true
+    },
+    "links": [
+      {
+        "title": "Our Team",
+        "link": "/team",
+        "active": false
+      },
+      {
+        "title": "Common Conditions",
+        "link": "/conditions",
+        "active": true
+      },
+      {
+        "title": "Patient Documents",
+        "active": true,
+        "link": "#",
+        "sublinks": [
+          {
+            "title": "Record Request",
+            "link": "https://docs.google.com/document/d/1uQ0YMbGkGmrBEdn4PaRjYZRVi-Eqg48RRBvWE8OiYlc/edit?usp=sharing"
+          },
+          {
+            "title": "Record Release",
+            "link": "https://docs.google.com/document/d/1-2-1Q2YeJQdthJMemqW3PjwnW7kqV-3DAYmOZ-a0cBw/edit?usp=sharing"
+          },
+          {
+            "title": "New Patient",
+            "link": "https://docs.google.com/document/d/1YKlKyZD2zCZSbStIebEEe4pOgI71kexsQY35dxyeu6s/edit?usp=sharing"
+          }
+        ]
+      }
+    ]
   }
 
   componentDidMount() {
-    this.props.get('nav');
     window.addEventListener("resize", this.updateDimensions);
     window.addEventListener("scroll", this.handleScroll);
   }
@@ -111,41 +144,38 @@ class Nav extends Component {
   render() {
     return (
       <div className={"navbar" + this.state.activeClass}>
-      	{
-          this.props.nav ?
-          <div className="navbar-wrapper">
-        		<div className="logo">
-              <Link to='/' className="navbar-link logo-link" onClick={() => this.handleClick(1)}><img src={require('../../assets/logo/logo-alt.svg')} alt="the kinetic foot and ankle clinic logo"/></Link>
-        		</div>
-        		<div className={this.state.class}>
-        			{
-                this.props.nav.links.map(({active, title, sublinks, link}, index) => (
-                  active ?
-                  <NavbarItem
-                    key={title}
-                    title={title}
-                    link={link}
-                    sublinks={sublinks}
-                    index={index}
-                    onClick={() => this.handleClick()}
-                  />
-                  :
-                  null
-                ))
-              }
-        		</div>
-            <div className={`mobile-menu ${this.state.bar}`} onClick={() => this.handleClick()}>
-              <div className="nav-list bar1"></div>
-              <div className="nav-list bar2"></div>
-              <div className="nav-list bar3"></div>
-            </div>
-        		<div className="navbar-contact">
-        			<a href={`tel:${this.convertNumber(this.props.nav.contact)}`} className="navbar-link">{this.props.nav.contact}</a>
-        		</div>
-        	</div>
-          :
-          null
-        }
+        <div className="navbar-wrapper">
+          <div className="logo">
+            <Link to='/' className="navbar-link logo-link" onClick={() => this.handleClick(1)}>
+              <img src={require('../../assets/logo/logo-alt.svg')} alt="the kinetic foot and ankle clinic logo"/>
+            </Link>
+          </div>
+          <div className={this.state.class}>
+            {
+              this.state.links.map(({active, title, sublinks, link}, index) => (
+                active ?
+                <NavbarItem
+                  key={title}
+                  title={title}
+                  link={link}
+                  sublinks={sublinks}
+                  index={index}
+                  onClick={() => this.handleClick()}
+                />
+                :
+                null
+              ))
+            }
+          </div>
+          <div className={`mobile-menu ${this.state.bar}`} onClick={() => this.handleClick()}>
+            <div className="nav-list bar1"></div>
+            <div className="nav-list bar2"></div>
+            <div className="nav-list bar3"></div>
+          </div>
+          <div className="navbar-contact">
+            <a href={`tel:${this.convertNumber(this.state.data.contact)}`} className="navbar-link">{this.state.data.contact}</a>
+          </div>
+        </div>
       </div>
     )
   }

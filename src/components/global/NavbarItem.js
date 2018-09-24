@@ -49,8 +49,8 @@ class NavbarItem extends Component {
               this.state.show ?
               <div className="navbar-submenu">
                 {
-                  this.props.sublinks.map(({title, link}) => (
-                    <a key={title} href={link} target="_blank" className="navbar-submenu-link">{title}</a>
+                  this.props.sublinks.map(({title, link}, index) => (
+                    <a key={index} href={link} target="_blank" className="navbar-submenu-link">{title}</a>
                   ))
                 }
               </div>

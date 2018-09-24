@@ -1,44 +1,56 @@
-import React, { Component, Fragment} from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import Spinner from '../global/Spinner';
-
 class About extends Component {
 
-  componentDidMount() {
-    this.props.get('about');
+  state = {
+    data: {
+      "title": "About Us",
+      "sections": [
+        {
+          "title": "Our Health Mission",
+          "description": "Our experienced medical professionals are proud to put your healing needs first with care and compassion.",
+          "image": "key.svg"
+        },
+        {
+          "title": "Experience",
+          "description": "With more than 15 years of experience, we assist you in creating a custom recovery plan that's right for you, so that you can get back to what you love faster.",
+          "image": "doctor.svg"
+        },
+        {
+          "title": "A Team Who Cares",
+          "description": "We strive to help you improve your quality of life and achieve your wellness goals, so you can live your best life possible.",
+          "image": "team.svg"
+        }
+      ],
+      "buttonText": "find out more",
+      "link": "#"
+    }
   }
 
   render() {
     return (
-      <Fragment>
+      <div className="about section">
+        <span className="title">{this.state.data.title}</span>
+        <div className="about-grid">
+          {
+            this.state.data.sections.map(({image, title, description}) => (
+              <div className="about-item" key={title}>
+                <img className="about-item-img" src={require(`../../assets/icons/${image}`)} alt="kinetic foot ankle team about us" />
+                <span className="about-item-subtitle">{title}</span>
+                <p className="about-item-desc">{description}</p>
+              </div>
+            ))
+          }
+        </div>
         {
-          this.props.about ?
-          <div className="about section">
-            <span className="title">{this.props.about.title}</span>
-            <div className="about-grid">
-              {
-                this.props.about.sections.map(({image, title, description}) => (
-                  <div className="about-item" key={title}>
-                    <img className="about-item-img" src={require(`../../assets/icons/${image}`)} alt="kinetic foot ankle team about us" />
-                    <span className="about-item-subtitle">{title}</span>
-                    <p className="about-item-desc">{description}</p>
-                  </div>
-                ))
-              }
-            </div>
-            {
-              this.props.about.link !== '#' ?
-              <Link to={this.props.about.link} className="btn-secondary">{this.props.about.buttonText}</Link>
-              :
-              null
-            }
-          </div>
+          this.state.data.link !== '#' ?
+          <Link to={this.state.data.link} className="btn-secondary">{this.state.data.buttonText}</Link>
           :
-          <Spinner />
+          null
         }
-      </Fragment>
+      </div>
     )
   }
 }

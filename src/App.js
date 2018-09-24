@@ -18,12 +18,18 @@ export default class App extends Component {
     return (
       <DataConsumer>
         {({getPageData, data: {
+          loading,
           footer,
           nav
         }}) => (
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Fragment>
-              <Nav get={getPageData} nav={nav} />
+              {
+                loading ?
+                <Spinner />
+                :
+                <Nav get={getPageData} nav={nav} />
+              }
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/conditions" render={() => (
