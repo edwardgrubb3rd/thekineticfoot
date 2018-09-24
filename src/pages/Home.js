@@ -21,11 +21,11 @@ export default class Home extends Component {
     return (
       <div className="homepage">
         <Hero
-          heroCard={this.state.heroCard}
-          title={this.state.title}
-          content={this.state.content}
-          buttonText={this.state.buttonText}
-          link={this.state.link}
+          heroCard={this.state.data.heroCard}
+          title={this.state.data.title}
+          content={this.state.data.content}
+          buttonText={this.state.data.buttonText}
+          link={this.state.data.link}
         />
         <About />
         <Philosophy />

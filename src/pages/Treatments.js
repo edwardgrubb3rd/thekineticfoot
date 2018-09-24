@@ -108,9 +108,9 @@ export default class Treatments extends Component {
     return (
       <div className="treatments">
         <Hero
-          heroCard={this.state.heroCard}
-          title={this.state.title}
-          content={this.state.content}
+          heroCard={this.state.data.heroCard}
+          title={this.state.data.title}
+          content={this.state.data.content}
         />
         <div className="section treatment-grid">
           {

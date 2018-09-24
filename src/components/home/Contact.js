@@ -65,12 +65,6 @@ export default class Contact extends Component {
         formError: true
       });
     }
-
-    if(window.location.href.includes('github') && !this.state.formError && !this.state.emailError) {
-      axios.post('/thekineticfoot/contact', message, header).then(res => {
-        console.log(res);
-      });
-    }
     if(!this.state.formError && !this.state.emailError) {
       axios.post('/contact', message, header).then(res => {
         console.log(res);
