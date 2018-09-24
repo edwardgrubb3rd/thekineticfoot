@@ -50,7 +50,7 @@ class NavbarItem extends Component {
               <div className="navbar-submenu">
                 {
                   this.props.sublinks.map(({title, link}, index) => (
-                    <a key={index} href={link} target="_blank" className="navbar-submenu-link">{title}</a>
+                    <a key={index} href={link} target="_blank" className="navbar-submenu-link" rel="noopener">{title}</a>
                   ))
                 }
               </div>
