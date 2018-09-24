@@ -44,6 +44,21 @@ class Nav extends Component {
             "link": "https://docs.google.com/document/d/1YKlKyZD2zCZSbStIebEEe4pOgI71kexsQY35dxyeu6s/edit?usp=sharing"
           }
         ]
+      },
+      {
+        "title": "Patient Resources",
+        "active": true,
+        "link": "#",
+        sublinks: [
+          {
+            "title": "Pay My Bill",
+            "link": "http://www.paymydoc.net/"
+          },
+          {
+            "title": "Patient Portal",
+            "link": "#"
+          }
+        ]
       }
     ]
   }
