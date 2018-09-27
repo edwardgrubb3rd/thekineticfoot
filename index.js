@@ -66,7 +66,7 @@ app.post('/contact', (req, res) => {
 
   let mailOptions = {
     from: `"${req.body.name}" <${req.body.email}>`,
-    to: 'trevans24@gmail.com',
+    to: 'mhouse2@yahoo.com',
     subject: 'Message from The Kinetic Foot Contact Form',
     text: `${req.body.message}`
   }
