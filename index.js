@@ -52,12 +52,15 @@ app.get('/api', (req, res) => {
 // Emailing
 app.post('/contact', (req, res) => {
   let transporter = nodemailer.createTransport({
-    host: 'smtp.thekineticfoot.com',
+    host: 'smtp.gmail.com',
     port: 465,
     secure: true,
     auth: {
-      user: 'mhouse@thekineticfoot.com',
-      password: 'Mullenix6!'
+      type: 'OAuth2',
+      user: 'trevans24@gmail.com',
+      clientId: '106001694039-9c9sf90sccoecjbskll5u0r4nvdchio7.apps.googleusercontent.com',
+      clientSecret: 'wYluNHxCohGG0ycWz8FkFXQp',
+      refreshToken: '1/MeYeW3iIROpttVEd-zsgVyozhj1kck2kkW5hMILrxoI'
     }
   });
 
