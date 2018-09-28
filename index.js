@@ -21,29 +21,9 @@ app.get('/api', (req, res) => {
     message: "Welcome to The Kinetic Foot API",
     clientEndpoints: [
       {
-        method: 'GET',
-        path: '/api/pages',
-        description: 'Get all pages'
-      },
-      {
         method: 'POST',
-        path: '/api/pages',
-        description: 'Add a new page to the database'
-      },
-      {
-        method: 'SHOW',
-        path: '/api/pages/:id',
-        description: 'Show one page section data'
-      },
-      {
-        method: 'PUT',
-        path: '/api/pages/:id',
-        description: 'Update page information'
-      },
-      {
-        method: 'DELETE',
-        path: '/api/pages/:id',
-        description: 'Delete a page from the database'
+        path: '/api/contact',
+        description: 'Contact Form Emailing'
       }
     ]
   })
