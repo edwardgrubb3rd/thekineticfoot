@@ -4,6 +4,7 @@ import axios from 'axios';
 
 export default class Contact extends Component {
   state = {
+    formActive: false,
     name: '',
     email: '',
     message: '',
@@ -91,55 +92,60 @@ export default class Contact extends Component {
     return (
       <div className="contact section">
         <span className="title">{this.state.data.title}</span>
-        <div className="contact-section">
+        <div className={"contact-section" + (this.state.formActive ? '' : ' center')}>
           {
             this.state.data.form ?
             <Fragment>
-              <form className="contact-form card" onSubmit={this.handleSubmit}>
-                <span className="form-title">{this.state.data.form.formTitle}</span>
-                <div className="form-field">
-                  <label htmlFor="name">Name *</label>
-                  <input
-                    type="text"
-                    aria-label="name"
-                    onChange={(e) => this.handleInputChange(e, 'name')}
-                    style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
-                  />
-                </div>
-                <div className="form-field">
-                  <label htmlFor="email">Email *</label>
-                  <input
-                    type="email"
-                    aria-label="email"
-                    onChange={(e) => this.handleInputChange(e, 'email')}
-                    style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
-                  />
-                </div>
-                <div className="form-field">
-                  <label htmlFor="message">Message *</label>
-                  <textarea
-                    aria-label="message"
-                    cols="30"
-                    rows="10"
-                    onChange={(e) => this.handleInputChange(e, 'message')}
-                    style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
-                    ></textarea>
-                </div>
-                {
-                  this.state.formError ?
-                  <div className="error-message">
-                    <span>** Required Fields Cannot Be Empty</span>
+              {
+                this.state.formActive ?
+                <form className="contact-form card" onSubmit={this.handleSubmit}>
+                  <span className="form-title">{this.state.data.form.formTitle}</span>
+                  <div className="form-field">
+                    <label htmlFor="name">Name *</label>
+                    <input
+                      type="text"
+                      aria-label="name"
+                      onChange={(e) => this.handleInputChange(e, 'name')}
+                      style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
+                    />
                   </div>
-                  :
-                  this.state.emailError ?
-                  <div className="error-message">
-                    <span>** Please provide a correct email</span>
+                  <div className="form-field">
+                    <label htmlFor="email">Email *</label>
+                    <input
+                      type="email"
+                      aria-label="email"
+                      onChange={(e) => this.handleInputChange(e, 'email')}
+                      style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
+                    />
                   </div>
-                  :
-                  null
-                }
-                <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.state.data.form.buttonText}</button>
-              </form>
+                  <div className="form-field">
+                    <label htmlFor="message">Message *</label>
+                    <textarea
+                      aria-label="message"
+                      cols="30"
+                      rows="10"
+                      onChange={(e) => this.handleInputChange(e, 'message')}
+                      style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
+                      ></textarea>
+                  </div>
+                  {
+                    this.state.formError ?
+                    <div className="error-message">
+                      <span>** Required Fields Cannot Be Empty</span>
+                    </div>
+                    :
+                    this.state.emailError ?
+                    <div className="error-message">
+                      <span>** Please provide a correct email</span>
+                    </div>
+                    :
+                    null
+                  }
+                  <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.state.data.form.buttonText}</button>
+                </form>
+                :
+                null
+              }
               <div className="more-info">
                 <span className="form-title">Hours of Operation</span>
                 <div className="hours-operation">

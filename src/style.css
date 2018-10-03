@@ -404,6 +404,12 @@ li {
       flex-direction: column;
       width: 90%; } }
 
+.center {
+  justify-content: center; }
+  .center .hours-operation {
+    justify-content: center;
+    margin: 10px auto 25px; }
+
 .contact-form {
   display: flex;
   flex-direction: column;
