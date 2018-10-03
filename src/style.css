@@ -755,7 +755,8 @@ li {
   width: 100%; }
   @media only screen and (max-width: 900px) {
     .navbar-submenu {
-      padding: 0 15px; } }
+      padding: 10px 15px 0;
+      position: relative; } }
 
 .navbar-link {
   color: #F8F1FF;
