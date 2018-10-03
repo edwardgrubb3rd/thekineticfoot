@@ -16,8 +16,9 @@ export default class Treatments extends Component {
           "description": "The accessory navicular (os navicularum or os tibiale externum) is an extra bone or piece of cartilage located on the inner side of the foot just above the arch."
         },
         {
-          "name": "Achilles and Plantar Fascia Stretches",
-          "link": "https://docs.google.com/document/d/1t4yE_NaEGvyBHpxdyNb9sWRjP7tw3FIqr0qk_ussAx0/edit?usp=sharing"
+          "name": "Achilles & Plantar Fascia Stretches",
+          "link": "https://docs.google.com/document/d/1t4yE_NaEGvyBHpxdyNb9sWRjP7tw3FIqr0qk_ussAx0/edit?usp=sharing",
+          "description": "Stretching exercise to help you out"
         },
         {
           "name": "Achilles Tendon Disorders",
@@ -153,7 +154,7 @@ export default class Treatments extends Component {
         <div className="section treatment-grid">
           {
             this.state.data.conditions.map(({name, description, link}) => (
-              <div className="treatment-card" key={name}>
+              <a className="treatment-card" key={name} href={link} target="_blank">
                 <span className="title-sm treatment-card-title">{name}</span>
                 {
                   description ?
@@ -161,8 +162,8 @@ export default class Treatments extends Component {
                   :
                   null
                 }
-                <a href={link} target="_blank" className="treatment-card-link">Learn More</a>
-              </div>
+                <span className="treatment-card-link">Learn More</span>
+              </a>
             ))
           }
         </div>
