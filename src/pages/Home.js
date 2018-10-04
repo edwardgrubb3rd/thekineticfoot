@@ -17,19 +17,36 @@ export default class Home extends Component {
     }
   }
 
+  componentDidMount() {
+    if(this.props.get) {
+      this.props.get('home');
+    }
+  }
+
   render() {
     return (
       <div className="homepage">
-        <Hero
-          heroCard={this.state.data.heroCard}
-          title={this.state.data.title}
-          content={this.state.data.content}
-          buttonText={this.state.data.buttonText}
-          link={this.state.data.link}
-        />
-        <About />
-        <Philosophy />
-        <Contact />
+        {
+          this.props.data !== undefined ?
+          <Hero
+            heroCard={this.props.data.heroCard}
+            title={this.props.data.title}
+            content={this.props.data.content}
+            buttonText={this.props.data.buttonText}
+            link={this.props.data.link}
+          />
+          :
+          <Hero
+            heroCard={this.state.data.heroCard}
+            title={this.state.data.title}
+            content={this.state.data.content}
+            buttonText={this.state.data.buttonText}
+            link={this.state.data.link}
+          />
+        }
+        <About get={this.props.get} data={this.props.about} />
+        <Philosophy get={this.props.get} />
+        <Contact get={this.props.get} />
       </div>
     )
   }

@@ -1,0 +1,83 @@
+
+.loading {
+  background-color: $riptide;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+
+  &:before {
+    animation: pulse 1.5s linear infinite;
+    border: 5px solid $kashmir;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 400px;
+    opacity: 0;
+    position: absolute;
+    width: 400px;
+    z-index: 2;
+  }
+
+  &:after {
+    animation: pulse 1.5s linear infinite;
+    animation-delay: 1s;
+    border: 5px solid $kashmir;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 400px;
+    opacity: 0;
+    position: absolute;
+    width: 400px;
+    z-index: 2;
+  }
+}
+
+.loading-logo {
+  animation: shadow 1.5s linear infinite;
+  border-radius: 50%;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  width: 200px;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: $box-shadow;
+  }
+
+  50% {
+    box-shadow: $box-shadow2;
+  }
+
+  100% {
+    box-shadow: $box-shadow;
+  }
+}

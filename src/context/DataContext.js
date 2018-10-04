@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import api from '../config/api';
+import { db } from '../config/firebase';
 
 export const DataContext = React.createContext({});
 
@@ -8,21 +8,28 @@ export const DataConsumer = DataContext.Consumer;
 
 export class DataProvider extends Component {
   state = {
-    loading: false
+
+  }
+
+  componentDidMount() {
+    this.loading(true);
   }
 
   getPageData = (page) => {
-    let url = '/api/pages/' + page;
-
-    api.getData(url).then(({data}) => {
+    db.collection('pages').doc(page).get().then(doc => {
       this.setState({
-        [page]: data
+        [page]: doc.data()
       });
+      setTimeout(() => {
+        this.loading(false);
+      }, 1500);
     });
   }
 
-  setLoading = (loading) => {
-    this.setState({loading});
+  loading = (bool) => {
+    this.setState({
+      loading: bool
+    });
   }
 
   render() {

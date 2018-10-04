@@ -11,7 +11,7 @@ import Team from './pages/Team';
 // Components
 import Nav from './components/global/Nav';
 import Footer from './components/global/Footer';
-import Spinner from './components/global/Spinner';
+import Loading from './components/global/Loading';
 
 export default class App extends Component {
   render() {
@@ -19,26 +19,33 @@ export default class App extends Component {
       <DataConsumer>
         {({getPageData, data: {
           loading,
-          footer,
-          nav
+          home,
+          about,
+          philosophy,
+          contact
         }}) => (
+          loading ?
+          <Loading />
+          :
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Fragment>
-              {
-                loading ?
-                <Spinner />
-                :
-                <Nav get={getPageData} nav={nav} />
-              }
+
+              <Nav />
               <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/conditions" render={() => (
-                  <Treatments get={getPageData} />
+                <Route exact path="/" render={() => (
+                  <Home get={getPageData} data={home} about={about} philosophy={philosophy} contact={contact} />
                 )} />
-                <Route path="/team" component={Team} />
-                <Route exact path="*" component={Home} />
+                <Route path="/conditions" render={() => (
+                  <Treatments  />
+                )} />
+                <Route path="/team" render={() => (
+                  <Team />
+                )} />
+                <Route exact path="*" render={() => (
+                  <Home />
+                )} />
               </Switch>
-              <Footer get={getPageData} footer={footer} />
+              <Footer />
             </Fragment>
           </BrowserRouter>
         )}
