@@ -4,13 +4,13 @@ import axios from 'axios';
 
 export default class Contact extends Component {
   state = {
-    formActive: false,
     name: '',
     email: '',
     message: '',
     formError: false,
     emailError: false,
     data: {
+      "formActive": false,
       "title": "contact us",
       "form": {
         "formTitle": "Message Us or to Schedule an Appointment",
@@ -33,6 +33,12 @@ export default class Contact extends Component {
       "emergencyContact": "Emergency Service: 24/7, on call"
     }
   };
+
+  componentDidMount() {
+    if(this.props.get) {
+      this.props.get('contact');
+    }
+  }
 
   handleInputChange = (e, name) => {
     let val = {...this.state, [name] : e.target.value};
@@ -91,93 +97,188 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="contact section">
-        <span className="title">{this.state.data.title}</span>
-        <div className={"contact-section" + (this.state.formActive ? '' : ' center')}>
-          {
-            this.state.data.form ?
-            <Fragment>
+        {
+          this.props.data ?
+          <Fragment>
+            <span className="title">{this.props.data.title}</span>
+            <div className={"contact-section" + (this.state.formActive ? '' : ' center')}>
               {
-                this.state.formActive ?
-                <form className="contact-form card" onSubmit={this.handleSubmit}>
-                  <span className="form-title">{this.state.data.form.formTitle}</span>
-                  <div className="form-field">
-                    <label htmlFor="name">Name *</label>
-                    <input
-                      type="text"
-                      aria-label="name"
-                      onChange={(e) => this.handleInputChange(e, 'name')}
-                      style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
-                    />
-                  </div>
-                  <div className="form-field">
-                    <label htmlFor="email">Email *</label>
-                    <input
-                      type="email"
-                      aria-label="email"
-                      onChange={(e) => this.handleInputChange(e, 'email')}
-                      style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
-                    />
-                  </div>
-                  <div className="form-field">
-                    <label htmlFor="message">Message *</label>
-                    <textarea
-                      aria-label="message"
-                      cols="30"
-                      rows="10"
-                      onChange={(e) => this.handleInputChange(e, 'message')}
-                      style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
-                      ></textarea>
-                  </div>
+                this.props.data.form ?
+                <Fragment>
                   {
-                    this.state.formError ?
-                    <div className="error-message">
-                      <span>** Required Fields Cannot Be Empty</span>
-                    </div>
-                    :
-                    this.state.emailError ?
-                    <div className="error-message">
-                      <span>** Please provide a correct email</span>
-                    </div>
+                    this.props.data.formActive ?
+                    <form className="contact-form card" onSubmit={this.handleSubmit}>
+                      <span className="form-title">{this.props.data.form.formTitle}</span>
+                      <div className="form-field">
+                        <label htmlFor="name">Name *</label>
+                        <input
+                          type="text"
+                          aria-label="name"
+                          onChange={(e) => this.handleInputChange(e, 'name')}
+                          style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
+                        />
+                      </div>
+                      <div className="form-field">
+                        <label htmlFor="email">Email *</label>
+                        <input
+                          type="email"
+                          aria-label="email"
+                          onChange={(e) => this.handleInputChange(e, 'email')}
+                          style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
+                        />
+                      </div>
+                      <div className="form-field">
+                        <label htmlFor="message">Message *</label>
+                        <textarea
+                          aria-label="message"
+                          cols="30"
+                          rows="10"
+                          onChange={(e) => this.handleInputChange(e, 'message')}
+                          style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
+                          ></textarea>
+                      </div>
+                      {
+                        this.state.formError ?
+                        <div className="error-message">
+                          <span>** Required Fields Cannot Be Empty</span>
+                        </div>
+                        :
+                        this.state.emailError ?
+                        <div className="error-message">
+                          <span>** Please provide a correct email</span>
+                        </div>
+                        :
+                        null
+                      }
+                      <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.props.data.form.buttonText}</button>
+                    </form>
                     :
                     null
                   }
-                  <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.state.data.form.buttonText}</button>
-                </form>
+                  <div className="more-info">
+                    <span className="form-title">Hours of Operation</span>
+                    <div className="hours-operation">
+                      {
+                        this.props.data.hoursOfOperation.map(({days, hours}) => (
+                          <div className="time-slot" key={days}>
+                            <span className="day">{days}:</span>
+                            <span className="hours">{hours}</span>
+                          </div>
+                        ))
+                      }
+                    </div>
+                    <a href="https://www.google.com/maps?daddr=12510+East+Iliff+Avenue+Ste.+120,+Aurora,+Colorado+80014,+United+States"
+                      target="_blank"
+                      className="form-title"
+                      rel="noopener noreferrer"
+                    >
+                      Directions To Our Clinic
+                    </a>
+                    <div className="bottom-section">
+                      <span className="form-title">{this.props.data.emergencyContact}</span>
+                      <p className="disclaimer">
+                        If you are having a medical emergency please call <a href="tel:911" className="large">911</a>,
+                        or go to the nearest Emergency Room or Urgent Care facility.
+                      </p>
+                    </div>
+                  </div>
+                </Fragment>
                 :
                 null
               }
-              <div className="more-info">
-                <span className="form-title">Hours of Operation</span>
-                <div className="hours-operation">
+            </div>
+          </Fragment>
+          :
+          <Fragment>
+            <span className="title">{this.state.data.title}</span>
+            <div className={"contact-section" + (this.state.formActive ? '' : ' center')}>
+              {
+                this.state.data.form ?
+                <Fragment>
                   {
-                    this.state.data.hoursOfOperation.map(({days, hours}) => (
-                      <div className="time-slot" key={days}>
-                        <span className="day">{days}:</span>
-                        <span className="hours">{hours}</span>
+                    this.state.data.formActive ?
+                    <form className="contact-form card" onSubmit={this.handleSubmit}>
+                      <span className="form-title">{this.state.data.form.formTitle}</span>
+                      <div className="form-field">
+                        <label htmlFor="name">Name *</label>
+                        <input
+                          type="text"
+                          aria-label="name"
+                          onChange={(e) => this.handleInputChange(e, 'name')}
+                          style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
+                        />
                       </div>
-                    ))
+                      <div className="form-field">
+                        <label htmlFor="email">Email *</label>
+                        <input
+                          type="email"
+                          aria-label="email"
+                          onChange={(e) => this.handleInputChange(e, 'email')}
+                          style={{borderColor: this.state.emailError ? '#FF5057' : '#D3DFB8'}}
+                        />
+                      </div>
+                      <div className="form-field">
+                        <label htmlFor="message">Message *</label>
+                        <textarea
+                          aria-label="message"
+                          cols="30"
+                          rows="10"
+                          onChange={(e) => this.handleInputChange(e, 'message')}
+                          style={{borderColor: this.state.formError ? '#FF5057' : '#D3DFB8'}}
+                          ></textarea>
+                      </div>
+                      {
+                        this.state.formError ?
+                        <div className="error-message">
+                          <span>** Required Fields Cannot Be Empty</span>
+                        </div>
+                        :
+                        this.state.emailError ?
+                        <div className="error-message">
+                          <span>** Please provide a correct email</span>
+                        </div>
+                        :
+                        null
+                      }
+                      <button className="btn-secondary no-hover" disabled={this.checkDisabled()} type="submit">{this.state.data.form.buttonText}</button>
+                    </form>
+                    :
+                    null
                   }
-                </div>
-                <a href="https://www.google.com/maps?daddr=12510+East+Iliff+Avenue+Ste.+120,+Aurora,+Colorado+80014,+United+States"
-                  target="_blank"
-                  className="form-title"
-                  rel="noopener noreferrer"
-                >
-                  Directions To Our Clinic
-                </a>
-                <div className="bottom-section">
-                  <span className="form-title">{this.state.data.emergencyContact}</span>
-                  <p className="disclaimer">
-                    If you are having a medical emergency please call <a href="tel:911" className="large">911</a>,
-                    or go to the nearest Emergency Room or Urgent Care facility.
-                  </p>
-                </div>
-              </div>
-            </Fragment>
-            :
-            null
-          }
-        </div>
+                  <div className="more-info">
+                    <span className="form-title">Hours of Operation</span>
+                    <div className="hours-operation">
+                      {
+                        this.state.data.hoursOfOperation.map(({days, hours}) => (
+                          <div className="time-slot" key={days}>
+                            <span className="day">{days}:</span>
+                            <span className="hours">{hours}</span>
+                          </div>
+                        ))
+                      }
+                    </div>
+                    <a href="https://www.google.com/maps?daddr=12510+East+Iliff+Avenue+Ste.+120,+Aurora,+Colorado+80014,+United+States"
+                      target="_blank"
+                      className="form-title"
+                      rel="noopener noreferrer"
+                    >
+                      Directions To Our Clinic
+                    </a>
+                    <div className="bottom-section">
+                      <span className="form-title">{this.state.data.emergencyContact}</span>
+                      <p className="disclaimer">
+                        If you are having a medical emergency please call <a href="tel:911" className="large">911</a>,
+                        or go to the nearest Emergency Room or Urgent Care facility.
+                      </p>
+                    </div>
+                  </div>
+                </Fragment>
+                :
+                null
+              }
+            </div>
+          </Fragment>
+        }
       </div>
     )
   }
