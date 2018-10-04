@@ -24,7 +24,8 @@ export default class App extends Component {
           philosophy,
           contact,
           nav,
-          footer
+          footer,
+          treatments
         }}) => (
           loading ?
           <Loading />
@@ -37,7 +38,7 @@ export default class App extends Component {
                   <Home get={getPageData} data={home} about={about} philosophy={philosophy} contact={contact} />
                 )} />
                 <Route path="/conditions" render={() => (
-                  <Treatments  />
+                  <Treatments get={getPageData} data={treatments} />
                 )} />
                 <Route path="/team" render={() => (
                   <Team />
