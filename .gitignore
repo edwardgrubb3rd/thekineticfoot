@@ -20,3 +20,5 @@ uploads/*
 !uploads/index.php
 simple-backup
 upgrade
+
+firebase.js

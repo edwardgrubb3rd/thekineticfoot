@@ -45,7 +45,7 @@ export default class Home extends Component {
           />
         }
         <About get={this.props.get} data={this.props.about} />
-        <Philosophy get={this.props.get} />
+        <Philosophy get={this.props.get} data={this.props.philosophy} />
         <Contact get={this.props.get} />
       </div>
     )
