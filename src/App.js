@@ -22,15 +22,16 @@ export default class App extends Component {
           home,
           about,
           philosophy,
-          contact
+          contact,
+          nav,
+          footer
         }}) => (
           loading ?
           <Loading />
           :
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Fragment>
-
-              <Nav />
+              <Nav get={getPageData} data={nav} />
               <Switch>
                 <Route exact path="/" render={() => (
                   <Home get={getPageData} data={home} about={about} philosophy={philosophy} contact={contact} />
@@ -45,7 +46,7 @@ export default class App extends Component {
                   <Home />
                 )} />
               </Switch>
-              <Footer />
+              <Footer get={getPageData} data={footer} />
             </Fragment>
           </BrowserRouter>
         )}
